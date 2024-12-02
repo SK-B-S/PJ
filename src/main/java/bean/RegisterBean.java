@@ -9,7 +9,7 @@ public class RegisterBean implements Serializable{
 
   public RegisterBean(){
   }
-  
+
   public void setName(String name){
     this.name = name;
   }
@@ -19,7 +19,7 @@ public class RegisterBean implements Serializable{
   public void setLangs(String[] langs){
     this.langs = langs;
   }
-  
+
   public String getName(){
     return name;
   }
@@ -29,13 +29,13 @@ public class RegisterBean implements Serializable{
   public String[] getLangs(){
     return langs;
   }
-  
+
   public String getJpnAge(){
     String jpnAge;
     if(age.equals("child")){
-      jpnAge = "18以上";
+      jpnAge = "18歳以上";
     } else {
-      jpnAge = "18未満";
+      jpnAge = "18歳以下";
     }
     return jpnAge;
   }
