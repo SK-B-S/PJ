@@ -1,0 +1,16 @@
+@startuml 農家詳細表示
+
+actor    "登録農家" as act
+boundary "販売履歴画面" as Mypage
+boundary "ブラウザ" as brz
+control  "販売履歴コントローラー" as Acquisition_c
+entity   "販売履歴DAO" as Farmer_DAO
+
+'-------------------------------------------------------------------------------------------
+
+brz -> Acquisition_c : GET
+Acquisition_c -> Farmer_DAO : 販売履歴情報を取得する
+Acquisition_c <-- Farmer_DAO
+Mypage <- Acquisition_c : 表示する
+
+@enduml

@@ -1,0 +1,21 @@
+@startuml 商品検索
+
+actor    "ユーザー" as act
+boundary "トップ画面" as Top
+boundary "検索結果画面" as Search_results
+control  "商品検索コントローラー" as Product_search_c
+entity   "商品DAO" as Product
+
+'-------------------------------------------------------------------------
+
+act -> Top: 検索欄にキーワードを入力し、\n検索ボタンをクリックする
+Top -> Product_search_c : GET(検索ワード)
+Product_search_c -> Product : 検索ワードで検索する
+Product_search_c <-- Product
+alt 検索した商品が商品データにない場合
+    Product_search_c -> Search_results: メッセージを表示する
+    else
+    Search_results <- Product_search_c: 検索した商品を表示する
+end
+
+@enduml

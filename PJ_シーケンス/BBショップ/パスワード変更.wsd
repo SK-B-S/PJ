@@ -1,0 +1,38 @@
+@startuml パスワード変更
+
+actor    "ユーザー" as account
+boundary "パスワード変更画面" as change_password
+boundary "パスワード変更完了画面" as change_password_done
+boundary "ブラウザ" as brz
+control  "パスワードコントローラー" as change_password_c
+entity   "アカウントDAO" as account_db
+control  "変更完了コントローラー" as completion_c
+
+'-------------------------------------------------------------------------------------------
+
+brz ->  change_password_c : GET
+change_password  <-  change_password_c : パスワード変更画面を表示する
+account -> change_password : 旧、新パスワード、\nパスワード確認を入力し\n確定ボタンをクリックする
+
+alt 項目に未入力がある
+    change_password -> change_password: ツールチップを表示する
+else
+    change_password -> change_password_c : POST(旧、新パスワード)
+    alt パスワードが半角英大文字小文字数字を含む8文字以上でない
+        change_password <- change_password_c : メッセージを表示する
+
+    else パスワードとパスワード(確認)が一致しない
+        change_password <- change_password_c : メッセージを表示する
+    else
+        change_password_c -> account_db : ログイン認証をする
+        change_password_c <-- account_db
+        alt 旧パスワードの入力が正しくない
+            change_password <- change_password_c : メッセージを表示する
+        else
+            change_password_c -> account_db : パスワードを更新する
+            change_password_c -> completion_c : リダイレクト
+            change_password_done <- completion_c : 表示する
+        end
+    end
+end
+@enduml

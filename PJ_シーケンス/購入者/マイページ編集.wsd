@@ -1,0 +1,18 @@
+@startuml マイページ編集
+
+actor    "登録購入者" as act
+boundary "マイページ編集画面" as Change_Mypage
+control  "マイページ編集コントローラー" as Approval_c
+entity   "アカウントDAO" as Account
+boundary "マイページ" as Kannryou
+control  "マイページコントローラー" as completion_c
+
+'-------------------------------------------------------------------------------------------
+
+act -> Change_Mypage : 変更内容を入力し\n変更ボタンを\nクリックする
+Change_Mypage -> Approval_c: POST(編集後アカウント情報)
+Approval_c -> Account: 入力情報を更新する
+Approval_c -> completion_c : リダイレクト
+completion_c -> Kannryou : 表示する
+
+@enduml

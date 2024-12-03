@@ -1,0 +1,71 @@
+/* 全体のスタイル */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ヘッダーのスタイル */
+header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-bottom: 2px solid #000; /* ヘッダーの下に黒い線 */
+    text-align: center;
+}
+
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-top: 2px solid #000;
+    text-align: center;
+}
+
+/* コンテナのスタイル */
+.container {
+    display: flex;
+    height: calc(100vh - 70px); /* ヘッダーの高さを除いた高さ */
+}
+
+/* サイドバーのスタイル */
+.sidebar {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-right: 2px solid #000; /* サイドバーの右に黒い線 */
+}
+
+/* ナビゲーションメニューのスタイル */
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar nav ul li a:hover {
+    color: #007bff;
+}
+
+/* コンテンツのスタイル */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #000; /* サイドバーの下に黒い線 */
+    }
+}

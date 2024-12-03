@@ -1,0 +1,32 @@
+@startuml ログイン
+
+actor    "ゲスト" as act
+boundary "ログイン画面" as Login
+boundary "ブラウザ" as brz
+control  "ログインコントローラー" as Approval_c
+entity   "アカウントDAO" as Account
+entity   "セッション" as sessyon
+boundary "トップ画面" as Top
+control  "トップコントローラー" as Completion_c
+
+'-------------------------------------------------------------------------------------------
+
+brz -> Approval_c : GET
+Login <- Approval_c : 表示する
+act -> Login : アカウント情報を入力し、\nログインボタンを\nクリックする
+Login -> Approval_c : POST(メールアドレス、パスワード)
+alt 未入力項目がある場合
+    Approval_c -> Login: ツールチップを表示する
+    else
+        Approval_c -> Account : ログイン認証をする
+        Approval_c <-- Account :アカウントアカウントDTO
+    alt 認証に失敗した場合
+        Approval_c -> Login: エラーメッセージを表示する
+    else
+        Approval_c -> sessyon : ユーザーID, メールアドレス, 氏名を保存する
+        Approval_c -> Completion_c : リダイレクト
+        Completion_c -> Top : 表示する
+    end
+end
+
+@enduml

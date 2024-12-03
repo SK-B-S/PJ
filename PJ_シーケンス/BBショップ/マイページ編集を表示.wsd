@@ -1,0 +1,16 @@
+@startuml マイページ編集
+
+actor    "ユーザー" as act
+boundary "マイページ変更画面" as Change_Mypage
+boundary "ブラウザ" as brz
+control  "マイページ変更コントローラー" as Approval_c
+entity   "アカウントDAO" as Account
+
+'-------------------------------------------------------------------------------------------
+
+brz -> Approval_c : GET
+Approval_c -> Account : アカウント情報を取得する
+Approval_c <-- Account
+Approval_c -> Change_Mypage : 表示する
+
+@enduml

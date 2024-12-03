@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <!-- UTF-8でエンコード -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- タイトル -->
+        <title>パスワード変更</title>
+        <!-- style_top.cssを参照 -->
+        <link rel="stylesheet" href="p_edpw_style.css">
+        <!-- last update 2024/11/27 杉田-->
+    </head>
+    <body>
+        <!-- メイン -->
+        <div class="container">
+            <header class="header">
+                <h1>パスワード変更</h1>
+            </header>
+
+            <main class="main">
+                <!-- パスワード変更フォーム -->
+                <form action="/pass" method="POST" class="pass-form">
+                    <div class="form-group">
+                        <label for="odpass">旧パスワード</label>
+                        <input type="odpass" id="odpass" name="odpass" required>
+                        <label for="newpassword">新パスワード</label>
+                        <input type="newpassword" id="newpassword" name="password" required>
+                        <label for="newpassword2">新パスワード(確認)</label>
+                        <input type="newpassword2" id="newpassword2" name="password" required>
+                    </div>
+                    <!-- 確定ボタン -->
+                    <button type="submit" class="pass-btn">確定</button>
+                </form>
+            </main>
+        </div>
+    </body>
+</html>

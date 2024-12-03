@@ -1,0 +1,27 @@
+@startuml 注文キャンセル
+
+actor    "ユーザー" as account
+boundary "商品削除画面" as delete_product
+boundary "ブラウザ" as brz
+control  "商品削除コントローラー" as history_c
+entity   "注文履歴DAO" as history_db
+boundary "キャンセル完了画面" as order_history
+control  "完了コントローラー" as completion_c
+
+'-------------------------------------------------------------------------
+
+brz ->  history_c : GET(注文番号)
+history_c ->  history_db : 注文番号で取得する
+history_c <-- history_db
+delete_product  <-  history_c : 商品削除画面を表示する
+account ->  delete_product : チェックを付けて\nキャンセルボタンを\nクリックする
+alt チェックが付いていない
+    delete_product -> delete_product : メッセージを表示する
+else チェックが付いている
+    delete_product ->  history_c : POST(注文番号)
+    history_c ->  history_db : 注文した商品を削除する
+    history_c -> completion_c : リダイレクト
+    completion_c -> order_history : 表示する
+end
+
+@enduml

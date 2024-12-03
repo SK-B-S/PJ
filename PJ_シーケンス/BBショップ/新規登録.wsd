@@ -1,0 +1,60 @@
+@startuml 新規登録
+
+actor    "ゲスト" as account
+boundary "新規登録画面" as new_registration
+boundary "メール送信完了画面" as mail_done
+boundary "メール画面" as mail
+boundary "ブラウザ" as brz
+control  "新規登録コントローラー" as approval_c
+boundary "メール検証失敗画面" as mail_fail
+control  "検証コントローラー" as verification_c
+entity   "アカウントDAO" as account_db
+entity   "仮アカウントDAO" as account_db_provisional
+entity   "アカウントアカウントDAO" as kaiinn_account_db
+boundary "登録完了画面" as registration_done
+control  "完了コントローラー" as completion_c
+
+'------------------------------------------------------------------------------------
+
+brz -> approval_c : GET
+new_registration <- approval_c : 表示する
+account -> new_registration: 登録情報を入力し、\n新規登録ボタンを\nクリックする
+alt 項目に未入力がある
+    new_registration-> new_registration: ツールチップを表示する
+else
+    new_registration-> approval_c: POST(新規登録情報)
+    alt パスワードが半角英大文字小文字数字を含む8文字以上でない
+        approval_c -> new_registration : エラーメッセージを表示する
+    else パスワードとパスワード(確認)が一致するか
+        approval_c -> new_registration : エラーメッセージを表示する
+    else
+        approval_c -> account_db: メールアドレスで検索する
+        approval_c <-- account_db
+            alt メールアドレスが登録済み
+                approval_c -> new_registration: メッセージを表示する
+            else
+            approval_c -> account_db : 入力情報を登録する
+            account_db-->approval_c
+            approval_c -> account_db_provisional : 入力情報を登録する
+            account_db_provisional-->approval_c
+            approval_c -> kaiinn_account_db : 入力情報を登録する
+            kaiinn_account_db-->approval_c
+            approval_c -> mail : 確認メールを送信する
+            approval_c -> mail_done : 表示する
+            account -> mail : URLをクリックする
+            mail -> verification_c : GET(トークン)
+            verification_c -> account_db_provisional : トークンを検証する
+            verification_c <-- account_db_provisional : ユーザーID
+            alt ユーザーIDが正の整数でない場合
+                mail_fail <- verification_c : 表示する
+            else
+                verification_c -> account_db : ユーザータイプを更新する
+                verification_c -> account_db_provisional : 入力情報を削除する
+                verification_c -> completion_c : リダイレクト
+                registration_done <- completion_c : 表示する
+            end
+        end
+    end
+end
+
+@enduml

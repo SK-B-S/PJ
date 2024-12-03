@@ -1,0 +1,16 @@
+@startuml 農家証明書確認
+
+actor    "登録農家" as act
+boundary "農家証明書確認画面" as Mypage
+boundary "ブラウザ" as brz
+control  "農家証明書確認コントローラー" as Acquisition_c
+entity   "農家アカウントDAO" as Farmer_DAO
+
+'-------------------------------------------------------------------------------------------
+
+brz -> Acquisition_c : GET
+Acquisition_c -> Farmer_DAO : JASステータスを取得する
+Acquisition_c <-- Farmer_DAO
+Mypage <- Acquisition_c : メッセージ表示する
+
+@enduml

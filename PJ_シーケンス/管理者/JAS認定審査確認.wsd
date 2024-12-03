@@ -1,0 +1,25 @@
+@startuml JAS認定審査表示
+
+actor    "管理者" as act
+boundary "JAS認定審査確認画面" as JAS_s
+boundary "メール画面" as mail
+boundary "ブラウザ" as brz
+control  "JAS認定審査コントローラー" as Acquisition_c
+entity   "農家アカウントDAO" as Farmer_DAO
+control  "完了コントローラー" as completion_c
+
+'-------------------------------------------------------------------------------------------
+
+brz -> Acquisition_c : GET
+Acquisition_c -> Farmer_DAO : 農家アカウント情報を取得する
+Acquisition_c <-- Farmer_DAO
+JAS_s <- Acquisition_c : 表示する
+act -> JAS_s : 承認を選択して\n確定ボタンをクリックする
+JAS_s -> Farmer_DAO : POST(フラグ)
+Acquisition_c -> Farmer_DAO : フラグを更新する
+Farmer_DAO --> Acquisition_c : 農家メールアドレス
+Acquisition_c -> mail : 確認メールを送信する
+Acquisition_c -> completion_c : リダイレクト
+completion_c -> JAS_s : メッセージを表示する
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml 農家アカウント削除
+
+actor    "管理者" as act
+boundary "農家アカウント削除画面" as delete_s
+control  "商品削除コントローラー" as delete_c
+entity   "農家アカウントDAO" as Farmer_DAO
+control  "商品削除完了コントローラー" as completion_c
+
+'--------------------------------------------------------------------------------------
+
+act ->  delete_s : はいボタンを\nクリックする
+delete_s -> delete_c : POST(フラグ)
+delete_c -> Farmer_DAO : フラグを変更する
+delete_c <-- Farmer_DAO
+delete_c -> completion_c : リダイレクト
+delete_s <- completion_c : 表示する
+
+@enduml

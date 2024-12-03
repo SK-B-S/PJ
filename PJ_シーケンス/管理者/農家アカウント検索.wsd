@@ -1,0 +1,16 @@
+@startuml 農家アカウント検索
+
+actor    "管理者" as act
+boundary "購入者アカウント管理画面" as purchase_management_s
+control  "購入者検索コントローラー" as purchase_search_c
+entity   "購入者アカウントDAO" as purchase_DAO
+
+'-------------------------------------------------------------------------
+
+act -> purchase_management_s: 検索欄にキーワードを入力し、\n検索ボタンをクリックする
+purchase_management_s -> purchase_search_c : GET(検索ワード)
+purchase_search_c -> purchase_DAO : 検索ワードで検索する
+purchase_search_c <-- purchase_DAO
+purchase_management_s <- purchase_search_c: 検索結果を表示する
+
+@enduml

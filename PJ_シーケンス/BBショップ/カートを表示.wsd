@@ -1,0 +1,16 @@
+@startuml カートを表示
+
+actor    "ユーザー" as act
+boundary "カート画面" as Cart_s
+boundary "ブラウザ" as brz
+control  "カートコントローラー" as Acquisition_c
+entity   "カートDAO" as Cart
+
+'-------------------------------------------------------------------------------------------
+
+brz -> Acquisition_c : GET
+Acquisition_c -> Cart : アカウント情報で取得する
+Acquisition_c <-- Cart
+Cart_s <- Acquisition_c : 表示する
+
+@enduml

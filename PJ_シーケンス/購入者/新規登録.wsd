@@ -1,0 +1,41 @@
+@startuml 新規登録
+
+actor    "ゲスト購入者" as account
+boundary "新規登録画面" as new_registration
+boundary "ログイン画面" as login
+boundary "メール画面" as mail
+boundary "ブラウザ" as brz
+control  "ログインコントローラー" as login_c
+boundary "メール検証失敗画面" as mail_fail
+control  "検証コントローラー" as verification_c
+entity   "アカウントDAO" as account_db
+entity   "仮アカウントDAO" as account_db_provisional
+entity   "会員アカウントDAO" as kaiinn_account_db
+
+
+'------------------------------------------------------------------------------------
+
+brz -> login_c : GET
+new_registration <- login_c : 表示する
+account -> new_registration: 登録情報を入力し、\n新規登録ボタンを\nクリックする
+new_registration-> login_c: POST(新規登録情報)
+login_c -> account_db: メールアドレスで検索する
+login_c <-- account_db
+login_c -> account_db : 入力情報を登録する
+account_db-->login_c
+login_c -> account_db_provisional : 入力情報を登録する
+account_db_provisional-->login_c
+login_c -> kaiinn_account_db : 入力情報を登録する
+kaiinn_account_db-->login_c
+login_c -> mail : 確認メールを送信する
+login_c -> login : メッセージを表示する
+account -> mail : URLをクリックする
+mail -> verification_c : GET(トークン)
+verification_c -> account_db_provisional : トークンを検証する
+verification_c <-- account_db_provisional : ユーザーID
+verification_c -> account_db : ユーザータイプを更新する
+verification_c -> account_db_provisional : 入力情報を削除する
+verification_c -> login_c : リダイレクト
+login <- login_c : メッセージを表示する
+
+@enduml

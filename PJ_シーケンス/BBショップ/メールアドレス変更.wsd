@@ -1,0 +1,47 @@
+@startuml マイページ編集
+
+actor    "ユーザー" as act
+boundary "メールアドレス変更画面" as Change_mail
+boundary "メール画面" as Mail
+boundary "メール送信完了画面" as mail_done
+boundary "変更失敗画面" as Miss
+control  "マイページ変更コントローラー" as Approval_c
+control  "検証コントローラー" as Verification_c
+entity   "アカウントDAO" as Account
+entity   "仮アカウントDAO" as account_db_provisional
+boundary "変更完了画面" as Kannryou
+control  "変更完了コントローラー" as completion_c
+
+'-------------------------------------------------------------------------------------------
+
+act -> Change_mail : メールアドレスを入力し\n変更ボタンを\nクリックする
+alt 項目に未入力がある
+    Change_mail -> Change_mail : ツールチップを表示する
+else
+    Change_mail -> Approval_c: POST(入力情報)
+    Approval_c -> Account: メールアドレスで検索する
+    Approval_c <-- Account
+    alt メールアドレスが登録済み
+        Approval_c -> Change_mail : メッセージを表示する
+    else
+        Approval_c -> account_db_provisional : メールアドレスを更新する
+        account_db_provisional --> Approval_c
+        Approval_c -> Mail : メールを送信
+        Approval_c -> mail_done : 表示する
+    end
+end
+
+act -> Mail : メールにあるURLをクリックする
+Mail -> Verification_c : POST(トークン)
+alt 検証に失敗した場合
+    Verification_c -> Miss : エラーメッセージを表示する
+else
+    Verification_c -> Approval_c : 成功レスポンスを送る
+    account_db_provisional <- Approval_c : メールアドレスを取得する
+    Approval_c <-- account_db_provisional
+    Approval_c -> Account : メールアドレスを更新する
+    Approval_c -> completion_c : リダイレクト
+    completion_c -> Kannryou : 表示する
+end
+
+@enduml

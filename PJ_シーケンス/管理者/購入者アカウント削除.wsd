@@ -1,0 +1,18 @@
+@startuml 購入者アカウント削除
+
+actor    "管理者" as act
+boundary "購入者アカウント\n削除画面" as delete_s
+control  "商品削除コントローラー" as delete_c
+entity   "購入者アカウントDAO" as purchase_DAO
+control  "削除完了コントローラー" as completion_c
+
+'--------------------------------------------------------------------------------------
+
+act ->  delete_s : はいボタンを\nクリックする
+delete_s -> delete_c : POST(フラグ)
+delete_c -> purchase_DAO : フラグを変更する
+delete_c <-- purchase_DAO
+delete_c -> completion_c : リダイレクト
+delete_s <- completion_c : 表示する
+
+@enduml

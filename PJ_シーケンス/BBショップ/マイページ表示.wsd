@@ -1,0 +1,16 @@
+@startuml マイページを表示
+
+actor    "ユーザー" as account
+boundary "マイページ" as Mypage
+boundary "ブラウザ" as brz
+control  "マイページコントローラー" as Acquisition_c
+entity   "会員アカウントDAO" as Account
+
+'-------------------------------------------------------------------------------------------
+
+brz -> Acquisition_c : GET
+Acquisition_c -> Account : アカウント情報を取得する
+Acquisition_c <-- Account
+Mypage <- Acquisition_c : 表示する
+
+@enduml

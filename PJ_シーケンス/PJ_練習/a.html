@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAS認定管理</title>
+    <style>
+        .container {
+            margin: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 農家情報セクション -->
+        <div class="section">
+            <h2>農家情報</h2>
+            <label for="jas-images">JAS認定証明書の画像をアップロード:</label>
+            <input type="file" id="jas-images" accept="image/*" multiple onchange="previewImages()">
+            <br><br>
+
+            <div id="image-preview-container" class="hidden">
+                <h3>アップロードされた画像</h3>
+                <div id="image-previews"></div>
+            </div>
+
+            <!-- 登録ボタン -->
+            <button id="register-button" class="hidden" onclick="notifyAdmin()">登録</button>
+            <div id="confirmation-message" class="hidden">
+                <h3>画像が確認されました。管理者に送信されます。</h3>
+            </div>
+
+            <!-- 農家側の有効期限表示 -->
+            <div id="farmer-expiry" class="hidden">
+                <p>管理者が設定した有効期限: <span id="farmer-expiry-date"></span></p>
+            </div>
+
+            <!-- 継続ボタン -->
+            <button id="renew-button" class="hidden" onclick="resendImages()">継続</button>
+        </div>
+
+        <!-- 管理者機能セクション -->
+        <div class="section" id="admin-section" class="hidden">
+            <h2>管理者機能</h2>
+            <p>農家がアップロードした画像を確認し、承認/拒否することができます。</p>
+
+            <!-- 管理者確認用の画像 -->
+            <h3>農家のアップロード画像</h3>
+            <div id="admin-image-previews" class="hidden"></div>
+
+            <!-- 有効期限設定（秒） -->
+            <label for="expiry-seconds">有効期限（秒）を設定:</label>
+            <input type="number" id="expiry-seconds" placeholder="秒数で入力">
+            <button id="set-expiry-button" onclick="setExpiryDate()">有効期限を設定</button>
+
+            <!-- 承認ボタンと拒否ボタン -->
+            <button id="approve-button" onclick="approveImages()">承認</button>
+            <button id="reject-button" onclick="rejectImages()">拒否</button>
+
+            <div id="admin-confirmation" class="hidden">
+                <p>承認または拒否の操作を選んでください。</p>
+            </div>
+
+            <div id="expiry-confirmation" class="hidden">
+                <p>設定した有効期限: <span id="expiry-date-display"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let imageFiles = [];  // 画像ファイルを保存する配列
+        let uploadedImages = [];  // 管理者用に農家がアップロードした画像を保存
+        let expiryDate = null;  // 管理者が設定した有効期限
+        let isApproved = false;  // 承認されたかどうかのフラグ
+        let isExpired = false;  // 画像が期限切れかどうかのフラグ
+        let rejectionTimeout = null;  // 自動拒否タイマー
+
+        // 農家が画像をアップロードした後、プレビューを表示
+        function previewImages() {
+            const imageInput = document.getElementById('jas-images');
+            imageFiles = Array.from(imageInput.files);  // アップロードされたすべてのファイルを取得
+
+            if (imageFiles.length === 0) {
+                alert('画像をアップロードしてください。');
+                return;
+            }
+
+            const previewsContainer = document.getElementById('image-previews');
+            previewsContainer.innerHTML = ''; // 既存のプレビューをクリア
+
+            imageFiles.forEach((file, index) => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = e.target.result;
+                    imgElement.style.maxWidth = '200px';
+                    imgElement.style.margin = '5px';
+                    previewsContainer.appendChild(imgElement);
+                };
+                reader.readAsDataURL(file);  // ファイルをData URL形式で読み込み
+            });
+
+            document.getElementById('image-preview-container').classList.remove('hidden');
+            document.getElementById('register-button').classList.remove('hidden'); // 登録ボタンを表示
+        }
+
+        // 登録ボタンを押すと管理者に通知
+        function notifyAdmin() {
+            if (imageFiles.length === 0) {
+                alert('画像がアップロードされていません。');
+                return;
+            }
+
+            // 管理者機能を表示
+            uploadedImages = [...imageFiles];  // 農家がアップロードした画像を保存
+            const adminImagePreviews = document.getElementById('admin-image-previews');
+            adminImagePreviews.innerHTML = ''; // 既存の管理者プレビューをクリア
+
+            uploadedImages.forEach(file => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = e.target.result;
+                    imgElement.style.maxWidth = '200px';
+                    imgElement.style.margin = '5px';
+                    adminImagePreviews.appendChild(imgElement);
+                };
+                reader.readAsDataURL(file);  // ファイルをData URL形式で読み込み
+            });
+
+            document.getElementById('admin-image-previews').classList.remove('hidden');
+            document.getElementById('admin-section').classList.remove('hidden');  // 管理者セクションを表示
+            document.getElementById('confirmation-message').classList.remove('hidden');  // 確認メッセージを表示
+
+            checkExpiry();  // 有効期限のチェック
+        }
+
+        // 有効期限を設定（秒単位）
+        function setExpiryDate() {
+            const expirySeconds = document.getElementById('expiry-seconds').value;
+
+            if (!expirySeconds || isNaN(expirySeconds) || expirySeconds <= 0) {
+                alert('無効な秒数です。');
+                return;
+            }
+
+            // 秒数から有効期限を計算
+            expiryDate = new Date();
+            expiryDate.setSeconds(expiryDate.getSeconds() + parseInt(expirySeconds));
+
+            // 有効期限の表示
+            document.getElementById('expiry-date-display').textContent = expiryDate.toLocaleString();
+            document.getElementById('expiry-confirmation').classList.remove('hidden');
+
+            // 設定した時点から5秒後に自動で拒否される
+            rejectionTimeout = setTimeout(() => {
+                rejectImages();
+            }, expirySeconds * 1000);  // 秒数後に拒否処理を実行
+        }
+
+        // 有効期限が過ぎているかを確認
+        function checkExpiry() {
+            if (expiryDate && new Date() > expiryDate) {
+                isExpired = true;
+                alert('有効期限が切れました。');
+                document.getElementById('image-preview-container').classList.add('hidden');
+                document.getElementById('farmer-expiry').classList.add('hidden');
+            } else {
+                isExpired = false;
+            }
+        }
+
+        // 管理者が承認した場合
+        function approveImages() {
+            if (isExpired) {
+                alert('画像の有効期限が切れています。');
+                return;
+            }
+
+            isApproved = true;  // 承認状態に変更
+            document.getElementById('approve-button').classList.add('hidden');  // 承認ボタンを非表示
+            document.getElementById('reject-button').classList.add('hidden');  // 拒否ボタンを非表示
+
+            alert('画像が承認されました。');
+            document.getElementById('farmer-expiry').classList.remove('hidden');
+        }
+
+        // 管理者が拒否した場合
+        function rejectImages() {
+            isApproved = false;
+            isExpired = true;
+
+            document.getElementById('approve-button').classList.add('hidden');  // 承認ボタンを非表示
+            document.getElementById('reject-button').classList.add('hidden');  // 拒否ボタンを非表示
+            document.getElementById('image-preview-container').classList.add('hidden');
+
+            alert('画像が拒否されました。農家に通知されます。');
+        }
+
+        // 農家が画像を再送信（継続）する
+        function resendImages() {
+            if (imageFiles.length === 0) {
+                alert('画像がありません。');
+                return;
+            }
+
+            alert('画像が再送信されました。管理者が確認します。');
+            notifyAdmin();
+        }
+    </script>
+</body>
+</html>

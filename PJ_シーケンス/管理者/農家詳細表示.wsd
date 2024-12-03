@@ -1,0 +1,16 @@
+@startuml 農家詳細表示
+
+actor    "管理者" as act
+boundary "農家詳細画面" as Mypage
+boundary "ブラウザ" as brz
+control  "農家詳細コントローラー" as Acquisition_c
+entity   "農家アカウントDAO" as Farmer_DAO
+
+'-------------------------------------------------------------------------------------------
+
+brz -> Acquisition_c : GET
+Acquisition_c -> Farmer_DAO : 農家アカウント情報を取得する
+Acquisition_c <-- Farmer_DAO
+Mypage <- Acquisition_c : 表示する
+
+@enduml

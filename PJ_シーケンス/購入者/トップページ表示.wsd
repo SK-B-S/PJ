@@ -1,0 +1,16 @@
+@startuml トップページを表示
+
+actor    "登録購入者" as account
+boundary "トップページ" as Top
+boundary "ブラウザ" as brz
+control  "トップページコントローラー" as Acquisition_c
+entity   "商品DAO" as merchandise
+
+'-------------------------------------------------------------------------------------------
+
+brz -> Acquisition_c : GET
+Acquisition_c -> merchandise : 商品情報を取得する
+Acquisition_c <-- merchandise
+Top <- Acquisition_c : 表示する
+
+@enduml

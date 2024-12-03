@@ -1,0 +1,21 @@
+@startuml カートから削除
+
+actor    "ユーザー" as account
+boundary "カートから削除画面" as cart_screen
+boundary "ブラウザ" as brz
+control  "商品削除コントローラー" as delete_c
+entity   "カートDAO" as cart_db
+boundary "カート画面" as Cart
+control  "カートコントローラー" as cart_c
+
+'--------------------------------------------------------------------------------------
+brz ->  delete_c : GET
+cart_screen <-  delete_c : 表示する
+account ->  cart_screen : 確定ボタンを\nクリックする
+cart_screen -> delete_c : POST(商品ID)
+delete_c -> cart_db : 商品を削除する
+delete_c <-- cart_db
+delete_c -> cart_c : リダイレクト
+Cart <- cart_c : 表示する
+
+@enduml

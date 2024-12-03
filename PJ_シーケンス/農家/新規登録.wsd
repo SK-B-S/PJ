@@ -1,0 +1,39 @@
+@startuml 新規登録
+
+actor    "ゲスト農家" as act
+boundary "新規登録画面" as new_registration
+boundary "ログイン画面" as login
+boundary "メール画面" as mail
+boundary "ブラウザ" as brz
+control  "新規登録コントローラー" as approval_c
+control  "検証コントローラー" as verification_c
+entity   "アカウントDAO" as account_DAO
+entity   "仮アカウントDAO" as account_DAO_provisional
+entity   "農家アカウントDAO" as Farmer_account_DAO
+control  "完了コントローラー" as completion_c
+
+'------------------------------------------------------------------------------------
+
+brz -> approval_c : GET
+new_registration <- approval_c : 表示する
+act -> new_registration: 登録情報を入力し、\n新規登録ボタンを\nクリックする
+new_registration-> approval_c: POST(登録情報)
+approval_c -> account_DAO : 入力情報を登録する
+account_DAO-->approval_c
+approval_c -> account_DAO_provisional : 入力情報を登録する
+account_DAO_provisional-->approval_c
+approval_c -> Farmer_account_DAO : 入力情報を登録する
+Farmer_account_DAO-->approval_c
+approval_c -> mail : 確認メールを送信する
+approval_c -> login : メッセージを表示する
+
+act -> mail : URLをクリックする
+mail -> verification_c : GET(トークン)
+verification_c -> account_DAO_provisional : トークンを検証する
+verification_c <-- account_DAO_provisional : ユーザーID
+verification_c -> account_DAO : フラグを更新する
+verification_c -> account_DAO_provisional : 入力情報を削除する
+verification_c -> completion_c : リダイレクト
+login <- completion_c : 表示する
+
+@enduml

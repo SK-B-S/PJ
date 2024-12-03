@@ -1,0 +1,16 @@
+@startuml 商品詳細を表示
+
+actor    "ユーザー" as act
+boundary "商品詳細画面" as product_details_s
+boundary "ブラウザ" as brz
+control  "商品詳細コントローラー" as product_details_c
+entity   "商品DAO" as product_details
+
+'-------------------------------------------------------------------------------------------
+
+brz -> product_details_c : GET(商品ID)
+product_details_c -> product_details : 商品詳細情報を取得する
+product_details_c <-- product_details
+product_details_s <- product_details_c : 表示する
+
+@enduml
