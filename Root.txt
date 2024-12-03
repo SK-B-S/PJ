@@ -47,6 +47,24 @@ styleシート対応表
 		└ 農家ユーザサインアップ		f_signup.html
 		└ 農家ユーザマイページ			f_mypage.html
 		└ 農家ユーザpw変更			f_edpw.html
+	
+	listing_style.css
+		└ 出品登録
+		└ 出品商品変更
+			└ 削除確認ポップアップ		sale_config.js        // 削除の場合 -> 	トップ画面に遷移 / 削除しない場合 -> ポップアップを消す
+		└ 出荷準備確認
+	
+	sales_.css
+		└ 販売履歴
+		└ 販売済商品詳細
+
+	report_style.css
+		└ 売上レポート
+		└ カテゴリ別売上レポート 
+
+	cirtification_style.css
+		└ 農家証明書確認
+		└ 公認マーク登録継続確認
 
 管理者
 	admin_style.css
@@ -62,10 +80,10 @@ styleシート対応表
 
 	accountdetails_style.css
 		└ 農家アカウント詳細			a_fdetails.html
-			└ 確認ポップアップ				acnt_config.js        // 削除の場合 -> ステータス画面に遷移 / 削除しない場合 -> ポップアップを消す
+			└ 削除確認ポップアップ			acnt_config.js        // 削除の場合 -> ステータス画面に遷移 / 削除しない場合 -> ポップアップを消す
 
 		└ 一般ユーザアカウント詳細		a_pdetails.html
-			└ 確認ポップアップ				acnt_config.js        // 削除の場合 -> ステータス画面に遷移 / 削除しない場合 -> ポップアップを消す
+			└ 削除確認ポップアップ			acnt_config.js        // 削除の場合 -> ステータス画面に遷移 / 削除しない場合 -> ポップアップを消す
 
 	jasmanage_style.css
 		└ JAS認証審査ステータス			a_jasexamination.html
