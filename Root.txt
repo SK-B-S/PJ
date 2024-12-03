@@ -64,7 +64,7 @@ styleシート対応表
 
 	cirtification_style.css
 		└ 農家証明書確認
-		└ 公認マーク登録継続確認
+		└ JAS登録継続確認
 
 管理者
 	admin_style.css
