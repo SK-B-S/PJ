@@ -49,22 +49,22 @@ styleシート対応表
 		└ 農家ユーザpw変更			f_edpw.html
 	
 	listing_style.css
-		└ 出品登録
-		└ 出品商品変更
-			└ 削除確認ポップアップ		sale_config.js        // 削除の場合 -> 	トップ画面に遷移 / 削除しない場合 -> ポップアップを消す
-		└ 出荷準備確認
+		└ 出品登録				f_listing.html
+		└ 出品商品変更				f_edlisting.html
+			└ 削除確認ポップアップ			sale_config.js        // 削除の場合 -> 	トップ画面に遷移 / 削除しない場合 -> ポップアップを消す
+		└ 出荷準備確認				f_shipconf.html
 	
-	sales_.css
-		└ 販売履歴
-		└ 販売済商品詳細
+	sales_style.css
+		└ 販売履歴				f_history.html
+		└ 販売済商品詳細			f_historydetail.html
 
 	report_style.css
-		└ 売上レポート
-		└ カテゴリ別売上レポート 
+		└ 売上レポート				f_salereport.html
+		└ カテゴリ別売上レポート 		f_catreport.html
 
 	cirtification_style.css
-		└ 農家証明書確認
-		└ JAS登録継続確認
+		└ 農家証明書確認			f_cirtificate.html
+		└ JAS登録継続確認			f_jasregister.html
 
 管理者
 	admin_style.css
