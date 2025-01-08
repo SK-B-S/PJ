@@ -2,9 +2,6 @@ htmlファイル
 
 必須要素などは sample.html を参照してください
 
-・枠なし
-・ヘッダー、フッターあり
-
 Actor
 	管理者-admin				a_[ファイル名].html
 	農家-farmer				f_[ファイル名].html
@@ -91,3 +88,33 @@ styleシート対応表
 	jasmanage_style.css
 		└ JAS認証審査ステータス			a_jasexamination.html
 		└ JAS認証審査確認			a_jasconf.html
+
+設計詳細
+	ヘッダー
+		header {
+			display: flex;
+			align-items: center; /* 水平方向の位置調整 */
+			justify-content: center;　/* 垂直方向の位置調整 */
+			background-color: #f7f7f7; /* 背景色 */
+			height: 120px; /* ヘッダーの厚み */
+			padding: 5px; /* 文字と枠の空間 */
+			border-bottom: 1px solid #000; /* ヘッダーの下に黒い線 */
+			
+			/* font setting */
+			color: #000;
+			font-size: 100px;
+			font-weight: bold;
+
+		}
+
+	フッター
+		footer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #f7f7f7;
+			height: 30;
+			padding: 5px;
+			border-top: 1px solid #000;
+		}
+
