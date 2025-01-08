@@ -1,9 +1,9 @@
 @startuml 農家アカウント検索
 
 actor    "管理者" as act
-boundary "購入者アカウント管理画面" as purchase_management_s
-control  "購入者検索コントローラー" as purchase_search_c
-entity   "購入者アカウントDAO" as purchase_DAO
+boundary "農家アカウント管理画面" as purchase_management_s
+control  "農家検索コントローラー" as purchase_search_c
+entity   "農家アカウントDAO" as purchase_DAO
 
 '-------------------------------------------------------------------------
 

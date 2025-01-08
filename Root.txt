@@ -2,6 +2,9 @@ htmlファイル
 
 必須要素などは sample.html を参照してください
 
+・枠なし
+・ヘッダー、フッターあり
+
 Actor
 	管理者-admin				a_[ファイル名].html
 	農家-farmer				f_[ファイル名].html
