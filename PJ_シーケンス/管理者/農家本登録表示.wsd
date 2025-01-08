@@ -1,0 +1,14 @@
+@startuml 農家本登録
+
+actor    "管理者" as act
+boundary "農家本登録画面" as Farmer_s
+boundary "ブラウザ" as brz
+control  "農家本登録コントローラー" as Farmer_c
+entity   "農家アカウントDAO" as account_DAO
+
+'-------------------------------------------------------------------------------------------
+
+brz -> Farmer_c : GET
+Farmer_c -> account_DAO : 農家アカウント情報を取得する
+Farmer_c <-- account_DAO
+Farmer_s <- Farmer_c : 表示する

@@ -1,0 +1,13 @@
+@startuml トップページ
+
+actor    "管理者" as act
+boundary "トップページ" as Top
+boundary "ブラウザ" as brz
+control  "トップコントローラー" as Approval_c
+
+'-------------------------------------------------------------------------------------------
+
+brz -> Approval_c : GET
+Top <- Approval_c : 表示する
+
+@enduml
