@@ -13,7 +13,6 @@ boundary "注文履歴画面" as ccc
 brz -> history_c : GET
 history_c -> delete_product : 表示する
 account -> delete_product : チェックボックスを選択し\nキャンセルボタン\nをクリックする
-history_c -> f : メールを送信する
 delete_product -> history_c : POST(商品ID)
 history_c -> history_db : 商品を削除する
 history_c <-- history_db

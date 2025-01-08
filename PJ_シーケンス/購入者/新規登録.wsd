@@ -10,7 +10,6 @@ boundary "メール検証失敗画面" as mail_fail
 control  "検証コントローラー" as verification_c
 entity   "アカウントDAO" as account_db
 entity   "仮アカウントDAO" as account_db_provisional
-entity   "会員アカウントDAO" as kaiinn_account_db
 
 
 '------------------------------------------------------------------------------------
@@ -25,8 +24,6 @@ login_c -> account_db : 入力情報を登録する
 account_db-->login_c
 login_c -> account_db_provisional : 入力情報を登録する
 account_db_provisional-->login_c
-login_c -> kaiinn_account_db : 入力情報を登録する
-kaiinn_account_db-->login_c
 login_c -> mail : 確認メールを送信する
 login_c -> login : メッセージを表示する
 account -> mail : URLをクリックする

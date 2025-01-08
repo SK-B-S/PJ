@@ -1,0 +1,15 @@
+@startuml 注文内容確認を表示
+
+actor    "登録購入者" as account
+boundary "注文内容確認画面" as change_password
+boundary "ブラウザ" as brz
+control  "注文内容確認コントローラー" as change_password_c
+entity   "カートDAO" as cart_dao
+
+'----------------------------------------------------------------------'
+
+brz ->  change_password_c : GET
+change_password_c -> cart_dao : カート情報を取得
+change_password  <-  change_password_c : 表示する
+
+@enduml
