@@ -1,7 +1,7 @@
-@startuml JAS認定審査確認画面を表示
+@startuml 公認マーク登録継続確認画面を表示
 
 actor    "登録農家" as act
-boundary "JAS認定審査確認画面" as Top
+boundary "公認マーク登録継続確認画面" as Top
 boundary "ブラウザ" as brz
 control  "JAS認定審査確認コントローラー" as Acquisition_c
 entity   "農家アカウントDAO" as Farmer_dao

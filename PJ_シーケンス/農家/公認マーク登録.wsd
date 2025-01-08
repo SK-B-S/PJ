@@ -1,0 +1,18 @@
+@startuml JAS認定登録
+
+actor    "登録農家" as act
+boundary "公認マーク登録継続確認画面" as JAS_s
+control  "JAS認定審査確認コントローラー" as Acquisition_c
+entity   "JAS認定DAO" as JAS_dao
+control  "送信完了コントローラー" as Skan_c
+
+'-------------------------------------------------------------------------------------------
+
+act -> JAS_s : JAS認定書の画像をアップロードし、\n送信ボタンをクリックする
+JAS_s -> Acquisition_c : POST(認定画像)
+Acquisition_c -> JAS_dao : 認定画像を登録する
+JAS_dao --> Acquisition_c : JASステータス
+Acquisition_c -> Skan_c : リダイレクト
+Skan_c -> JAS_s : メッセージを表示する
+
+@enduml
