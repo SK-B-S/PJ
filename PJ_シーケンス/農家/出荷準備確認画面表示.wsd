@@ -1,0 +1,16 @@
+@startuml 出荷準備確認画面を表示
+
+actor    "登録農家" as account
+boundary "出荷準備確認画面" as Mypage
+boundary "ブラウザ" as brz
+control  "出荷準備確認画面\nコントローラー" as Acquisition_c
+entity   "注文DAO" as Account
+
+'-------------------------------------------------------------------------------------------
+
+brz -> Acquisition_c : GET
+Acquisition_c -> Account : 注文情報を取得する
+Acquisition_c <-- Account
+Mypage <- Acquisition_c : 表示する
+
+@enduml
