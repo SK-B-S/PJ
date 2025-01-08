@@ -1,8 +1,8 @@
 /* ページ全体のスタイル */
 body {
+    display: flex; /* Flexboxレイアウトを使用。これにより、要素を柔軟に配置できます */
     font-family: Arial, sans-serif; /* フォントをArialに設定し、Arialが利用できない場合は、一般的なサンセリフフォント（sans-serif）を使用 */
     background-color: #f4f4f9; /* 背景色を薄いグレー（#f4f4f9）に設定 */
-    display: flex; /* Flexboxレイアウトを使用。これにより、要素を柔軟に配置できます */
     justify-content: center; /* 横方向（主軸）でコンテンツを中央に配置 */
     align-items: center; /* 縦方向（交差軸）でコンテンツを中央に配置 */
     box-sizing: border-box; /* パディングやボーダーを要素のサイズに含める。これにより、パディングやボーダーを設定しても、指定した幅や高さが維持される */
