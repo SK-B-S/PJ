@@ -1,0 +1,14 @@
+@startuml 出品登録を表示
+
+actor    "登録農家" as act
+boundary "出品登録画面" as Top
+boundary "ブラウザ" as brz
+control  "出品登録コントローラー" as Acquisition_c
+entity   "商品DAO" as merchandise
+
+'-------------------------------------------------------------------------------------------
+
+brz -> Acquisition_c : GET
+Top <- Acquisition_c : 表示する
+act -> Top : 登録農家は登録情報を入力し\n商品登録ボタン
+@enduml
