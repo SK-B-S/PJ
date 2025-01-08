@@ -1,10 +1,10 @@
 /* 全体のスタイル設定 */
 body {
+    display: flex;
     font-family: Arial, sans-serif; /* ベースのフォント */
     margin: 0;
     padding: 0;
     background-color: #f0f0f0; /* 背景色 */
-    display: flex;
     justify-content: center; /* 中央寄せ（横方向） */
     align-items: center; /* 中央寄せ（縦方向） */
     height: 100vh; /* 画面全体をカバー */
