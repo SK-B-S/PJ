@@ -1,0 +1,16 @@
+@startuml 売り上げレポート表示
+
+actor    "登録農家" as act
+boundary "売上レポート画面" as Mypage
+boundary "ブラウザ" as brz
+control  "売上げコントローラー" as Acquisition_c
+entity   "売上DAO" as Farmer_DAO
+
+'-------------------------------------------------------------------------------------------
+
+brz -> Acquisition_c : GET
+Acquisition_c -> Farmer_DAO : 売上情報を取得する
+Acquisition_c <-- Farmer_DAO
+Mypage <- Acquisition_c : 表示する
+
+@enduml
