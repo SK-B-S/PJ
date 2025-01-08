@@ -1,0 +1,18 @@
+@startuml JAS認定審査表示
+
+actor    "登録農家" as act
+boundary "公認マーク登録継続確認画面" as JAS_s
+control  "JAS認定継続コントローラー" as b_c
+entity   "農家アカウントDAO" as Farmer_DAO
+control  "完了コントローラー" as completion_c
+
+'-------------------------------------------------------------------------------------------
+
+act -> JAS_s : アップロードボタンをクリック、\n画像を選択し\n送信ボタンをクリックする
+JAS_s -> b_c : POST(検索結果報告書)
+b_c -> Farmer_DAO : 登録する
+b_c <-- Farmer_DAO :
+b_c -> completion_c : リダイレクト
+completion_c -> JAS_s : メッセージを表示する
+
+@enduml
