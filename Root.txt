@@ -5,7 +5,7 @@ htmlファイル
 Actor
 	管理者-admin				a_[ファイル名].html
 	農家-farmer				f_[ファイル名].html
-	一般ユーザ-general		p_[ファイル名].html
+	一般ユーザ-general		g_[ファイル名].html
 
 css
 	└ style.css
