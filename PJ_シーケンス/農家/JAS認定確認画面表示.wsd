@@ -1,0 +1,16 @@
+@startuml JAS認定審査確認画面を表示
+
+actor    "登録農家" as act
+boundary "JAS認定審査確認画面" as Top
+boundary "ブラウザ" as brz
+control  "JAS認定審査確認コントローラー" as Acquisition_c
+entity   "農家アカウントDAO" as Farmer_dao
+
+'-------------------------------------------------------------------------------------------
+
+brz -> Acquisition_c : GET
+Acquisition_c -> Farmer_dao : 証明書、認定書を取得する
+Acquisition_c <-- Farmer_dao
+Top <- Acquisition_c : 表示する
+
+@enduml

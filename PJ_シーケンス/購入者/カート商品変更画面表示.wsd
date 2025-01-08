@@ -1,0 +1,16 @@
+@startuml カート商品変更画面表示
+
+actor    "登録購入者" as act
+boundary "カート商品変更画面" as Change_Cart
+boundary "ブラウザ" as brz
+control  "カート商品変更コントローラー" as Approval_c
+entity   "カートDAO" as cart_dao
+
+'-------------------------------------------------------------------------------------------
+
+brz ->  Approval_c : GET
+Approval_c -> cart_dao : カート情報を取得する
+cart_dao --> Approval_c
+Change_Cart <-  Approval_c : 表示する
+
+@enduml

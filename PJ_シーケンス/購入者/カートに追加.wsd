@@ -4,7 +4,6 @@ actor    "登録購入者" as act
 boundary "商品詳細画面" as product_details_s
 control "商品詳細js" as js
 control  "カート追加コントローラー" as cart_add
-entity   "商品DAO" as product_details
 entity   "カートDAO" as cart
 
 '-------------------------------------------------------------------------------------------

@@ -2,7 +2,6 @@
 
 actor    "登録購入者" as act
 boundary "カート商品変更画面" as Change_Cart
-boundary "ブラウザ" as brz
 control  "カート商品変更コントローラー" as Approval_c
 entity   "カートDAO" as Account
 boundary "カート画面" as cart
@@ -10,8 +9,6 @@ control  "カートコントローラー" as cart_c
 
 '-------------------------------------------------------------------------------------------
 
-brz ->  Approval_c : GET
-Change_Cart <-  Approval_c : 表示する
 act -> Change_Cart : 数量を変更し\n確定ボタンを\nクリックする
 Change_Cart -> Approval_c: POST(数)
 Approval_c -> Account: 数を更新する
