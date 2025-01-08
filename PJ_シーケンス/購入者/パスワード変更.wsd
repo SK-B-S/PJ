@@ -19,4 +19,5 @@ change_password_c <-- account_db
 change_password_c -> account_db : パスワードを更新する
 change_password_c -> login : リダイレクト
 loguin_d <- login : メッセージ表示する
+
 @enduml

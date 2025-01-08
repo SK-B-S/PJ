@@ -1,4 +1,4 @@
-@startuml 注文履歴を表示
+@startuml 注文履歴表を表示
 
 actor    "登録購入者" as act
 boundary "注文履歴画面" as order_history

@@ -9,7 +9,8 @@ entity   "カートDAO" as cart_dao
 '----------------------------------------------------------------------'
 
 brz ->  change_password_c : GET
-change_password_c -> cart_dao : カート情報を取得
+change_password_c -> cart_dao : カート情報を取得する
+cart_dao --> change_password_c
 change_password  <-  change_password_c : 表示する
 
 @enduml

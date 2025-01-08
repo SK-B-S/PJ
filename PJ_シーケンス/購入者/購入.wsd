@@ -11,8 +11,6 @@ control  "トップページコントローラー" as top_c
 
 '-------------------------------------------------------------------------------------------
 
-brz ->  change_password_c : GET
-change_password  <-  change_password_c : 表示する
 account -> change_password : 確定ボタンをクリックする
 change_password -> change_password_c : POST(購入情報)
 chumon_dao <- change_password_c : 登録する
