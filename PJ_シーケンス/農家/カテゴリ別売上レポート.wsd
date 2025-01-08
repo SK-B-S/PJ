@@ -1,4 +1,4 @@
-@startuml カートを表示
+@startuml カテゴリ別売上レポート
 
 actor    "管理者" as act
 boundary "カート画面" as Cart_s
@@ -9,7 +9,7 @@ entity   "カートDAO" as Cart
 '-------------------------------------------------------------------------------------------
 
 brz -> Acquisition_c : GET
-Acquisition_c -> Cart : アカウント情報で取得する
+Acquisition_c -> Cart : 売上情報を取得する
 Acquisition_c <-- Cart
 Cart_s <- Acquisition_c : 表示する
 

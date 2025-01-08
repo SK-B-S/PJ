@@ -1,0 +1,23 @@
+@startuml パスワード変更
+
+actor    "登録農家" as account
+boundary "パスワード編集画面" as change_password
+boundary "ログイン画面" as loguin_d
+boundary "ブラウザ" as brz
+control  "パスワードコントローラー" as change_password_c
+entity   "アカウントDAO" as account_db
+control  "ログインコントローラー" as login
+
+'-------------------------------------------------------------------------------------------
+
+brz ->  change_password_c : GET
+change_password  <-  change_password_c : 表示する
+account -> change_password : 旧、新パスワード、\nパスワード確認を入力し\n確定ボタンをクリックする
+change_password -> change_password_c : POST(旧、新パスワード)
+change_password_c -> account_db : ログイン認証をする
+change_password_c <-- account_db
+change_password_c -> account_db : パスワードを更新する
+change_password_c -> login : リダイレクト
+loguin_d <- login : メッセージ表示する
+
+@enduml
