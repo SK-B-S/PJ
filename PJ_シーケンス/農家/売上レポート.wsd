@@ -1,4 +1,4 @@
-@startuml 売り上げレポート表示
+@startuml 売上レポート表示
 
 actor    "登録農家" as act
 boundary "売上レポート画面" as Mypage
