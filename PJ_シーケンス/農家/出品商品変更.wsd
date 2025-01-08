@@ -1,0 +1,23 @@
+@startuml 出品商品を変更する
+
+actor    "ユーザー" as account
+boundary "出品商品変更画面" as cart_screen
+boundary "ブラウザ" as brz
+control  "商品変更コントローラー" as delete_c
+entity   "商品DAO" as syouhin_dao
+boundary "トップ画面" as Cart
+control  "完了コントローラー" as cart_c
+
+'--------------------------------------------------------------------------------------
+brz ->  delete_c : GET
+delete_c -> syouhin_dao : 商品情報を取得する
+syouhin_dao --> delete_c
+cart_screen <-  delete_c : 表示する
+account ->  cart_screen : はいボタンを\nクリックする
+cart_screen -> delete_c : POST(商品情報)
+delete_c -> syouhin_dao : 商品情報を更新する
+delete_c <-- syouhin_dao
+delete_c -> cart_c : リダイレクト
+Cart <- cart_c : 表示する
+
+@enduml
