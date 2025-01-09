@@ -4,7 +4,7 @@ actor    "登録購入者" as account
 boundary "マイページ" as Mypage
 boundary "ブラウザ" as brz
 control  "マイページコントローラー" as Acquisition_c
-entity   "アカウントDAO" as Account
+entity   "購入者アカウントDAO" as Account
 
 '-------------------------------------------------------------------------------------------
 

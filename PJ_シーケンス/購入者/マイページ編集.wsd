@@ -3,7 +3,7 @@
 actor    "登録購入者" as act
 boundary "マイページ編集画面" as Change_Mypage
 control  "マイページ編集コントローラー" as Approval_c
-entity   "アカウントDAO" as Account
+entity   "購入者アカウントDAO" as Account
 boundary "マイページ" as Kannryou
 control  "マイページコントローラー" as completion_c
 

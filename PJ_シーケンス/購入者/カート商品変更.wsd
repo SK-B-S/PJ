@@ -11,7 +11,7 @@ control  "カートコントローラー" as cart_c
 
 act -> Change_Cart : 数量を変更し\n確定ボタンを\nクリックする
 Change_Cart -> Approval_c: POST(数)
-Approval_c -> Account: 数を更新する
+Approval_c -> Account: 数量を更新する
 Approval_c -> cart_c : リダイレクト
 cart_c -> cart : メッセージを表示する
 

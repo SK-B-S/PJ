@@ -5,7 +5,7 @@ boundary "パスワード編集画面" as change_password
 boundary "ログイン画面" as loguin_d
 boundary "ブラウザ" as brz
 control  "パスワードコントローラー" as change_password_c
-entity   "アカウントDAO" as account_db
+entity   "購入者アカウントDAO" as account_db
 control  "ログインコントローラー" as login
 
 '-------------------------------------------------------------------------------------------
