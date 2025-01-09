@@ -92,9 +92,20 @@ styleシート対応表
 設計詳細
 	ボディー
 		body {
-			margin: 0; /* 枠と外部の空間 */
-			font-family: Arial, sans-serif; /*  ページ全体で Arial フォント（もし利用できない場合は、代わりにサンセリフ体のフォント）を指定 */
-			min-height: 100vh; /* ページの高さをビューポートの高さに指定 */
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between; /* headerとfooterとの間に空間 */
+			align-items: center;
+
+			margin: 0;
+			font-family: Arial, sans-serif;
+			min-height: 100vh;
+
+			/* 背景に画像を適応させる */
+			background-image: url('path/to/images/file'); /* 画像ファイルのパス */
+			background-size: cover; /* 画像がコンテナ全体にフィットするように */
+			background-position: center; /* 画像を中央に配置 */
+			background-repeat: no-repeat; /* 画像が繰り返し表示されないように */
 		}
 
 	ヘッダー
@@ -106,6 +117,7 @@ styleシート対応表
 			background-color: #f7f7f7; /* 背景色 */
 			border-bottom: 1px solid #000; /* ヘッダーの下に黒い線 */
 			
+			width: 100%; /* ヘッダーの横幅を画面幅に合わせる */
 			height: 120px; /* ヘッダーの厚み */
 			padding: 5px; /* 文字と枠の空間 */
 			
@@ -113,6 +125,21 @@ styleシート対応表
 			color: #000; /* フォントカラー */
 			font-size: 100px; /* フォントサイズ */
 			font-weight: bold; /* フォントのスタイル : 太字 */
+		}
+
+	メイン
+		main {
+		display: flex;
+		flex-direction: column; /* 内部の要素を縦に並べる */
+		align-items: center; /* 中央寄せ */
+
+		width: 100%; /* コンテンツの幅を100%に設定 */
+		max-width: 1200px; /* 最大幅を指定 */
+		padding: 20px;
+		border-radius: 8px; /* 角を丸める */
+
+		background-color: #f7f7f7;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影をつける */
 		}
 
 	フッター
@@ -144,3 +171,20 @@ styleシート対応表
 				border-bottom: 1px solid #000; /* サイドバーの下に黒い線 */
 			}
 		}
+
+	コンテナ
+		/* コンテナのスタイル */
+		.container {
+			display: flex;
+			flex-direction: column; /* 要素を縦に並べる */
+		}
+
+	コンテンツ
+		/* コンテンツのスタイル */
+		.content {
+			flex: 1;
+			padding: 20px;
+			margin: 10px 0;
+		}
+
+		
