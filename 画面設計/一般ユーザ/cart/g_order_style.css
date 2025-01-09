@@ -76,8 +76,8 @@ footer {
 }
 
 .container {
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 100%;
     min-height: 100vh;
