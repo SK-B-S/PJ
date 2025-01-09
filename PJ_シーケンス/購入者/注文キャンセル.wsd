@@ -10,8 +10,6 @@ control  "注文履歴コントローラー" as completion_c
 boundary "注文履歴画面" as ccc
 
 '-------------------------------------------------------------------------
-brz -> history_c : GET
-history_c -> delete_product : 表示する
 account -> delete_product : チェックボックスを選択し\nキャンセルボタン\nをクリックする
 delete_product -> history_c : POST(商品ID)
 history_c -> history_db : キャンセルフラグを更新する
