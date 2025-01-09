@@ -92,9 +92,9 @@ styleシート対応表
 設計詳細
 	ボディー
 		body {
-    margin: 0; /* 枠と外部の空間 */
-    font-family: Arial, sans-serif; /*  ページ全体で Arial フォント（もし利用できない場合は、代わりにサンセリフ体のフォント）を指定 */
-    min-height: 100vh; /* ページの高さをビューポートの高さに指定 */
+			margin: 0; /* 枠と外部の空間 */
+			font-family: Arial, sans-serif; /*  ページ全体で Arial フォント（もし利用できない場合は、代わりにサンセリフ体のフォント）を指定 */
+			min-height: 100vh; /* ページの高さをビューポートの高さに指定 */
 		}
 
 	ヘッダー
@@ -113,7 +113,6 @@ styleシート対応表
 			color: #000; /* フォントカラー */
 			font-size: 100px; /* フォントサイズ */
 			font-weight: bold; /* フォントのスタイル : 太字 */
-
 		}
 
 	フッター
@@ -130,7 +129,18 @@ styleシート対応表
 
 			/* font setting */
 			color: #000; /* フォントカラー */
-			font-size: 20px; /* フォントサイズ */
-			
+			font-size: 20px; /* フォントサイズ */	
 		}
 
+	レシポンシブデザイン
+		/* レスポンシブデザイン -> デバイスに応じた調整を実施 */
+		@media (max-width: 768px) {
+			.container {
+				flex-direction: column; /* 縦方向に配置 */
+			}
+			.sidebar {
+				width: 100%; /* サイドバーの横幅を画面幅に設定 */
+				border-right: none;	/* 右側のサイドバーを削除 */
+				border-bottom: 1px solid #000; /* サイドバーの下に黒い線 */
+			}
+		}

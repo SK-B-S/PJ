@@ -9,8 +9,8 @@ control  "送信完了コントローラー" as Skan_c
 '-------------------------------------------------------------------------------------------
 
 act -> JAS_s : JAS認定書の画像をアップロードし、\n送信ボタンをクリックする
-JAS_s -> Acquisition_c : POST(認定画像)
-Acquisition_c -> Farmer_DAO : 認定画像を登録する
+JAS_s -> Acquisition_c : POST(農家ID, 認定画像)
+Acquisition_c -> Farmer_DAO : 認定書画像を登録する
 Farmer_DAO --> Acquisition_c
 Acquisition_c -> Skan_c : リダイレクト
 Skan_c -> JAS_s : メッセージを表示する

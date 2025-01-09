@@ -16,8 +16,8 @@ Login <- Approval_c : 表示する
 act -> Login : アカウント情報を入力し、\nログインボタンを\nクリックする
 Login -> Approval_c : POST(メールアドレス、パスワード)
 Approval_c -> Account : ログイン認証をする
-Approval_c <-- Account :アカウントアカウントDTO
-Approval_c -> sessyon : ユーザーID, メールアドレス, 氏名を保存する
+Approval_c <-- Account
+Approval_c -> sessyon : 氏名を保存する
 Approval_c -> Completion_c : リダイレクト
 Completion_c -> Top : 表示する
 

@@ -18,6 +18,8 @@ brz -> approval_c : GET
 new_registration <- approval_c : 表示する
 act -> new_registration: 登録情報を入力し、\n新規登録ボタンを\nクリックする
 new_registration-> approval_c: POST(登録情報)
+approval_c -> account_DAO : メールアドレスで検索する
+account_DAO-->approval_c
 approval_c -> account_DAO : 入力情報を登録する
 account_DAO-->approval_c
 approval_c -> account_DAO_provisional : 入力情報を登録する
@@ -30,8 +32,8 @@ approval_c -> login : メッセージを表示する
 act -> mail : URLをクリックする
 mail -> verification_c : GET(トークン)
 verification_c -> account_DAO_provisional : トークンを検証する
-verification_c <-- account_DAO_provisional : ユーザーID
-verification_c -> account_DAO : フラグを更新する
+verification_c <-- account_DAO_provisional : 農家アカウントDTO
+verification_c -> Farmer_account_DAO : アカウントステータスを更新する
 verification_c -> account_DAO_provisional : 入力情報を削除する
 verification_c -> completion_c : リダイレクト
 login <- completion_c : 表示する
