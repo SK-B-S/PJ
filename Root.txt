@@ -94,6 +94,7 @@ styleシート対応表
 設計詳細
 
 	ボディー
+		/* ボディーのスタイル */
 		body {
 			display: flex;
 			flex-direction: column;
@@ -112,6 +113,7 @@ styleシート対応表
 		}
 
 	ヘッダー
+		/* ヘッダーのスタイル */
 		header {
 			display: flex; /* flexboxを使用 */
 			align-items: center; /* 水平方向の位置調整 */
@@ -131,6 +133,7 @@ styleシート対応表
 		}
 
 	メイン
+		/* メインのスタイル */
 		main {
 			display: flex;
 			flex-direction: column; /* 内部の要素を縦に並べる */
@@ -146,6 +149,7 @@ styleシート対応表
 		}
 
 	フッター
+		/* フッターのスタイル */
 		footer {
 			display: flex; /* flexboxを使用 */
 			align-items: center; /* 水平方向の位置調整 */
