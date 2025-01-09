@@ -69,6 +69,7 @@ styleシート対応表
 管理者
 	admin_style.css
 		└ 管理者ログイン			a_login.html
+		└ 管理者トップ				a_top.html
 
 	register_style.css
 		└ 農家アカウント本登録			a_fregister.html
