@@ -77,7 +77,7 @@ styleシート対応表
 
 	accountmanage_style.css
 		└ 農家アカウント管理			a_facntmanage.html
-		└ 一般ユーザアカウント管理		a_pacntmanage.html
+		└ 一般ユーザアカウント管理		a_gacntmanage.html
 
 	accountdetails_style.css
 		└ 農家アカウント詳細			a_fdetails.html
