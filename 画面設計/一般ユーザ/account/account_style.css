@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* headerとfooterとの間に空間 */
+    align-items: center;
+
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    /* 背景に画像を適応させる */
+    background-image: url('path/to/images/file'); /* 画像ファイルのパス */
+    background-size: cover; /* 画像がコンテナ全体にフィットするように */
+    background-position: center; /* 画像を中央に配置 */
+    background-repeat: no-repeat; /* 画像が繰り返し表示されないように */
+}
+
+header {
+    display: flex; /* flexboxを使用 */
+    align-items: center; /* 水平方向の位置調整 */
+    justify-content: center; /* 垂直方向の位置調整 */
+
+    background-color: #f7f7f7; /* 背景色 */
+    border-bottom: 1px solid #000; /* ヘッダーの下に黒い線 */
+    
+    width: 100%; /* ヘッダーの横幅を画面幅に合わせる */
+    height: 120px; /* ヘッダーの厚み */
+    padding: 5px; /* 文字と枠の空間 */
+    
+    /* font setting */
+    color: #000; /* フォントカラー */
+    font-size: 100px; /* フォントサイズ */
+    font-weight: bold; /* フォントのスタイル : 太字 */
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* 内部の要素を縦に並べる */
+    align-items: center; /* 中央寄せ */
+
+    width: 100%; /* コンテンツの幅を100%に設定 */
+    max-width: 1200px; /* 最大幅を指定 */
+    padding: 20px;
+    border-radius: 8px; /* 角を丸める */
+
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影をつける */
+}
+
+footer {
+    display: flex; /* flexboxを使用 */
+    align-items: center; /* 水平方向の位置調整 */
+    justify-content: center; /* 垂直方向の位置調整 */
+
+    background-color: #f7f7f7; /* 背景色 */
+    border-top: 1px solid #000; /* フッターの上に黒い線 */
+
+    height: 30; /* ヘッダーの厚み */
+    padding: 5px; /* 文字と枠の空間 */
+
+    /* font setting */
+    color: #000; /* フォントカラー */
+    font-size: 20px; /* フォントサイズ */	
+}
+
+/* レスポンシブデザイン -> デバイスに応じた調整を実施 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* 縦方向に配置 */
+    }
+    .sidebar {
+        width: 100%; /* サイドバーの横幅を画面幅に設定 */
+        border-right: none;	/* 右側のサイドバーを削除 */
+        border-bottom: 1px solid #000; /* サイドバーの下に黒い線 */
+    }
+}
+
+/* コンテナのスタイル */
+.container {
+    display: flex;
+    flex-direction: column; /* 要素を縦に並べる */
+}
+
+/* コンテンツのスタイル */
+.content {
+    flex: 1;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+/* フォーム全体のスタイル */
+.form-container {
+    background-color: #fff;
+    padding: 150px; /* 内側の余白を少し広げる */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%; /* フォーム全体を広げる */
+    max-width: 1000px; /* 最大幅を800pxに調整 */
+    box-sizing: border-box;
+}
+
+/* ラベルのスタイル */
+label {
+    font-size: 16px; /* ラベルのフォントサイズを少し大きく */
+    margin-bottom: 5px;
+    display: block; /* ブロック要素でラベルを左揃え */
+    color: #333;
+}

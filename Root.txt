@@ -94,6 +94,7 @@ styleシート対応表
 設計詳細
 
 	ボディー
+		/* ボディーのスタイル */
 		body {
 			display: flex;
 			flex-direction: column;
@@ -112,6 +113,7 @@ styleシート対応表
 		}
 
 	ヘッダー
+		/* ヘッダーのスタイル */
 		header {
 			display: flex; /* flexboxを使用 */
 			align-items: center; /* 水平方向の位置調整 */
@@ -131,21 +133,23 @@ styleシート対応表
 		}
 
 	メイン
+		/* メインのスタイル */
 		main {
-		display: flex;
-		flex-direction: column; /* 内部の要素を縦に並べる */
-		align-items: center; /* 中央寄せ */
+			display: flex;
+			flex-direction: column; /* 内部の要素を縦に並べる */
+			align-items: center; /* 中央寄せ */
 
-		width: 100%; /* コンテンツの幅を100%に設定 */
-		max-width: 1200px; /* 最大幅を指定 */
-		padding: 20px;
-		border-radius: 8px; /* 角を丸める */
+			width: 100%; /* コンテンツの幅を100%に設定 */
+			max-width: 1200px; /* 最大幅を指定 */
+			padding: 20px;
+			border-radius: 8px; /* 角を丸める */
 
-		background-color: #f7f7f7;
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影をつける */
+			background-color: #f7f7f7;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影をつける */
 		}
 
 	フッター
+		/* フッターのスタイル */
 		footer {
 			display: flex; /* flexboxを使用 */
 			align-items: center; /* 水平方向の位置調整 */
