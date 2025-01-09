@@ -8,42 +8,43 @@
         <title>マイページ</title>
         <!-- style_top.cssを参照 -->
         <link rel="stylesheet" href="g_mypage_style.css">
-        <!-- last update 2024/11/27 杉田-->
+        <!-- last update 2025/1/9 杉田-->
     </head>
-    <body>
-        <!-- メイン -->
-        <div class="container">
-            <!-- ヘッダー -->
-            <header class="header">
-                <h1>マイページ</h1>
-            </header>
 
-            <main class="main">
-                <!-- 個人情報入力フォーム -->
-                <form action="/mypage" method="POST" class="mypage-form">
-                    <div class="form-group">
+    <body>
+        <!-- ヘッダー -->
+        <header class="header">
+            <p>マイページ</p>
+        </header>
+        <!-- メイン -->
+        <main>
+            <div class="container">
+                <div class="form-group">
+                    <p class="cursive example-text">
                         <label for="name">氏名</label>
-                        <label for="name"></label><br>
+                        <label for="name"></label>
                         <label for="email">メールアドレス</label>
-                        <label for="email"></label><br>
+                        <label for="email"></label>
                         <label for="number">電話番号</label>
-                        <label for="number"></label><br>
+                        <label for="number"></label>
                         <label for="code">郵便番号</label>
-                        <label for="code"></label><br>
+                        <label for="code"></label>
                         <label for="addrese">住所</label>
-                        <label for="addrese"></label><br>
+                        <label for="addrese"></label>
                         <label for="date">生年月日</label>
                         <label for="date"></label>
-                    </div>
+                    </p>
+                </div>
+                <div class="order-btn">
                     <!-- 変更ボタン -->
-                    <button type="submit" class="mypage-btn">変更</button>
-                </form>
-            </main>
-            <!-- フッター -->
-            <footer class="footer">
-                <!-- パスワード変更リンク -->
-                <a href="/password" class="link">パスワード変更はこちら</a>
-            </footer>
-        </div>
+                    <input type="button" value="変更">
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>フッター</p>
+        </footer>
+
     </body>
 </html>

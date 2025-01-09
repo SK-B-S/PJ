@@ -6,7 +6,7 @@
     .sidebar {
         width: 100%;
         border-right: none;
-        border-bottom: 2px solid #000; /* サイドバーの下に黒い線 */
+        border-bottom: 1px solid #000; /* サイドバーの下に黒い線 */
     }
 }
 
@@ -26,7 +26,7 @@ body {
     background-repeat: no-repeat; /* 画像が繰り返し表示されないように */
 }
 
-.header {
+header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,13 +44,13 @@ body {
     font-weight: bold;
 }
 
-.main {
+main {
     display: flex;
     flex-direction: column; /* 内部の要素を縦に並べる */
     align-items: center; /* 中央寄せ */
 
     width: 100%; /* コンテンツの幅を100%に設定（任意） */
-    max-width: 1200px; /* 最大幅を指定（任意） */
+    max-width: 800px; /* 最大幅を指定（任意） */
     padding: 20px;
     border-radius: 8px; /* 角を丸める（任意） */
 
@@ -78,6 +78,9 @@ footer {
 .container {
     display: flex;
     flex-direction: column;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    min-height: 100vh;
 }
 
 .form-group label {
@@ -125,7 +128,7 @@ footer {
 .content {
     flex: 1;
     padding: 20px;
-    margin: 10px 0;
+    margin: 1px 0;
 }
 
 .cursive {
