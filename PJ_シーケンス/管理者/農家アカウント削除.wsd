@@ -10,7 +10,9 @@ control  "商品削除完了コントローラー" as completion_c
 
 act ->  delete_s : はいボタンを\nクリックする
 delete_s -> delete_c : POST(フラグ)
-delete_c -> Farmer_DAO : フラグを変更する
+delete_c -> Farmer_DAO : 削除フラグを更新する
+delete_c <-- Farmer_DAO
+delete_c -> Farmer_DAO : アカウントステータスを更新する
 delete_c <-- Farmer_DAO
 delete_c -> completion_c : リダイレクト
 delete_s <- completion_c : 表示する

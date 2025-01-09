@@ -9,6 +9,6 @@ entity   "農家アカウントDAO" as Farmer_DAO
 '-------------------------------------------------------------------------------------------
 
 brz -> Acquisition_c : GET
-Acquisition_c -> Farmer_DAO : 農家アカウント情報を取得する
+Acquisition_c -> Farmer_DAO : JASステータスが承認待ちの\n農家アカウント情報を取得する
 Acquisition_c <-- Farmer_DAO
 Acquisition_c -> JAS_s : 表示する

@@ -1,0 +1,16 @@
+@startuml 購入者詳細を表示
+
+actor    "管理者" as act
+boundary "購入者詳細画面" as Mypage
+boundary "ブラウザ" as brz
+control  "購入者詳細コントローラー" as Acquisition_c
+entity   "購入者アカウントDAO" as Farmer_DAO
+
+'-------------------------------------------------------------------------------------------
+
+brz -> Acquisition_c : GET
+Acquisition_c -> Farmer_DAO : 購入者アカウント情報を取得する
+Acquisition_c <-- Farmer_DAO
+Mypage <- Acquisition_c : 表示する
+
+@enduml

@@ -4,12 +4,12 @@ actor    "管理者" as act
 boundary "農家アカウント管理画面" as Farmer_management_s
 boundary "ブラウザ" as brz
 control  "農家詳細コントローラー" as Acquisition_c
-entity   "アカウントDAO" as Account_DAO
+entity   "農家アカウントDAO" as Account_DAO
 
 '-------------------------------------------------------------------------------------------
 
 brz -> Acquisition_c : GET
-Acquisition_c -> Account_DAO : アカウント情報を取得する
+Acquisition_c -> Account_DAO : 農家アカウント情報を取得する
 Acquisition_c <-- Account_DAO
 Farmer_management_s <- Acquisition_c : 表示する
 
