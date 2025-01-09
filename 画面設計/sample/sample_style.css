@@ -2,6 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    min-height: 100vh;
 }
 
 /* ヘッダーのスタイル */
@@ -25,20 +26,22 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f7f7f7;
-    height: 30;
+
+    height: 30px;
     padding: 5px;
+
+    background-color: #f7f7f7;
     border-top: 1px solid #000;
 
     /* font-setting */
-    color: #f5f;
+    color: #000;
     font-size: 20px;
 }
 
 /* コンテナのスタイル */
 .container {
     display: flex;
-    height: calc(100vh - 70px); /* ヘッダーの高さを除いた高さ */
+    flex-direction: column;
 }
 
 /* サイドバーのスタイル */
@@ -72,6 +75,7 @@ footer {
 .content {
     flex: 1;
     padding: 20px;
+    margin: 10px 0;
 }
 
 /* レスポンシブデザイン */
@@ -84,4 +88,39 @@ footer {
         border-right: none;
         border-bottom: 1px solid #000; /* サイドバーの下に黒い線 */
     }
+}
+
+h2 {
+    margin-top: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.serif {
+    font-family: 'Times New Roman', Georgia, serif;
+}
+
+.sans-serif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.monospace {
+    font-family: 'Courier New', Consolas, monospace;
+}
+
+.cursive {
+    font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
+}
+
+.fantasy {
+    font-family: Impact, fantasy;
+}
+
+.system {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.example-text {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #333;
 }
