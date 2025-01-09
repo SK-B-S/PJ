@@ -83,7 +83,7 @@ styleシート対応表
 		└ 農家アカウント詳細			a_fdetails.html
 			└ 削除確認ポップアップ			acnt_config.js        // 削除の場合 -> ステータス画面に遷移 / 削除しない場合 -> ポップアップを消す
 
-		└ 一般ユーザアカウント詳細		a_pdetails.html
+		└ 一般ユーザアカウント詳細		a_gdetails.html
 			└ 削除確認ポップアップ			acnt_config.js        // 削除の場合 -> ステータス画面に遷移 / 削除しない場合 -> ポップアップを消す
 
 	jasmanage_style.css
