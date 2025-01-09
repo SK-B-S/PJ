@@ -4,7 +4,7 @@ actor    "登録購入者" as act
 boundary "ログイン画面" as Login
 boundary "ブラウザ" as brz
 control  "ログインコントローラー" as Approval_c
-entity   "アカウントDAO" as Account
+entity   "購入者アカウントDAO" as Account
 entity   "セッション" as sessyon
 boundary "トップ画面" as Top
 control  "トップコントローラー" as Completion_c

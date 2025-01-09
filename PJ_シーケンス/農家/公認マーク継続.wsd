@@ -11,7 +11,7 @@ control  "完了コントローラー" as completion_c
 act -> JAS_s : アップロードボタンをクリック、\n画像を選択し\n送信ボタンをクリックする
 JAS_s -> b_c : POST(農家ID, 継続報告書画像)
 b_c -> Farmer_DAO : 継続報告書画像を登録する
-b_c <-- Farmer_DAO :
+b_c <-- Farmer_DAO
 b_c -> completion_c : リダイレクト
 completion_c -> JAS_s : メッセージを表示する
 

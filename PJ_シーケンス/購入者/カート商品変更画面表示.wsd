@@ -9,7 +9,7 @@ entity   "カートDAO" as cart_dao
 '-------------------------------------------------------------------------------------------
 
 brz ->  Approval_c : GET
-Approval_c -> cart_dao : カート情報を取得する
+Approval_c -> cart_dao : カートに登録されている商品情報を取得する
 cart_dao --> Approval_c
 Change_Cart <-  Approval_c : 表示する
 
