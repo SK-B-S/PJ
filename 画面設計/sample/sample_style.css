@@ -38,6 +38,18 @@ footer {
     font-size: 20px;
 }
 
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #000; /* サイドバーの下に黒い線 */
+    }
+}
+
 /* コンテナのスタイル */
 .container {
     display: flex;
@@ -76,18 +88,6 @@ footer {
     flex: 1;
     padding: 20px;
     margin: 10px 0;
-}
-
-/* レスポンシブデザイン */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    .sidebar {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #000; /* サイドバーの下に黒い線 */
-    }
 }
 
 h2 {
