@@ -136,3 +136,21 @@ footer {
     line-height: 1.5;
     color: #333;
 }
+
+.ac {
+    text-align: right;
+    position: relative;
+    right: -300px;
+}
+
+.link {
+    display: block;
+    color: #007BFF;
+    text-decoration: none;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
