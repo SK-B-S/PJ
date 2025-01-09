@@ -91,6 +91,7 @@ styleシート対応表
 
 
 設計詳細
+
 	ボディー
 		body {
 			display: flex;
