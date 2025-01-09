@@ -1,177 +1,177 @@
 /* 全体統一でのスタイル */
-/* ボディーのスタイル */
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* headerとfooterとの間に空間 */
-    align-items: center;
+    /* ボディーのスタイル */
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* headerとfooterとの間に空間 */
+        align-items: center;
 
-    margin: 0;
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
 
-    /* 背景に画像を適応させる */
-    background-image: url('path/to/images/file'); /* 画像ファイルのパス */
-    background-size: cover; /* 画像がコンテナ全体にフィットするように */
-    background-position: center; /* 画像を中央に配置 */
-    background-repeat: no-repeat; /* 画像が繰り返し表示されないように */
-}
+        /* 背景に画像を適応させる */
+        background-image: url('path/to/images/file'); /* 画像ファイルのパス */
+        background-size: cover; /* 画像がコンテナ全体にフィットするように */
+        background-position: center; /* 画像を中央に配置 */
+        background-repeat: no-repeat; /* 画像が繰り返し表示されないように */
+    }
 
-/* ヘッダーのスタイル */
-header {
-    display: flex; /* flexboxを使用 */
-    align-items: center; /* 水平方向の位置調整 */
-    justify-content: center; /* 垂直方向の位置調整 */
+    /* ヘッダーのスタイル */
+    header {
+        display: flex; /* flexboxを使用 */
+        align-items: center; /* 水平方向の位置調整 */
+        justify-content: center; /* 垂直方向の位置調整 */
 
-    background-color: #f7f7f7; /* 背景色 */
-    border-bottom: 1px solid #000; /* ヘッダーの下に黒い線 */
-    
-    width: 100%; /* ヘッダーの横幅を画面幅に合わせる */
-    height: 120px; /* ヘッダーの厚み */
-    padding: 5px; /* 文字と枠の空間 */
-    
-    /* font setting */
-    color: #000; /* フォントカラー */
-    font-size: 100px; /* フォントサイズ */
-    font-weight: bold; /* フォントのスタイル : 太字 */
-}
+        background-color: #f7f7f7; /* 背景色 */
+        border-bottom: 1px solid #000; /* ヘッダーの下に黒い線 */
+        
+        width: 100%; /* ヘッダーの横幅を画面幅に合わせる */
+        height: 120px; /* ヘッダーの厚み */
+        padding: 5px; /* 文字と枠の空間 */
+        
+        /* font setting */
+        color: #000; /* フォントカラー */
+        font-size: 100px; /* フォントサイズ */
+        font-weight: bold; /* フォントのスタイル : 太字 */
+    }
 
-/* メインのスタイル */
-main {
-    display: flex;
-    flex-direction: column; /* 内部の要素を縦に並べる */
-    align-items: center; /* 中央寄せ */
+    /* メインのスタイル */
+    main {
+        display: flex;
+        flex-direction: column; /* 内部の要素を縦に並べる */
+        align-items: center; /* 中央寄せ */
 
-    width: 100%; /* コンテンツの幅を100%に設定 */
-    max-width: 1200px; /* 最大幅を指定 */
-    padding: 20px;
-    border-radius: 8px; /* 角を丸める */
+        width: 100%; /* コンテンツの幅を100%に設定 */
+        max-width: 1200px; /* 最大幅を指定 */
+        padding: 20px;
+        border-radius: 8px; /* 角を丸める */
 
-    background-color: #f7f7f7;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影をつける */
-}
+        background-color: #f7f7f7;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影をつける */
+    }
 
-/* フッターのスタイル */
-footer {
-    display: flex; /* flexboxを使用 */
-    align-items: center; /* 水平方向の位置調整 */
-    justify-content: center; /* 垂直方向の位置調整 */
+    /* フッターのスタイル */
+    footer {
+        display: flex; /* flexboxを使用 */
+        align-items: center; /* 水平方向の位置調整 */
+        justify-content: center; /* 垂直方向の位置調整 */
 
-    background-color: #f7f7f7; /* 背景色 */
-    border-top: 1px solid #000; /* フッターの上に黒い線 */
+        background-color: #f7f7f7; /* 背景色 */
+        border-top: 1px solid #000; /* フッターの上に黒い線 */
 
-    height: 30; /* ヘッダーの厚み */
-    padding: 5px; /* 文字と枠の空間 */
+        height: 30; /* ヘッダーの厚み */
+        padding: 5px; /* 文字と枠の空間 */
 
-    /* font setting */
-    color: #000; /* フォントカラー */
-    font-size: 20px; /* フォントサイズ */	
-}
+        /* font setting */
+        color: #000; /* フォントカラー */
+        font-size: 20px; /* フォントサイズ */	
+    }
 
-/* レスポンシブデザイン -> デバイスに応じた調整を実施 */
-@media (max-width: 768px) {
+    /* レスポンシブデザイン -> デバイスに応じた調整を実施 */
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column; /* 縦方向に配置 */
+        }
+        .sidebar {
+            width: 100%; /* サイドバーの横幅を画面幅に設定 */
+            border-right: none;	/* 右側のサイドバーを削除 */
+            border-bottom: 1px solid #000; /* サイドバーの下に黒い線 */
+        }
+    }
+
+    /* コンテナのスタイル */
     .container {
-        flex-direction: column; /* 縦方向に配置 */
+        display: flex;
+        flex-direction: column; /* 要素を縦に並べる */
     }
-    .sidebar {
-        width: 100%; /* サイドバーの横幅を画面幅に設定 */
-        border-right: none;	/* 右側のサイドバーを削除 */
-        border-bottom: 1px solid #000; /* サイドバーの下に黒い線 */
+
+    /* コンテンツのスタイル */
+    .content {
+        flex: 1;
+        padding: 20px;
+        margin: 10px 0;
     }
-}
-
-/* コンテナのスタイル */
-.container {
-    display: flex;
-    flex-direction: column; /* 要素を縦に並べる */
-}
-
-/* コンテンツのスタイル */
-.content {
-    flex: 1;
-    padding: 20px;
-    margin: 10px 0;
-}
 
 
 /* サインアップページのスタイル */
-/* フォーム全体のスタイル */
-.form-container {
-    background-color: #fff;
-    padding: 150px; /* 内側の余白を少し広げる */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 60%; /* フォーム全体を広げる */
-    max-width: 1000px; /* 最大幅を800pxに調整 */
-    box-sizing: border-box;
-}
+    /* フォーム全体のスタイル */
+    .form-container {
+        background-color: #fff;
+        padding: 150px; /* 内側の余白を少し広げる */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 60%; /* フォーム全体を広げる */
+        max-width: 1000px; /* 最大幅を800pxに調整 */
+        box-sizing: border-box;
+    }
 
-/* 見出しのスタイル */
-.su_h1 {
-    margin-bottom: 25px;
-    font-size: 40px;
-    color: #333;
-    text-align: center; /* 中央揃え */
-}
+    /* 見出しのスタイル */
+    .su_h1 {
+        margin-bottom: 25px;
+        font-size: 40px;
+        color: #333;
+        text-align: center; /* 中央揃え */
+    }
 
 
-/* ラベルのスタイル */
-label {
-    font-size: 16px; /* ラベルのフォントサイズを少し大きく */
-    margin-bottom: 5px;
-    display: block; /* ブロック要素でラベルを左揃え */
-    color: #333;
-}
+    /* ラベルのスタイル */
+    .su_label {
+        font-size: 16px; /* ラベルのフォントサイズを少し大きく */
+        margin-bottom: 5px;
+        display: block; /* ブロック要素でラベルを左揃え */
+        color: #333;
+    }
 
-/* 入力フィールドのスタイル */
-input[type="text"],
-input[type="email"],
-input[type="phone"],
-input[type="zipcode"],
-input[type="address"],
-input[type="date"],
-input[type="password"] {
+    /* 入力フィールドのスタイル */
+    .su_input[type="text"],
+    .su_input[type="email"],
+    .su_input[type="phone"],
+    .su_input[type="zipcode"],
+    .su_input[type="address"],
+    .su_input[type="date"],
+    .su_input[type="password"] {
 
-    width: 100%;
-    max-width: 100%; /* 入力フィールドの最大幅を広げる */
-    padding: 12px; /* 内側の余白を広げる */
-    margin-bottom: 20px; /* 下の余白を調整 */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px; /* フォントサイズを大きく */
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
-}
+        width: 100%;
+        max-width: 100%; /* 入力フィールドの最大幅を広げる */
+        padding: 12px; /* 内側の余白を広げる */
+        margin-bottom: 20px; /* 下の余白を調整 */
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px; /* フォントサイズを大きく */
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+    }
 
-/* フォーカス時のスタイル */
-input:focus {
-    border-color: #4CAF50;
-    outline: none;
-}
+    /* フォーカス時のスタイル */
+    .su_input:focus {
+        border-color: #4CAF50;
+        outline: none;
+    }
 
-/* ボタンのスタイル */
-.su_button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 14px; /* ボタンの高さを調整 */
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    max-width: 100%; /* ボタンの幅を入力フィールドに揃える */
-}
+    /* ボタンのスタイル */
+    .su_button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 14px; /* ボタンの高さを調整 */
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%;
+        max-width: 100%; /* ボタンの幅を入力フィールドに揃える */
+    }
 
-/* ホバー時のスタイル */
-button:hover {
-    background-color: #376a3a;
-}
+    /* ホバー時のスタイル */
+    .su_button:hover {
+        background-color: #376a3a;
+    }
 
-.flatpickr-calendar {
-    font-size: 20px;
-    width: 350px;
-}
+    .flatpickr-calendar {
+        font-size: 20px;
+        width: 350px;
+    }
 
 
 /* ログインページのスタイル */

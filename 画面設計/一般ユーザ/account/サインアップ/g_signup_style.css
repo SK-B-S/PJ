@@ -28,7 +28,7 @@ h1 {
 }
 
 /* ラベルのスタイル */
-label {
+.su_label {
     font-size: 16px; /* ラベルのフォントサイズを少し大きく */
     margin-bottom: 5px;
     display: block; /* ブロック要素でラベルを左揃え */
@@ -36,37 +36,37 @@ label {
 }
 
 /* 入力フィールドのスタイル */
-input[type="text"],
-input[type="email"],
-input[type="phone"],
-input[type="zipcode"],
-input[type="address"],
-input[type="date"],
-input[type="password"] {
+.su_input[type="text"],
+.su_input[type="email"],
+.su_input[type="phone"],
+.su_input[type="zipcode"],
+.su_input[type="address"],
+.su_input[type="date"],
+.su_input[type="password"] {
     width: 100%;
     max-width: 600px; /* 入力フィールドの最大幅を広げる */
     padding: 12px; /* 内側の余白を広げる */
     margin-bottom: 20px; /* 下の余白を調整 */
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 4px; /*角の丸み4px*/
     font-size: 16px; /* フォントサイズを大きく */
     box-sizing: border-box;
     transition: border-color 0.3s ease;
 }
 
 /* フォーカス時のスタイル */
-input:focus {
+.su_input:focus {
     border-color: #4CAF50;
     outline: none;
 }
 
 /* ボタンのスタイル */
-button {
+.su_button {
     background-color: #4CAF50;
     color: white;
     border: none;
     padding: 14px; /* ボタンの高さを調整 */
-    border-radius: 4px;
+    border-radius: 4px; /*角の丸み : 4px*/
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -75,7 +75,7 @@ button {
 }
 
 /* ホバー時のスタイル */
-button:hover {
+.su_button:hover {
     background-color: #45a049;
 }
 
