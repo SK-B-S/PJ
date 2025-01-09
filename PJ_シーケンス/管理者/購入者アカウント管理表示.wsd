@@ -4,12 +4,12 @@ actor    "管理者" as act
 boundary "購入者アカウント管理画面" as purchase_management_s
 boundary "ブラウザ" as brz
 control  "購入者コントローラー" as Acquisition_c
-entity   "アカウントDAO" as Account_DAO
+entity   "購入者アカウントDAO" as Account_DAO
 
 '-------------------------------------------------------------------------------------------
 
 brz -> Acquisition_c : GET
-Acquisition_c -> Account_DAO : アカウント情報を取得する
+Acquisition_c -> Account_DAO : 購入者アカウント情報を取得する
 Acquisition_c <-- Account_DAO
 purchase_management_s <- Acquisition_c : 表示する
 

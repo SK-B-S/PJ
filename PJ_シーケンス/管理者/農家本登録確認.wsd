@@ -1,27 +1,30 @@
-@startuml 農家本登録
+@startuml 農家本登録の確認
 
 actor    "管理者" as act
-boundary "農家本登録画面" as Farmer_s
-boundary "メール画面" as mail
+boundary "農家本登録確認画面" as Farmer_s
 boundary "ブラウザ" as brz
+boundary "メール画面" as mail
 control  "農家本登録コントローラー" as Farmer_c
 control  "検証コントローラー" as verification_c
 control  "完了コントローラー" as completion_c
-entity   "アカウントDAO" as account_DAO
+entity   "農家アカウントDAO" as account_DAO
 control  "完了コントローラー" as completion_c
+boundary "農家本登録画面" as Farmers_s
 
 '-------------------------------------------------------------------------------------------
 
 brz -> Farmer_c : GET
-Farmer_c -> account_DAO : 登録農家アカウント情報を取得する
+Farmer_c -> account_DAO : 農家アカウント情報を取得する
 Farmer_c <-- account_DAO
 Farmer_s <- Farmer_c : 表示する
 act -> Farmer_s : 承認を選択し、\n確定ボタンをクリックする
-Farmer_s -> Farmer_c : POST(フラグ)
-Farmer_c -> account_DAO : フラグを更新する
+Farmer_s -> Farmer_c : POST(農家証明フラグ)
+Farmer_c -> account_DAO : 農家証明フラグを更新する
+account_DAO --> Farmer_c
+Farmer_c -> account_DAO : アカウントステータスを更新する
 account_DAO --> Farmer_c
 Farmer_c -> mail : 確認メールを送信する
 Farmer_c -> completion_c : リダイレクト
-Farmer_c -> Farmer_s : メッセージを表示する
+completion_c -> Farmers_s : メッセージを表示する
 
 @enduml

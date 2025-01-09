@@ -1,4 +1,4 @@
-@startuml 農家本登録
+@startuml 農家本登録画面を表示
 
 actor    "管理者" as act
 boundary "農家本登録画面" as Farmer_s
@@ -9,6 +9,6 @@ entity   "農家アカウントDAO" as account_DAO
 '-------------------------------------------------------------------------------------------
 
 brz -> Farmer_c : GET
-Farmer_c -> account_DAO : 農家アカウント情報を取得する
+Farmer_c -> account_DAO : アカウントステータスが未承認の\n農家アカウント情報を取得する
 Farmer_c <-- account_DAO
 Farmer_s <- Farmer_c : 表示する

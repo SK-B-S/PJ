@@ -1,23 +1,18 @@
 @startuml 購入者アカウントステータス変更
 
 actor    "管理者" as act
-boundary "購入者アカウント\nステータス変更画面" as Account_change
+boundary "購入者詳細画面" as Account_change
 boundary "メール画面" as mail
-boundary "ブラウザ" as brz
 control  "購入者コントローラー" as purchase_c
 control  "完了コントローラー" as completion_c
 entity   "購入者アカウントDAO" as purchase_account_DAO
 
 '-------------------------------------------------------------------------------------------
 
-brz -> purchase_c : GET
-purchase_c -> purchase_account_DAO : ステータスを取得する
-purchase_c <-- purchase_account_DAO
-Account_change <- purchase_c : 表示する
 act -> Account_change : ステータスを選択し、\n確定ボタンをクリックする
 Account_change -> purchase_c : POST(ステータス)
 purchase_c -> purchase_account_DAO : ステータスを更新する
-purchase_account_DAO --> purchase_c : 農家メールアドレス
+purchase_account_DAO --> purchase_c
 purchase_c -> mail : 確認メールを送信する
 purchase_c -> completion_c : リダイレクト
 completion_c -> Account_change : メッセージを表示する
