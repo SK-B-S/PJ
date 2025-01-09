@@ -21,7 +21,7 @@ body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
 
-    background-image: url('../sample/rabbit.jpg'); /* 画像ファイルのパス */
+    background-image: url('../sample/ms.jpg'); /* 画像ファイルのパス */
     background-size: cover; /* 画像がコンテナ全体にフィットするように */
     background-position: center; /* 画像を中央に配置 */
     background-repeat: no-repeat; /* 画像が繰り返し表示されないように */
