@@ -8,12 +8,14 @@
         <title>注文内容確認</title>
         <!-- style_top.cssを参照 -->
         <link rel="stylesheet" href="g_order_style.css">
-        <!-- last update 2025/1/8 杉田-->
+        <!-- last update 2025/1/9 杉田-->
+
     </head>
+
     <body>
         <!-- ヘッダー -->
         <header class="header">
-            <h1>注文内容確認</h1>
+            <p>注文内容確認</p>
         </header>
         <!-- メイン -->
         <div class="container">
@@ -21,37 +23,43 @@
                 <!-- 注文情報フォーム -->
                 <form action="/order" method="POST" class="order">
                     <div class="form-group">
-                        <label for="addrese">お届け先</label>
-                        <label for="addrese"></label><br>
-                        <label for="pay">支払い方法</label>
-                        <label for="pay"></label><br>
-                        <label for="name">商品名</label>
-                        <label for="name"></label><br>
-                        <label for="quantity">数量</label>
-                        <label for="quantity"></label><br>
+                        <p class="cursive example-text">
+                            <label for="addrese">お届け先</label>
+                            <label for="addrese">あ</label>
+                            <label for="pay">支払い方法</label>
+                            <label for="pay">あ</label>
+                            <label for="name">商品名</label>
+                            <label for="name">あ</label>
+                            <label for="quantity">数量</label>
+                            <label for="quantity">あ</label>
+                        </p>
                     </div>
 
                     <!-- メール表示 -->
                     <form action="/mail" method="POST" class="mail-form">
                         <div class="form-group">
-                            <label for="mail">
-                                ■ 代金引換<br>
-                                ・代金は商品配送時にお支払いください。<br>
-                                ・配送時のお支払方法は現金のみとなっております。<br>
-                                ・〔代引き手数料料金表〕<br>
-                                    全国一律料金：300円
-                            </label>
-                            <!-- 注文確定ボタン -->
-                            <button type="submit" class="order-btn">注文を確定</button>
-                            <!-- 戻るボタン -->
-                            <button type="submit" class="order-btn">戻る</button>
+                            <p class="cursive example-text">
+                                <label for="mail">
+                                    ■ 代金引換<br>
+                                    ・代金は商品配送時にお支払いください。<br>
+                                    ・配送時のお支払方法は現金のみとなっております。<br>
+                                    ・〔代引き手数料料金表〕<br>
+                                        全国一律料金：300円
+                                </label>
+                            </p>
+                            <div class="order-btn">
+                                <!-- 注文確定ボタン -->
+                                <input type="button" value="確定">
+                                <!-- 戻るボタン -->
+                                <input type="button" value="戻る">
+                            </div>
                         </div>
                     </form>
                 </form>
             </main>
         </div>
         <footer>
-            <p></p>
+            <p>フッター</p>
         </footer>
     </body>
 </html>
