@@ -1,3 +1,5 @@
+/* 全体統一でのスタイル */
+/* ボディーのスタイル */
 body {
     display: flex;
     flex-direction: column;
@@ -15,6 +17,7 @@ body {
     background-repeat: no-repeat; /* 画像が繰り返し表示されないように */
 }
 
+/* ヘッダーのスタイル */
 header {
     display: flex; /* flexboxを使用 */
     align-items: center; /* 水平方向の位置調整 */
@@ -33,6 +36,7 @@ header {
     font-weight: bold; /* フォントのスタイル : 太字 */
 }
 
+/* メインのスタイル */
 main {
     display: flex;
     flex-direction: column; /* 内部の要素を縦に並べる */
@@ -47,6 +51,7 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影をつける */
 }
 
+/* フッターのスタイル */
 footer {
     display: flex; /* flexboxを使用 */
     align-items: center; /* 水平方向の位置調整 */
@@ -88,6 +93,8 @@ footer {
     margin: 10px 0;
 }
 
+
+/* サインアップページのスタイル */
 /* フォーム全体のスタイル */
 .form-container {
     background-color: #fff;
@@ -99,6 +106,15 @@ footer {
     box-sizing: border-box;
 }
 
+/* 見出しのスタイル */
+.su_h1 {
+    margin-bottom: 25px;
+    font-size: 40px;
+    color: #333;
+    text-align: center; /* 中央揃え */
+}
+
+
 /* ラベルのスタイル */
 label {
     font-size: 16px; /* ラベルのフォントサイズを少し大きく */
@@ -106,3 +122,56 @@ label {
     display: block; /* ブロック要素でラベルを左揃え */
     color: #333;
 }
+
+/* 入力フィールドのスタイル */
+input[type="text"],
+input[type="email"],
+input[type="phone"],
+input[type="zipcode"],
+input[type="address"],
+input[type="date"],
+input[type="password"] {
+
+    width: 100%;
+    max-width: 100%; /* 入力フィールドの最大幅を広げる */
+    padding: 12px; /* 内側の余白を広げる */
+    margin-bottom: 20px; /* 下の余白を調整 */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* フォントサイズを大きく */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* フォーカス時のスタイル */
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* ボタンのスタイル */
+.su_button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 14px; /* ボタンの高さを調整 */
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 100%; /* ボタンの幅を入力フィールドに揃える */
+}
+
+/* ホバー時のスタイル */
+button:hover {
+    background-color: #376a3a;
+}
+
+.flatpickr-calendar {
+    font-size: 20px;
+    width: 350px;
+}
+
+
+/* ログインページのスタイル */
