@@ -8,7 +8,7 @@ boundary "ブラウザ" as brz
 control  "ログインコントローラー" as login_c
 boundary "メール検証失敗画面" as mail_fail
 control  "検証コントローラー" as verification_c
-entity   "アカウントDAO" as account_db
+entity   "購入者アカウントDAO" as account_db
 entity   "仮アカウントDAO" as account_db_provisional
 
 
