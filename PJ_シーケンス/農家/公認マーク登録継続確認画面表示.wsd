@@ -9,7 +9,7 @@ entity   "農家アカウントDAO" as Farmer_dao
 '-------------------------------------------------------------------------------------------
 
 brz -> Acquisition_c : GET
-Acquisition_c -> Farmer_dao : 証明書、認定書を取得する
+Acquisition_c -> Farmer_dao : 農家アカウント情報を取得する
 Acquisition_c <-- Farmer_dao
 Top <- Acquisition_c : 表示する
 
