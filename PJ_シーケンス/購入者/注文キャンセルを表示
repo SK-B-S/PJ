@@ -1,0 +1,16 @@
+@startuml 注文キャンセルを表示
+
+actor    "登録購入者" as act
+boundary "注文キャンセル画面" as order_history
+boundary "ブラウザ" as brz
+control  "注文キャンセルコントローラー" as order_history_c
+entity   "注文DAO" as order_history_dao
+
+'-------------------------------------------------------------------------------------------
+
+brz -> order_history_c : GET(注文番号)
+order_history_c -> order_history_dao : 注文情報を取得する
+order_history_c <-- order_history_dao
+order_history <- order_history_c : 表示する
+
+@enduml
