@@ -5,7 +5,7 @@ boundary "注文内容確認画面" as change_password
 boundary "トップページ" as top
 boundary "ブラウザ" as brz
 control  "購入コントローラー" as change_password_c
-entity   "注文履歴DAO" as chumon_dao
+entity   "注文DAO" as chumon_dao
 entity   "カートDAO" as cart_dao
 control  "トップページコントローラー" as top_c
 
@@ -13,7 +13,7 @@ control  "トップページコントローラー" as top_c
 
 account -> change_password : 確定ボタンをクリックする
 change_password -> change_password_c : POST(購入情報)
-chumon_dao <- change_password_c : 登録する
+chumon_dao <- change_password_c : 注文情報を登録する
 chumon_dao --> change_password_c
 cart_dao <- change_password_c : カート情報を削除する
 cart_dao --> change_password_c
