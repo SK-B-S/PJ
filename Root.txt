@@ -90,31 +90,57 @@ styleシート対応表
 		└ JAS認証審査確認			a_jasconf.html
 
 設計詳細
+	ボディー
+		body {
+			margin: 0; /* 枠と外部の空間 */
+			font-family: Arial, sans-serif; /*  ページ全体で Arial フォント（もし利用できない場合は、代わりにサンセリフ体のフォント）を指定 */
+			min-height: 100vh; /* ページの高さをビューポートの高さに指定 */
+		}
+
 	ヘッダー
 		header {
-			display: flex;
+			display: flex; /* flexboxを使用 */
 			align-items: center; /* 水平方向の位置調整 */
 			justify-content: center;　/* 垂直方向の位置調整 */
+
 			background-color: #f7f7f7; /* 背景色 */
-			height: 120px; /* ヘッダーの厚み */
-			padding: 5px; /* 文字と枠の空間 */
 			border-bottom: 1px solid #000; /* ヘッダーの下に黒い線 */
 			
+			height: 120px; /* ヘッダーの厚み */
+			padding: 5px; /* 文字と枠の空間 */
+			
 			/* font setting */
-			color: #000;
-			font-size: 100px;
-			font-weight: bold;
-
+			color: #000; /* フォントカラー */
+			font-size: 100px; /* フォントサイズ */
+			font-weight: bold; /* フォントのスタイル : 太字 */
 		}
 
 	フッター
 		footer {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			background-color: #f7f7f7;
-			height: 30;
-			padding: 5px;
-			border-top: 1px solid #000;
+			display: flex; /* flexboxを使用 */
+			align-items: center; /* 水平方向の位置調整 */
+			justify-content: center; /* 垂直方向の位置調整 */
+
+			background-color: #f7f7f7; /* 背景色 */
+			border-top: 1px solid #000; /* フッターの上に黒い線 */
+
+			height: 30; /* ヘッダーの厚み */
+			padding: 5px; /* 文字と枠の空間 */
+
+			/* font setting */
+			color: #000; /* フォントカラー */
+			font-size: 20px; /* フォントサイズ */	
 		}
 
+	レシポンシブデザイン
+		/* レスポンシブデザイン -> デバイスに応じた調整を実施 */
+		@media (max-width: 768px) {
+			.container {
+				flex-direction: column; /* 縦方向に配置 */
+			}
+			.sidebar {
+				width: 100%; /* サイドバーの横幅を画面幅に設定 */
+				border-right: none;	/* 右側のサイドバーを削除 */
+				border-bottom: 1px solid #000; /* サイドバーの下に黒い線 */
+			}
+		}

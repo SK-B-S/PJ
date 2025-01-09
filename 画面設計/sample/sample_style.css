@@ -1,7 +1,25 @@
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #000; /* サイドバーの下に黒い線 */
+    }
+}
+
 /* 全体のスタイル */
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* headerとfooterとの間に空間 */
+    align-items: center;
+
     margin: 0;
     font-family: Arial, sans-serif;
+    min-height: 100vh;
 }
 
 /* ヘッダーのスタイル */
@@ -9,10 +27,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+
     background-color: #f7f7f7;
+    border-bottom: 1px solid #000; /* ヘッダーの下に黒い線 */
+
+    width: 100%;
     height: 120px; /* ヘッダーの厚み */
     padding: 5px;
-    border-bottom: 1px solid #000; /* ヘッダーの下に黒い線 */
 
     /* font setting */
     color: #000;
@@ -21,24 +42,42 @@ header {
 
 }
 
+main {
+    display: flex;
+    flex-direction: column; /* 内部の要素を縦に並べる */
+    align-items: center; /* 中央寄せ */
+
+    width: 100%; /* コンテンツの幅を100%に設定（任意） */
+    max-width: 1200px; /* 最大幅を指定（任意） */
+    padding: 20px;
+    border-radius: 8px; /* 角を丸める（任意） */
+
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影をつける（任意） */
+}
+
+
 footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f7f7f7;
-    height: 30;
+
+    width: 100%;
+    height: 30px;
     padding: 5px;
+
+    background-color: #f7f7f7;
     border-top: 1px solid #000;
 
     /* font-setting */
-    color: #f5f;
+    color: #000;
     font-size: 20px;
 }
 
 /* コンテナのスタイル */
 .container {
     display: flex;
-    height: calc(100vh - 70px); /* ヘッダーの高さを除いた高さ */
+    flex-direction: column;
 }
 
 /* サイドバーのスタイル */
@@ -72,16 +111,40 @@ footer {
 .content {
     flex: 1;
     padding: 20px;
+    margin: 10px 0;
 }
 
-/* レスポンシブデザイン */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    .sidebar {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #000; /* サイドバーの下に黒い線 */
-    }
+h2 {
+    margin-top: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.serif {
+    font-family: 'Times New Roman', Georgia, serif;
+}
+
+.sans-serif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.monospace {
+    font-family: 'Courier New', Consolas, monospace;
+}
+
+.cursive {
+    font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
+}
+
+.fantasy {
+    font-family: Impact, fantasy;
+}
+
+.system {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.example-text {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #333;
 }
