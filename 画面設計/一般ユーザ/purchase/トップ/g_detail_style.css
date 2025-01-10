@@ -103,19 +103,24 @@ footer {
     padding: 5px;
     padding-top: -20%;
     position: relative;
-    right: -300px;
+    right: -400px;
+}
+
+.mypage-btn {
+    padding: 5px;
+    padding-top: -20%;
+    position: relative;
+    right: -400px;
 }
 
 input {
     display: inline-block;
-    text-align: center;
     padding: 1em 0.5em;
     line-height: 1;
     border: 1px solid #999;
     box-sizing: border-box;
     background: #f2f2f2;
     margin: 0.5em 0;
-    font-size: 50%;
 }
 
 /* レスポンシブデザイン */
