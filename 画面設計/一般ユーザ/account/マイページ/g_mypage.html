@@ -16,40 +16,49 @@
         <header class="header">
             <p>マイページ</p>
         </header>
-        <!-- メイン -->
-        <main>
             <div class="container">
-                <div class="form-group">
-                    <p class="cursive example-text">
-                        <form action="/pass" method="POST" class="pass-form">
-                            <div class="form-group">
-                                <label for="name">氏名</label>
-                                <input type="name" id="name" name="name" required>
-                                <label for="email">メールアドレス</label>
-                                <input type="email" id="email" name="email" required>
-                                <label for="phone">電話番号</label>
-                                <input type="phone" id="phone" name="phone" required>
-                                <label for="code">郵便番号</label>
-                                <input type="code" id="code" name="code" required>
-                                <label for="addrese">住所</label>
-                                <input type="addrese" id="addrese" name="addrese" required>
-                                <label for="date">生年月日</label>
-                                <input type="date" id="date" name="date" required>
-                            </div>
-                        </form>
-                    </p>
-                </div>
-                <!-- 変更ボタン -->
-                <button type="submit" class="mypage-btn">変更</button>
+                <p class="cursive example-text">
+                    <form>
+                        <label class="my_label" for="name" style="font-weight: bold;">氏名</label>
+                        <input class="my_input" type="text" id="name" name="name">
+
+                        <label class="my_label" for="email" style="font-weight: bold;">メールアドレス</label>
+                        <input class="my_input" type="email" id="email" name="email">
+
+                        <label class="my_label" for="phone" style="font-weight: bold;">電話番号</label>
+                        <input class="my_input" type="phone" id="phone" name="phone">
+
+                        <label class="my_label" for="zipcode" style="font-weight: bold;">郵便番号</label>
+                        <input class="my_input" type="zipcode" id="zipcode" name="zipcode">
+
+                        <label class="my_label" for="address" style="font-weight: bold;">住所</label>
+                        <input class="my_input" type="address" id="address" name="address">
+
+                        <label class="my_label" for="date" style="font-weight: bold;">生年月日</label>
+                        <input class="my_input" type="text" id="date" name="date">
+
+                        <!-- 変更ボタン -->
+                        <button type="mybmit" class="mypage-btn" href="#">変更</button>
+                    </form>
+
+                    <div class="ac">
+                        <a href="https://ac.com/">パスワード変更はこちら</a>
+                    </div>
+                </p>
             </div>
-            <div class="ac">
-                <a href="https://ac.com/">パスワード変更はこちら</a>
-            </div>
-        </main>
 
         <footer>
             <p>フッター</p>
         </footer>
+
+        <script>
+            flatpickr( "#date", {
+                dateFormat: "Y-m-d",  // YYYY-MM-DD形式
+                locale: flatpickr.l10ns.ja,  // 日本語ロケールの指定
+                defaultDate: "",  // デフォルト空白
+                allowInput : true      // 直接入力も許可
+            });
+        </script>
 
     </body>
 </html>
