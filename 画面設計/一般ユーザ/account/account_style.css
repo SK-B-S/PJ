@@ -58,7 +58,7 @@
         justify-content: center; /* 垂直方向の位置調整 */
 
         width: 100%;
-        height: 30px; /* フッターの厚み */
+        height: 10%; /* フッターの厚み */
         padding: 5px; /* 文字と枠の空間 */
 
         background-color: #f7f7f7; /* 背景色 */
@@ -213,3 +213,6 @@
 
         padding-top: 5px;
     }    
+
+
+/* マイページのスタイル */
