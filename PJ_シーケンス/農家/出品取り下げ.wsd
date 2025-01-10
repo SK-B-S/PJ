@@ -5,7 +5,7 @@ boundary "出品取り下げ画面" as cart_screen
 boundary "ブラウザ" as brz
 control  "商品取り下げ\nコントローラー" as delete_c
 entity   "商品DAO" as cart_db
-control  "カートコントローラー" as cart_c
+control  "トップコントローラー" as cart_c
 boundary "トップ画面" as Top
 
 '--------------------------------------------------------------------------------------
