@@ -26,26 +26,22 @@
                 <!-- 入力フォーム -->
                 <form action="/login" method="POST" class="login-form">
 
-                    <div class="form-group">
-                        <label for="email">メールアドレス</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
+                    <label class="li_label" for="email">メールアドレス</label>
+                    <input class="li_input" type="email" id="email" name="email" placeholder="メールアドレス">
 
-                    <div class="form-group">
-                        <label for="password">パスワード</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
+                    <label class="li_label" for="password">パスワード</label>
+                    <input class="li_input" type="password" id="password" name="password" placeholder="パスワード">
 
                     <!-- ログインボタン -->
-                    <button type="submit" class="login-btn">ログイン</button>
+                    <button class="form_button" type="submit" class="login-btn">ログイン</button>
                 
                 </form>
 
             </div>
 
             <div class="container">
-                <a href="/register">新規登録</a>
-                <a href="/farmer-login">農家の方はこちら</a>           
+                <a class="li_link" href="/register">新規登録</a>
+                <a class="li_link" href="/farmer-login">農家の方はこちら</a>           
             </div>    
 
         </main>
