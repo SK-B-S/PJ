@@ -17,7 +17,7 @@ act -> Login : アカウント情報を入力し、\nログインボタンを\n�
 Login -> Approval_c : POST(メールアドレス、パスワード)
 Approval_c -> Account : ログイン認証をする
 Approval_c <-- Account
-Approval_c -> sessyon : 氏名を保存する
+Approval_c -> sessyon : 氏名, 証明書画像, 認定書画像, \nステータス名を保存する
 Approval_c -> Completion_c : リダイレクト
 Completion_c -> Top : 表示する
 

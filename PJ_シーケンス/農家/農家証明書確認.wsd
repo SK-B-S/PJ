@@ -9,7 +9,7 @@ entity   "農家アカウントDAO" as Farmer_DAO
 '-------------------------------------------------------------------------------------------
 
 brz -> Acquisition_c : GET
-Acquisition_c -> Farmer_DAO : JASステータスを取得する
+Acquisition_c -> Farmer_DAO : 農家アカウントDTOを\n取得する
 Acquisition_c <-- Farmer_DAO
 Mypage <- Acquisition_c : メッセージ表示する
 

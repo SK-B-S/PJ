@@ -9,7 +9,7 @@ entity   "商品DAO" as merchandise
 '-------------------------------------------------------------------------------------------
 
 brz -> Acquisition_c : GET
-Acquisition_c -> merchandise : 商品情報を取得する
+Acquisition_c -> merchandise : 出品商品を取得する
 Acquisition_c <-- merchandise
 Top <- Acquisition_c : 表示する
 
