@@ -4,7 +4,7 @@ actor    "管理者" as act
 boundary "カート画面" as Cart_s
 boundary "ブラウザ" as brz
 control  "カートコントローラー" as Acquisition_c
-entity   "カートDAO" as Cart
+entity   "売上DAO" as Cart
 
 '-------------------------------------------------------------------------------------------
 

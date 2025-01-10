@@ -10,13 +10,12 @@ control  "完了コントローラー" as cart_c
 
 '--------------------------------------------------------------------------------------
 brz ->  delete_c : GET
-delete_c -> syouhin_dao : 商品情報を取得する
+delete_c -> syouhin_dao : 出品商品を取得する
 syouhin_dao --> delete_c
 cart_screen <-  delete_c : 表示する
 account ->  cart_screen : はいボタンを\nクリックする
 cart_screen -> delete_c : POST(商品情報)
 delete_c -> syouhin_dao : 商品情報を更新する
-delete_c <-- syouhin_dao
 delete_c -> cart_c : リダイレクト
 Cart <- cart_c : 表示する
 

@@ -14,7 +14,7 @@ brz ->  delete_c : GET
 cart_screen <-  delete_c : 表示する
 account ->  cart_screen : はいボタンを\nクリックする
 cart_screen -> delete_c : POST(商品ID)
-delete_c -> cart_db : フラグを更新する
+delete_c -> cart_db : 取り下げフラグを更新する
 delete_c <-- cart_db
 delete_c -> cart_c : リダイレクト
 Top <- cart_c : メッセージを表示する
