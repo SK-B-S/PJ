@@ -9,7 +9,7 @@ entity   "売上DAO" as Farmer_DAO
 '-------------------------------------------------------------------------------------------
 
 brz -> Acquisition_c : GET
-Acquisition_c -> Farmer_DAO : 売上情報を取得する
+Acquisition_c -> Farmer_DAO : 売上明細情報を取得する
 Acquisition_c <-- Farmer_DAO
 Mypage <- Acquisition_c : 表示する
 

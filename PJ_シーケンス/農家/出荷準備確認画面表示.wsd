@@ -9,7 +9,7 @@ entity   "注文DAO" as Account
 '-------------------------------------------------------------------------------------------
 
 brz -> Acquisition_c : GET
-Acquisition_c -> Account : 注文情報を取得する
+Acquisition_c -> Account : 出荷準備情報を\n取得する
 Acquisition_c <-- Account
 Mypage <- Acquisition_c : 表示する
 

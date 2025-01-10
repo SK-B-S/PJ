@@ -18,8 +18,8 @@ brz -> approval_c : GET
 new_registration <- approval_c : 表示する
 act -> new_registration: 登録情報を入力し、\n新規登録ボタンを\nクリックする
 new_registration-> approval_c: POST(登録情報)
-approval_c -> account_DAO : メールアドレスで検索する
-account_DAO-->approval_c
+approval_c -> Farmer_account_DAO : メールアドレスで検索する
+Farmer_account_DAO-->approval_c
 approval_c -> account_DAO : 入力情報を登録する
 account_DAO-->approval_c
 approval_c -> account_DAO_provisional : 入力情報を登録する
