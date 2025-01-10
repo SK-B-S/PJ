@@ -1,18 +1,14 @@
 /* Bodyのスタイル */
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     margin: 0;
     font-family: Arial, sans-serif;
-    min-height: 100vh;
-
-    background-image: url('../sample/images/ms.jpg'); /* 適切な画像パスに変更 */
+    background-image: url('background.jpg'); /* 背景画像を設定 */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 100vh;
 }
+
 
 /* ヘッダーのスタイル */
 header {
@@ -35,16 +31,15 @@ header {
 /* メインのスタイル */
 main {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-
-    width: 100%;
+    flex-direction: column;
+    padding: 30px 20px;
     max-width: 1200px;
-    padding: 20px;
-    border-radius: 8px;
-
+    margin: 20px auto;
     background-color: #f7f7f7;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 /* テーブルのスタイル */
