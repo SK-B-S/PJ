@@ -1,69 +1,146 @@
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #000; /* サイドバーの下に黒い線 */
+    }
+}
+
 body {
     display: flex;
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    margin: 0;
     flex-direction: column;
-    height: 100vh;
+    justify-content: space-between; /* headerとfooterとの間に空間 */
+    align-items: center;
+
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    background-image: url('../../../sample/images/ms.jpg'); /* 画像ファイルのパス */
+    background-size: cover; /* 画像がコンテナ全体にフィットするように */
+    background-position: center; /* 画像を中央に配置 */
+    background-repeat: no-repeat; /* 画像が繰り返し表示されないように */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #000; /* ヘッダーの下に黒い線 */
+
+    width: 100%;
+    height: 120px; /* ヘッダーの厚み */
+    padding: 5px;
+
+    /* font setting */
+    color: #000;
+    font-size: 100px;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* 内部の要素を縦に並べる */
+    align-items: center; /* 中央寄せ */
+
+    width: 100%; /* コンテンツの幅を100%に設定（任意） */
+    max-width: 800px; /* 最大幅を指定（任意） */
+    padding: 20px;
+    border-radius: 8px; /* 角を丸める（任意） */
+
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影をつける（任意） */
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+
+    background-color: #f7f7f7;
+    border-top: 1px solid #000;
+
+    /* font-setting */
+    color: #000;
+    font-size: 20px;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
-.header {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.header h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-}
-
-.form-group {
-    margin-bottom: 15px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    min-height: 100vh;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
     font-weight: bold;
+    font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
 }
 
-.mypage-btn {
-    text-align: center;
-    width: 100%;
-    padding: 5px;
-    background-color: #ccc;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+.order-btn{
+    text-align: left;
 }
 
-.mypage-btn:hover {
-    background-color: #ccc;
+/* サイドバーのスタイル */
+.sidebar {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-right: 2px solid #000; /* サイドバーの右に黒い線 */
 }
 
-.footer {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+/* ナビゲーションメニューのスタイル */
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar nav ul li a:hover {
+    color: #007bff;
+}
+
+/* コンテンツのスタイル */
+.content {
+    flex: 1;
+    padding: 20px;
+    margin: 1px 0;
+}
+
+.cursive {
+    font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
+}
+
+.example-text {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #333;
+}
+
+.ac {
     text-align: right;
+    position: relative;
+    right: -300px;
 }
 
 .link {

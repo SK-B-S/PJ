@@ -5,16 +5,14 @@ actor "登録農家" as f
 boundary "注文キャンセル画面" as delete_product
 boundary "ブラウザ" as brz
 control  "注文キャンセルコントローラー" as history_c
-entity   "注文明細DAO" as history_db
+entity   "注文DAO" as history_db
 control  "注文履歴コントローラー" as completion_c
 boundary "注文履歴画面" as ccc
 
 '-------------------------------------------------------------------------
-brz -> history_c : GET
-history_c -> delete_product : 表示する
 account -> delete_product : チェックボックスを選択し\nキャンセルボタン\nをクリックする
 delete_product -> history_c : POST(商品ID)
-history_c -> history_db : 商品を削除する
+history_c -> history_db : キャンセルフラグを更新する
 history_c <-- history_db
 history_c -> completion_c : リダイレクト
 completion_c -> ccc : メッセージ表示する

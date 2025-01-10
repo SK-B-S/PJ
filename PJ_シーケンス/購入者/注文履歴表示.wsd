@@ -4,12 +4,12 @@ actor    "登録購入者" as act
 boundary "注文履歴画面" as order_history
 boundary "ブラウザ" as brz
 control  "注文履歴コントローラー" as order_history_c
-entity   "注文履歴DAO" as order_history_dao
+entity   "注文DAO" as order_history_dao
 
 '-------------------------------------------------------------------------------------------
 
 brz -> order_history_c : GET(ユーザーID)
-order_history_c -> order_history_dao : 注文履歴を取得する
+order_history_c -> order_history_dao : 注文情報を取得する
 order_history_c <-- order_history_dao
 order_history <- order_history_c : 表示する
 

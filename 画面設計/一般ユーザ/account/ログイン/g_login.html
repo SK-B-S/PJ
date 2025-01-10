@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+    
     <head>
         <!-- UTF-8でエンコード -->
         <meta charset="UTF-8">
@@ -7,37 +8,52 @@
         <!-- タイトル -->
         <title>ログイン画面</title>
         <!-- style_top.cssを参照 -->
-        <link rel="stylesheet" href="g_login_style.css">
+        <link rel="stylesheet" href="../account_style.css">
         <!-- last update 2024/11/27 杉田-->
     </head>
-    <body>
-        <!-- メイン -->
-        <div class="container">
-            <!-- ヘッダー -->
-            <header class="header">
-                <h1>ログイン</h1>
-            </header>
 
-            <main class="main">
+    <body>
+
+        <!-- ヘッダー -->
+        <header>
+            <p>ログイン</p>
+        </header>
+
+        <main>
+
+            <div class="container">
+
                 <!-- 入力フォーム -->
                 <form action="/login" method="POST" class="login-form">
+
                     <div class="form-group">
                         <label for="email">メールアドレス</label>
                         <input type="email" id="email" name="email" required>
                     </div>
+
                     <div class="form-group">
                         <label for="password">パスワード</label>
                         <input type="password" id="password" name="password" required>
                     </div>
+
                     <!-- ログインボタン -->
                     <button type="submit" class="login-btn">ログイン</button>
+                
                 </form>
-            </main>
-            <!-- リンク -->
-            <footer class="footer">
-                <a href="/register" class="link">新規登録</a>
-                <a href="/farmer-login" class="link">農家の方はこちら</a>
-            </footer>
-        </div>
+
+            </div>
+
+            <div class="container">
+                <a href="/register">新規登録</a>
+                <a href="/farmer-login">農家の方はこちら</a>           
+            </div>    
+
+        </main>
+
+        <footer>
+            <p>フッター</p>
+        </footer>
+
     </body>
+
 </html>

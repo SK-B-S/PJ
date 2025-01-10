@@ -1,0 +1,103 @@
+/* Bodyのスタイル */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    background-image: url('../sample/images/ms.jpg'); /* 適切な画像パスに変更 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ヘッダーのスタイル */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #000;
+
+    width: 100%;
+    height: 120px;
+    padding: 5px;
+
+    color: #000;
+    font-size: 32px; /* 100pxは通常大きすぎるため32pxに変更 */
+    font-weight: bold;
+}
+
+/* メインのスタイル */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    border-radius: 8px;
+
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* テーブルのスタイル */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #659c19;
+}
+
+th {
+    background-color: #77c627;
+    font-weight: bold;
+}
+
+a {
+    color: #000fe6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* フッターのスタイル */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f7f7f7;
+    border-top: 1px solid #000;
+
+    height: 30px;
+    padding: 5px;
+
+    color: #000;
+    font-size: 14px;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #000;
+    }
+}
