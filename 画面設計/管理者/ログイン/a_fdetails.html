@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>農家詳細</title>
+    <link rel="stylesheet" href="accountdetails_style.css">
+    <style>
+        .document-section {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .document-section > div {
+            flex: 1;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>農家詳細</h1>
+    </header>
+
+    <main>
+        <section class="details-section">
+            <h2 class="details-title">農家情報</h2>
+            <dl class="details">
+                <dt>氏名</dt>
+                <dd>農作 一郎</dd>
+                <dt>メールアドレス</dt>
+                <dd>oom2325001@example.com</dd>
+                <dt>電話番号</dt>
+                <dd>070-1072-2830</dd>
+                <dt>住所</dt>
+                <dd>東京都新宿区西新宿1-1-1</dd>
+                <dt>生年月日</dt>
+                <dd>2025年4月1日</dd>
+            </dl>
+            <div class="status">
+                ステータス: <strong>有効化</strong>
+            </div>
+            <button id="deleteButton">アカウント削除</button>
+        </section>
+
+        <section class="document-section">
+            <div>
+                <h2 class="details-title">認定書</h2>
+                <div class="certificate-frame">
+                    <embed src="sample_certificate.pdf" type="application/pdf" width="100%" height="500px">
+                </div>
+            </div>
+
+            <div>
+                <h2 class="details-title">結果報告書</h2>
+                <div class="report-frame">
+                    <embed src="sample_report.pdf" type="application/pdf" width="100%" height="500px">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="deletePopup">
+        <div class="popup-content">
+            <p>アカウントを削除しますか？</p>
+            <div id="popupActions">
+                <button id="popupYes">はい</button>
+                <button id="popupNo">いいえ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="acnt_config.js"></script>
+</body>
+</html>

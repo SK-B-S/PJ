@@ -97,6 +97,7 @@ footer {
     }
 }
 
+
 .certificates-section, .reports-section {
     margin: 20px 0;
     padding: 15px;
@@ -109,4 +110,78 @@ footer {
     border: 2px solid #77c627;
     border-radius: 5px;
     overflow: hidden;
+}
+
+/* 新しいレイアウト用のスタイル */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 20px;
+}
+
+/* 農家情報セクション */
+.details-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.details-section h2 {
+    font-size: 24px;
+}
+
+.details dl {
+    margin: 10px 0;
+}
+
+.details dt {
+    font-weight: bold;
+}
+
+.details dd {
+    margin: 5px 0;
+}
+
+.approval-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #77c627;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 認定書セクション */
+.certificate-section {
+    width: 50%; /* 認定書を右側に配置 */
+    padding: 20px;
+}
+
+.certificate-frame {
+    border: 2px solid #77c627;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* 戻るボタン */
+.back-button {
+    padding: 10px 20px;
+    background-color: #77c627;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    .certificate-section {
+        width: 100%;
+        margin-top: 20px;
+    }
 }
