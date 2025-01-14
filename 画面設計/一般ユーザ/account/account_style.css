@@ -247,8 +247,10 @@
         margin-top: 10px;
         margin-bottom: 5px;
         
-        display: block; /* ブロック要素でラベルを左揃え */
+        width: 100%;
         color: #333;
+
+        gap: 10px;
     }
 
     /* リンクのスタイル */
