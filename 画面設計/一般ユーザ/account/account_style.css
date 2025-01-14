@@ -54,12 +54,13 @@
     /* フッターのスタイル */
     footer {
         display: flex; /* flexboxを使用 */
+        flex-direction: column; 
         align-items: center; /* 水平方向の位置調整 */
         justify-content: center; /* 垂直方向の位置調整 */
 
         width: 100%;
         height: 10%; /* フッターの厚み */
-        padding: 5px; /* 文字と枠の空間 */
+        /* padding: 5px; 文字と枠の空間 */
 
         background-color: #f7f7f7; /* 背景色 */
         border-top: 1px solid #000; /* フッターの上に黒い線 */
@@ -116,7 +117,7 @@
 
 /* サインアップページのスタイル */
     /* フォーム全体のスタイル */
-    .form-container {
+    .form_container {
         background-color: #fff;
         padding: 150px; /* 内側の余白を少し広げる */
         border-radius: 8px;
@@ -168,7 +169,7 @@
         outline: none;
     }
 
-    .flatpickr-calendar {
+    .flatpickr_calendar {
         font-size: 20px;
         width: 350px;
     }
@@ -216,3 +217,47 @@
 
 
 /* マイページのスタイル */
+    /* ラベルのスタイル */
+    .my_label {
+        font-size: 16px; /* ラベルのフォントサイズを少し大きく */
+        font-weight: bold;
+
+        margin-bottom: 5px;
+        
+        display: block; /* ブロック要素でラベルを左揃え */
+        color: #333;
+    }
+
+    .edpw_link {
+        text-align: right;
+        position: relative;
+        padding-top: 200px;
+        right: -150px;
+    }
+    
+    .mypage_button{
+        text-align: center;
+
+        background-color: #4CAF50;
+        color: white;
+        
+        border: none;
+        border-radius: 4px;
+        
+        cursor: pointer;
+
+        font-size: 16px;
+        font-weight: bold;
+        
+        padding: 14px; /* ボタンの高さを調整 */
+
+        transition: background-color 0.3s ease;
+
+        width: 100%;
+        max-width: 60px; /* ボタンの幅を入力フィールドに揃える */
+    }
+    
+    /* ホバー時のスタイル */
+    .mypage_button:hover {
+        background-color: #376a3a;
+    }

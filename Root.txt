@@ -92,6 +92,30 @@ styleシート対応表
 
 
 設計詳細
+	<!DOCTYPE html>
+	<html lang="ja">
+		<head>
+        	<meta charset="UTF-8">
+        	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>PAGE TITLE</title>
+	        <link rel="stylesheet" href="PATH_TO_style.css">
+		</head>
+		<body>
+			<header class="header">
+				<p>PAGE NAME</p>
+			</header>
+			<main>
+				<div class="container">
+					PAGE CONTENTS
+				</div>
+			</main>
+			<footer>
+				<p>ご利用規約・プライバシーポリシー</p>
+				<p>© 2024 YUSA S.A.S</p>
+			</footer>
+		</body>
+	</html>
+
 
 	ボディー
 		/* ボディーのスタイル */
