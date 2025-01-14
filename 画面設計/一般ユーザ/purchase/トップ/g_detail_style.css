@@ -6,15 +6,11 @@ body {
 
 /* ヘッダーのスタイル */
 header {
-    background-color: #f8f8f8; /* 背景色 */
-    padding: 20px; /* 内側の余白 */
-    border-bottom: 2px solid #000; /* ヘッダーの下に黒い線 */
-    text-align: center; /* 中央揃え */
     display: flex;
+    background-color: #f8f8f8; /* 背景色 */
     align-items: center;
     justify-content: center;
 
-    background-color: #f7f7f7;
     border-bottom: 1px solid #000; /* ヘッダーの下に黒い線 */
 
     width: 100%;
@@ -87,30 +83,42 @@ footer {
 .new {
     text-align: left;
     position: relative;
-    right: -150px;
+    float: left;
+    left: 15%;
 }
+
+.announcement {
+    background-color: #5499b0; /* 薄い黄色の背景 */
+    color: #333; /* テキスト色を黒に */
+    text-align: center; /* テキストを中央揃え */
+    padding: 10px; /* 内側の余白 */
+    margin: 0%;
+    width: 50%;
+    left: 40%;
+    position: relative;
+}
+
 
 .left{
     float: left;
+    padding-top: 2%;
+    padding-right: 30%;
 }
 
 .name {
     position: relative;
-    right: -200px;
 }
 
 .mo {
     padding: 5px;
     padding-top: -20%;
     position: relative;
-    right: -400px;
 }
 
 .mypage-btn {
     padding: 5px;
     padding-top: -20%;
     position: relative;
-    right: -400px;
 }
 
 input {
@@ -133,15 +141,4 @@ input {
         border-right: none; /* 右の線を削除 */
         border-bottom: 2px solid #000; /* 下に黒い線 */
     }
-}
-
-.announcement {
-    background-color: #5499b0; /* 薄い黄色の背景 */
-    color: #333; /* テキスト色を黒に */
-    text-align: center; /* テキストを中央揃え */
-    padding-top: 10px; /* 内側の余白 */
-    margin: 0; /* 余白をなしに */
-    width: 50%;
-    position: relative;
-    right: -500px;
 }
