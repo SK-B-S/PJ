@@ -7,8 +7,8 @@
         <!-- タイトル -->
         <title>マイページ</title>
         <!-- style_top.cssを参照 -->
-        <link rel="stylesheet" href="g_mypage_style.css">
-        <!-- last update 2025/1/9 杉田-->
+        <link rel="stylesheet" href="../account_style.css">
+        <!-- last update 2025/1/14 小林-->
     </head>
 
     <body>
@@ -16,49 +16,36 @@
         <header class="header">
             <p>マイページ</p>
         </header>
+
+        <main>
             <div class="container">
-                <p class="cursive example-text">
-                    <form>
-                        <label class="my_label" for="name" style="font-weight: bold;">氏名</label>
-                        <input class="my_input" type="text" id="name" name="name">
+                <label class="my_label">
+                    <div for="name">氏名</div>
 
-                        <label class="my_label" for="email" style="font-weight: bold;">メールアドレス</label>
-                        <input class="my_input" type="email" id="email" name="email">
+                    <div for="email">メールアドレス</div>
 
-                        <label class="my_label" for="phone" style="font-weight: bold;">電話番号</label>
-                        <input class="my_input" type="phone" id="phone" name="phone">
+                    <div for="phone">電話番号</div>
 
-                        <label class="my_label" for="zipcode" style="font-weight: bold;">郵便番号</label>
-                        <input class="my_input" type="zipcode" id="zipcode" name="zipcode">
+                    <div for="zipcode">郵便番号</div>
 
-                        <label class="my_label" for="address" style="font-weight: bold;">住所</label>
-                        <input class="my_input" type="address" id="address" name="address">
+                    <div for="address">住所</div>
 
-                        <label class="my_label" for="date" style="font-weight: bold;">生年月日</label>
-                        <input class="my_input" type="text" id="date" name="date">
-                    
-                        <!-- 変更ボタン -->
-                        <button type="mybmit" class="mypage-btn" href="#">変更</button>
-                    </form>
+                    <div for="date">生年月日</div>
+                
+                    <!-- 変更ボタン -->
+                    <button class="mypage_button" href="#">変更</button>
 
-                    <div class="ac">
-                        <!--a href="https://ac.com/"-->パスワード変更はこちら</a>
+                    <div class="edpw_link">
+                        <a href="#">パスワード変更はこちら</a>
                     </div>
-                </p>
+                </label>
             </div>
+        </main>
 
         <footer>
-            <p>フッター</p>
+            <p>ご利用規約・プライバシーポリシー</p>
+            <p>© 2024 SATO S.A.S</p>
         </footer>
-
-        <script>
-            flatpickr( "#date", {
-                dateFormat: "Y-m-d",  // YYYY-MM-DD形式
-                locale: flatpickr.l10ns.ja,  // 日本語ロケールの指定
-                defaultDate: "",  // デフォルト空白
-                allowInput : true      // 直接入力も許可
-            });
-        </script>
 
     </body>
 </html>

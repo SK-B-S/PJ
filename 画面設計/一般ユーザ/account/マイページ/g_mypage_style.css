@@ -81,7 +81,7 @@ footer {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 60%; /* フォーム全体を広げる */
-    max-width: 1000px; /* 最大幅を800pxに調整 */
+    max-width: 100%; /* 最大幅を800pxに調整 */
     box-sizing: border-box;
 }
 
@@ -131,7 +131,7 @@ footer {
     cursor: pointer;
     transition: background-color 0.3s ease;
     width: 100%;
-    max-width: 600px; /* ボタンの幅を入力フィールドに揃える */
+    max-width: 60px; /* ボタンの幅を入力フィールドに揃える */
 }
 
 .mypage-btn:hover {
@@ -192,6 +192,7 @@ footer {
 
 .link {
     display: block;
+    /* color: hsla(328, 77%, 47%, 0.972); */
     color: #007BFF;
     text-decoration: none;
     margin: 5px 0;
