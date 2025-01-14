@@ -1,3 +1,6 @@
+// <!-- last update 2025/1/14 平田 -->
+// <!-- ほぼ完成 -->
+
 // 初期状態ではポップアップは表示しない
 document.getElementById('deletePopup').style.display = 'none';
 
