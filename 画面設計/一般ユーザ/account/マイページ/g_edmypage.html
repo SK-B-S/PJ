@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
     <head>
         <!-- UTF-8でエンコード -->
         <meta charset="UTF-8">
@@ -7,34 +8,45 @@
         <!-- タイトル -->
         <title>マイページ編集</title>
         <!-- style_top.cssを参照 -->
-        <link rel="stylesheet" href="g_edmypage_style.css">
-        <!-- last update 2024/11/27 杉田-->
+        <link rel="stylesheet" href="../account_style.css">
+        <!-- last update 2024/1/15 小林 -->
     </head>
-    <body>
-        <!-- メイン -->
-        <div class="container">
-            <!-- ヘッダー -->
-            <header class="header">
-                <h1>マイページ編集</h1>
-            </header>
 
-            <main class="main">
+    <body>
+        <!-- ヘッダー -->
+        <header>
+            <p>マイページ編集</p>
+        </header>
+
+        <main>
+            <div>
                 <!-- 個人情報フォーム -->
-                <form action="/edmypage" method="POST" class="mypage-form">
-                    <div class="form-group">
-                        <label for="name">氏名</label>
-                        <input type="name" id="name" name="name" required>
-                        <label for="code">郵便番号</label>
-                        <input type="code" id="code" name="code" required>
-                        <label for="addrese">住所</label>
-                        <input type="addrese" id="addrese" name="addrese" required>
-                        <label for="date">生年月日</label>
-                        <input type="date" id="date" name="date" required>
-                    </div>
+                <form>
+                    <label class="me_label" for="name">氏名</label>
+                    <input class="me_input" type="text" id="name" name="name" required>
+
+                    <label class="me_label" for="tel">電話番号</label>
+                    <input class="me_input" type="tel" id="name" name="name" required>
+
+                    <label class="me_label"  for="pst">郵便番号</label>
+                    <input class="me_input"  type="" id="code" name="code" required>
+
+                    <label class="me_label"  for="addrese">住所</label>
+                    <input class="me_input"  type="addr" id="addrese" name="addrese" required>
+
+                    <label class="me_label"  for="date">生年月日</label>
+                    <input class="me_input"  type="bd" id="date" name="date" required>
                     <!--  確定ボタン-->
-                    <button type="submit" class="mypage-btn">変更を確定</button>
+                    <button class="mypage_button" type="submit">変更を確定</button>
                 </form>
-            </main>
-        </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>ご利用規約・プライバシーポリシー</p>
+            <p>© 2024 YUSA S.A.S</p>
+        </footer>
+
     </body>
+
 </html>

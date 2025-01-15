@@ -286,3 +286,46 @@
     .mypage_button:hover {
         background-color: #376a3a;
     }
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* マイページ編集 */
+    /* ラベルのスタイル */
+    .me_label {
+        display: block; /* ブロック要素でラベルを左揃え */
+
+        font-size: 16px; /* ラベルのフォントサイズを少し大きく */
+        font-weight: bolder;
+
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    /* 入力フィールドのスタイル */
+    .me_input[type="text"],
+    .me_input[type="email"],
+    .me_input[type="phone"],
+    .me_input[type="zipcode"],
+    .me_input[type="address"],
+    .me_input[type="date"],
+    .me_input[type="password"] {
+        width: 100%;
+        max-width: 100%; /* 入力フィールドの最大幅を広げる */
+
+        padding: 12px; /* 内側の余白を広げる */
+        margin-bottom: 20px; /* 下の余白を調整 */
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        
+        font-size: 16px; /* フォントサイズを大きく */
+        
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+    }
+
+    /* フォーカス時のスタイル */
+    .me_input:focus {
+        border-color: #4CAF50;
+        outline: none;
+    }
+

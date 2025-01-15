@@ -113,6 +113,27 @@ footer {
     color: #007bff;
 }
 
+/* フォームのスタイル */
+.sample_form {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    grid-template-columns: 100px 100px 100px; /* 2列のグリッド: ラベルとテキストボックス */
+    gap: 10px 20px; /* 行と列の間隔 */
+
+    background-color: #fff;
+
+    padding: 50px; /* 内側の余白を少し広げる */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    width: 60%; /* フォーム全体を広げる */
+    max-width: 100%; /* 最大幅を800pxに調整 */
+
+    box-sizing: border-box;
+}
+
 /* コンテンツのスタイル */
 .content {
     flex: 1;
