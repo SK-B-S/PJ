@@ -75,6 +75,19 @@ footer {
     font-size: 20px;
 }
 
+/* コンテンツのスタイル */
+.content {
+    flex: 1;
+    padding: 20px;
+    margin: 1px 0;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+}
+
+
 .container {
     display: flex;
     flex-direction: column;
@@ -89,24 +102,12 @@ footer {
     font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
 }
 
-.order_btn input:first-of-type{
-    margin-right: 50px;
-}
-
 .order_btn{
-    text-align: left;
-}
-
-/* コンテンツのスタイル */
-.content {
-    flex: 1;
-    padding: 20px;
-    margin: 1px 0;
-}
-
-.input {
-    width: 100%;
+    width: 20%;
     padding: 10px;
+    margin-right: 20%;
+    position: relative;
+    left: 80px;
 }
 
 .cursive {
