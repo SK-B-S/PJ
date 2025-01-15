@@ -30,6 +30,7 @@ header {
     font-weight: bold;
 }
 
+/* フッターのスタイル */
 footer {
     display: flex; /* flexboxを使用 */
     flex-direction: column; 
