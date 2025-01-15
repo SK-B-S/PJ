@@ -1,18 +1,17 @@
+/*<!-- last update 2025/1/14 平田 -->*/
+/*<!-- ほぼ完成 -->*/
+
 /* Bodyのスタイル */
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     margin: 0;
     font-family: Arial, sans-serif;
-    min-height: 100vh;
-
-    background-image: url('../sample/images/ms.jpg'); /* 適切な画像パスに変更 */
+    background-image: url('background.jpg'); /* 背景画像を設定 */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 100vh;
 }
+
 
 /* ヘッダーのスタイル */
 header {
@@ -35,16 +34,15 @@ header {
 /* メインのスタイル */
 main {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-
-    width: 100%;
+    flex-direction: column;
+    padding: 30px 20px;
     max-width: 1200px;
-    padding: 20px;
-    border-radius: 8px;
-
+    margin: 20px auto;
     background-color: #f7f7f7;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 /* テーブルのスタイル */
@@ -100,4 +98,18 @@ footer {
         border-right: none;
         border-bottom: 1px solid #000;
     }
+}
+
+.certificates-section, .reports-section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.certificate-frame, .report-frame {
+    border: 2px solid #77c627;
+    border-radius: 5px;
+    overflow: hidden;
 }

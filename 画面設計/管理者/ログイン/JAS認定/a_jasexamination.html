@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAS認定審査確認</title>
+    <link rel="stylesheet" href="jasmanage_style.css">
+    <script>
+        // 戻るボタンの機能
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>JAS認定審査確認</h1>
+        <!-- last update 2025/1/14 平田 -->
+        <!-- ほぼ完成 -->
+    </header>
+
+    <main class="main-container">
+        <section class="details-section">
+            <h2>農家情報</h2>
+            <dl class="details">
+                <dt>農家ID</dt>
+                <dd>001</dd>
+                <dt>氏名</dt>
+                <dd>農作 太郎</dd>
+            </dl>
+            <button class="approval-button">承認</button>
+        </section>
+
+        <section class="certificate-section">
+            <h2>認定書</h2>
+            <div class="certificate-frame">
+                <embed src="certificate_sample.pdf" type="application/pdf" width="100%" height="500px">
+            </div>
+        </section>
+
+        <!-- 戻るボタン -->
+        <button class="back-button" onclick="goBack()">戻る</button>
+    </main>
+
+</body>
+</html>

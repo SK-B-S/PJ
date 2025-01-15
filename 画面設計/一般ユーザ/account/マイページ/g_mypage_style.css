@@ -51,7 +51,7 @@ main {
 
     width: 100%; /* コンテンツの幅を100%に設定（任意） */
     max-width: 800px; /* 最大幅を指定（任意） */
-    padding: 20px;
+    padding: 0px;
     border-radius: 8px; /* 角を丸める（任意） */
 
     background-color: #f7f7f7;
@@ -76,21 +76,66 @@ footer {
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 100%;
-    min-height: 100vh;
+    background-color: #fff;
+    padding: 200px; /* 内側の余白を少し広げる */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%; /* フォーム全体を広げる */
+    max-width: 100%; /* 最大幅を800pxに調整 */
+    box-sizing: border-box;
 }
 
-.form-group label {
-    display: block;
-    font-weight: bold;
-    font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
+.form-group {
+    margin-bottom: 15px;
 }
 
-.order-btn{
-    text-align: left;
+/* ラベルのスタイル */
+.my_label {
+    font-size: 16px; /* ラベルのフォントサイズを少し大きく */
+    margin-bottom: 5px;
+    display: block; /* ブロック要素でラベルを左揃え */
+    color: #333;
+}
+
+/* 入力フィールドのスタイル */
+.my_input[type="text"],
+.my_input[type="email"],
+.my_input[type="phone"],
+.my_input[type="zipcode"],
+.my_input[type="address"],
+.my_input[type="date"],
+.my_input[type="password"] {
+    width: 100%;
+    max-width: 600px; /* 入力フィールドの最大幅を広げる */
+    padding: 12px; /* 内側の余白を広げる */
+    margin-bottom: 20px; /* 下の余白を調整 */
+    border: 1px solid #ccc;
+    border-radius: 4px; /*角の丸み4px*/
+    font-size: 16px; /* フォントサイズを大きく */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.mypage-btn{
+    text-align: center;
+    background-color: #ccc;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    padding: 14px; /* ボタンの高さを調整 */
+    border-radius: 4px; /*角の丸み : 4px*/
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 60px; /* ボタンの幅を入力フィールドに揃える */
+}
+
+.mypage-btn:hover {
+    background-color: #ccc;
 }
 
 /* サイドバーのスタイル */
@@ -122,6 +167,7 @@ footer {
 
 /* コンテンツのスタイル */
 .content {
+    text-align: left;
     flex: 1;
     padding: 20px;
     margin: 1px 0;
@@ -140,11 +186,13 @@ footer {
 .ac {
     text-align: right;
     position: relative;
-    right: -300px;
+    padding-top: 200px;
+    right: -150px;
 }
 
 .link {
     display: block;
+    /* color: hsla(328, 77%, 47%, 0.972); */
     color: #007BFF;
     text-decoration: none;
     margin: 5px 0;
@@ -153,4 +201,9 @@ footer {
 
 .link:hover {
     text-decoration: underline;
+}
+
+.flatpickr-calendar {
+    font-size: 20px;
+    width: 350px;
 }

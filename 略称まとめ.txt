@@ -1,0 +1,29 @@
+略称まとめ
+
+アイコン 	icon -> ico
+アカウント	account -> acnt
+承認 		admit -> adt
+住所 		address -> addr
+詳細 		detail -> dtl
+証明 		proof -> prf
+証明書 		certification, certificate -> cert
+続ける 		continue -> cnti
+削除 		delete -> del
+ステータス 	status -> sts
+フラグ 		flag -> fla
+利益 		proceeds -> prcds
+理由 		reason -> rsn
+管理者 		admin -> adn
+購入者 		purchaser -> pchr
+郵便番号 	postcode -> pst
+有効期限 	dateofexpiry -> xpry
+ユーザ 		user -> usr
+単位 		unit -> unt
+誕生日 		datebirth -> bd
+電話 		phone -> tel
+農家 		farmer -> fmr
+パスワード 	password -> pwd
+販売	 	sales -> sls
+メール 		email -> em
+野菜 		vegetable -> vege
+イメージ 	image -> img

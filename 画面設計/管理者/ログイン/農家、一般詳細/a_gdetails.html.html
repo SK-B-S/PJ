@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購入者詳細</title>
+    <link rel="stylesheet" href="accountdetails_style.css">
+</head>
+<body>
+    <header>
+        <h1>購入者詳細</h1>
+        <!-- last update 2025/1/14 平田 -->
+        <!-- ほぼ完成 -->
+    </header>
+
+    <main>
+        <section class="details-section">
+            <h2 class="details-title">購入者情報</h2>
+            <dl class="details">
+                <dt>氏名</dt>
+                <dd>大原 一郎</dd>
+                <dt>メールアドレス</dt>
+                <dd>oom2325001@example.com</dd>
+                <dt>電話番号</dt>
+                <dd>070-1072-2830</dd>
+                <dt>住所</dt>
+                <dd>東京都新宿区西新宿1-1-1</dd>
+                <dt>生年月日</dt>
+                <dd>1800年4月1日</dd>
+            </dl>
+            <div class="status">
+                ステータス: <strong>有効化</strong>
+            </div>
+            <button id="deleteButton">アカウント削除</button>
+        </section>
+    </main>
+
+    <div id="deletePopup">
+        <div class="popup-content">
+            <p>アカウントを削除しますか？</p>
+            <div id="popupActions">
+                <button id="popupYes">はい</button>
+                <button id="popupNo">いいえ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="acnt_config.js"></script>
+</body>
+</html>

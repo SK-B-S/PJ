@@ -14,29 +14,30 @@
 
     <body>
         <!-- ヘッダー -->
-        <header class="header">
+        <header>
             <p>注文内容確認</p>
         </header>
+        
         <!-- メイン -->
         <main class="main">
             <div class="container">
 
-                <div class="form-group">
-                    <p class="cursive example-text">
-                        <label for="addrese">お届け先</label>
-                        <label for="addrese">あ</label>
+                <div class="form_group">
+                    <p class="cursive example_text">
+                        <label for="addr">お届け先</label>
+                        <input class="input" type="text" id="addr" name="addr" placeholder="お届け先の住所を入力">
                         <label for="pay">支払い方法</label>
-                        <label for="pay">あ</label>
+                        <input class="input" type="text" id="pay" name="pay" placeholder="支払い方法を入力">
                         <label for="name">商品名</label>
-                        <label for="name">あ</label>
+                        <input class="input" type="text" id="name" name="name" placeholder="商品名を入力">
                         <label for="quantity">数量</label>
-                        <label for="quantity">あ</label>
+                        <input class="input" type="number" id="quantity" name="quantity">
                     </p>
                 </div>
 
-                <div class="form-group">
-                    <p class="cursive example-text">
-                        <label for="mail">
+                <div class="form_group">
+                    <p class="cursive example_text">
+                        <label for="em">
                             ■ 代金引換<br>
                             ・代金は商品配送時にお支払いください。<br>
                             ・配送時のお支払方法は現金のみとなっております。<br>
@@ -44,18 +45,22 @@
                                 全国一律料金：300円
                         </label>
                     </p>
-                    <div class="order-btn">
-                        <!-- 注文確定ボタン -->
-                        <input type="button" value="確定">
-                        <!-- 戻るボタン -->
-                        <input type="button" value="戻る">
-                    </div>
-                </div>   
+                </div>
+
+                <div class="order_btn">
+                    <!-- 注文確定ボタン -->
+                    <input type="button" value="確定" href="#">
+                    <!-- 戻るボタン -->
+                    <input type="button" value="戻る" href="#">
+                </div>
                 
             </div>
         </main>
+
         <footer>
-            <p>フッター</p>
+            <p>ご利用規約・プライバシーポリシー</p>
+            <p>© 2024 YUSA S.A.S</p>
         </footer>
+        
     </body>
 </html>

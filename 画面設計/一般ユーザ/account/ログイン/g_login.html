@@ -9,14 +9,14 @@
         <title>ログイン画面</title>
         <!-- style_top.cssを参照 -->
         <link rel="stylesheet" href="../account_style.css">
-        <!-- last update 2024/11/27 杉田-->
+        <!-- last update 2024/1/10 小林 -->
     </head>
 
     <body>
 
         <!-- ヘッダー -->
         <header>
-            <p>ログイン</p>
+            <p>Jimoty - おうちで楽々人身売買 -</p>
         </header>
 
         <main>
@@ -24,34 +24,31 @@
             <div class="container">
 
                 <!-- 入力フォーム -->
-                <form action="/login" method="POST" class="login-form">
+                <form action="/login" method="POST" class="login_form">
 
-                    <div class="form-group">
-                        <label for="email">メールアドレス</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
+                    <label class="li_label" for="email">メールアドレス</label>
+                    <input class="li_input" type="email" id="email" name="email" placeholder="メールアドレス">
 
-                    <div class="form-group">
-                        <label for="password">パスワード</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
+                    <label class="li_label" for="password">パスワード</label>
+                    <input class="li_input" type="password" id="password" name="password" placeholder="パスワード">
 
                     <!-- ログインボタン -->
-                    <button type="submit" class="login-btn">ログイン</button>
+                    <button class="form_button" type="submit" class="login-btn">ログイン</button>
                 
                 </form>
 
             </div>
 
             <div class="container">
-                <a href="/register">新規登録</a>
-                <a href="/farmer-login">農家の方はこちら</a>           
+                <a class="li_link" href="/register">新規登録</a>
+                <a class="li_link" href="/farmer-login">農家の方はこちら</a>           
             </div>    
 
         </main>
 
         <footer>
-            <p>フッター</p>
+            <p>ご利用規約・プライバシーポリシー</p>
+            <p>© 2024 YUSA S.A.S</p>
         </footer>
 
     </body>

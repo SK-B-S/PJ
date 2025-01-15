@@ -7,8 +7,8 @@
         <!-- タイトル -->
         <title>マイページ</title>
         <!-- style_top.cssを参照 -->
-        <link rel="stylesheet" href="g_mypage_style.css">
-        <!-- last update 2025/1/9 杉田-->
+        <link rel="stylesheet" href="../account_style.css">
+        <!-- last update 2025/1/14 小林-->
     </head>
 
     <body>
@@ -16,39 +16,35 @@
         <header class="header">
             <p>マイページ</p>
         </header>
-        <!-- メイン -->
+
         <main>
             <div class="container">
-                <div class="form-group">
-                    <p class="cursive example-text">
-                        <form action="/pass" method="POST" class="pass-form">
-                            <div class="form-group">
-                                <label for="name">氏名</label>
-                                <input type="name" id="name" name="name" required>
-                                <label for="email">メールアドレス</label>
-                                <input type="email" id="email" name="email" required>
-                                <label for="phone">電話番号</label>
-                                <input type="phone" id="phone" name="phone" required>
-                                <label for="code">郵便番号</label>
-                                <input type="code" id="code" name="code" required>
-                                <label for="addrese">住所</label>
-                                <input type="addrese" id="addrese" name="addrese" required>
-                                <label for="date">生年月日</label>
-                                <input type="date" id="date" name="date" required>
-                            </div>
-                        </form>
-                    </p>
-                </div>
-                <!-- 変更ボタン -->
-                <button type="submit" class="mypage-btn">変更</button>
+                <div class="my_label" for="name">氏名</div>
+
+                <div class="my_label" for="email">メールアドレス</div>
+
+                <div class="my_label" for="phone">電話番号</div>
+
+                <div class="my_label" for="zipcode">郵便番号</div>
+
+                <div class="my_label" for="address">住所</div>
+
+                <div class="my_label" for="date">生年月日</div>                
             </div>
-            <div class="ac">
-                <a href="https://ac.com/">パスワード変更はこちら</a>
+            <div class="container">
+                <!-- 変更ボタン -->
+                <button class="mypage_button" href="#">変更</button>
+            </div>
+            <div class="container">
+                <div class="edpw_link">
+                    <a href="#">パスワード変更はこちら</a>
+                </div>
             </div>
         </main>
 
         <footer>
-            <p>フッター</p>
+            <p>ご利用規約・プライバシーポリシー</p>
+            <p>© 2024 YUSA S.A.S</p>
         </footer>
 
     </body>
