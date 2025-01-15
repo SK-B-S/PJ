@@ -101,7 +101,7 @@ styleシート対応表
 	        <link rel="stylesheet" href="PATH_TO_style.css">
 		</head>
 		<body>
-			<header class="header">
+			<header>
 				<p>PAGE NAME</p>
 			</header>
 			<main>
