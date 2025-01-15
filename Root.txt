@@ -116,6 +116,21 @@ styleシート対応表
 		</body>
 	</html>
 
+	<input>要素のtype属性
+		<input>のtype属性には以下のものを適応させる
+
+		text - テキスト入力フィールド（デフォルト）
+		password - パスワード入力（マスクされた文字）
+		email - メールアドレス用入力（形式のバリデーションが適用される）
+		number - 数値入力（数値のみ許可、上下ボタンで増減可能）
+		date, datetime-local, month, time, week - 日付や時間に関連した入力
+		checkbox - チェックボックス
+		radio - ラジオボタン
+		file - ファイル選択
+		url - URL入力（形式のバリデーションが適用される）
+		tel - 電話番号入力（形式のバリデーションなし）
+		color - カラーピッカー
+
 	class名等の接合部は"_"で記述
 
 	ボディー
