@@ -81,29 +81,21 @@ footer {
     margin: 10px 0;
 }
 
-.detail {
-    display: flex;
-    float: left;
-    font-weight: bold;
-    position: relative;
-    left: 150px;
-}
-
-.announcement {
-    color: #333; /* テキスト色を黒に */
-    background-color: #5499b0; /* 薄い黄色の背景 */
-    text-align: center; /* テキストを中央揃え */
-    position: relative;
-    left: 450px; /* 右に移動 */
-    padding: 10px; /* 内側の余白 */
-    width: 50%;
-}
-
 .list {
     float: left;
+    position: relative;
+    left: 15px;
 }
 
 .name {
+    font-size: 30px; /* フォントサイズ */
     position: relative;
-    left: 250px;
+    left: 75px;
+}
+
+.mypage_btn {
+    width: 10%;
+    padding: 10px;
+    position: relative;
+    left: 200px;
 }
