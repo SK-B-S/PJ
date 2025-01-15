@@ -29,7 +29,7 @@ login_c -> login : メッセージを表示する
 account -> mail : URLをクリックする
 mail -> verification_c : GET(トークン)
 verification_c -> account_db_provisional : トークンを検証する
-verification_c <-- account_db_provisional : ユーザーID
+verification_c <-- account_db_provisional : 購入者ID
 verification_c -> account_db : ユーザータイプを更新する
 verification_c -> account_db_provisional : 入力情報を削除する
 verification_c -> login_c : リダイレクト
