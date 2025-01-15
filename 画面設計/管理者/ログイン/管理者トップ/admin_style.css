@@ -13,6 +13,22 @@ body {
     height: 100vh; /* 画面全体をカバー */
 }
 
+footer {
+    display: flex; /* flexboxを使用 */
+    align-items: center; /* 水平方向の位置調整 */
+    justify-content: center; /* 垂直方向の位置調整 */
+
+    background-color: #f7f7f7; /* 背景色 */
+    border-top: 1px solid #000; /* フッターの上に黒い線 */
+
+    height: 30; /* ヘッダーの厚み */
+    padding: 5px; /* 文字と枠の空間 */
+
+    /* font setting */
+    color: #000; /* フォントカラー */
+    font-size: 20px; /* フォントサイズ */	
+}
+
 /* ログインフォームのコンテナ */
 .login-container {
     background: #ffffff; /* 白背景 */
