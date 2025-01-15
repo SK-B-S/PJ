@@ -27,8 +27,27 @@ header {
     padding: 5px;
 
     color: #000;
-    font-size: 32px; /* 100pxは通常大きすぎるため32pxに変更 */
+    font-size: 100px; /* 100pxは通常大きすぎるため32pxに変更 */
     font-weight: bold;
+}
+
+/* フッターのスタイル */
+footer {
+    display: flex; /* flexboxを使用 */
+    flex-direction: column; 
+    align-items: center; /* 水平方向の位置調整 */
+    justify-content: center; /* 垂直方向の位置調整 */
+
+    width: 100%;
+    height: 10%; /* フッターの厚み */
+    /* padding: 5px; 文字と枠の空間 */
+
+    background-color: #f7f7f7; /* 背景色 */
+    border-top: 1px solid #000; /* フッターの上に黒い線 */
+
+    /* font setting */
+    color: #000; /* フォントカラー */
+    font-size: 20px; /* フォントサイズ */	
 }
 
 /* メインのスタイル */
@@ -70,22 +89,6 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-/* フッターのスタイル */
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #f7f7f7;
-    border-top: 1px solid #000;
-
-    height: 30px;
-    padding: 5px;
-
-    color: #000;
-    font-size: 14px;
 }
 
 /* レスポンシブデザイン */

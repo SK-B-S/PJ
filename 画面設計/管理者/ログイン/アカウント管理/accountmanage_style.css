@@ -27,7 +27,7 @@ header {
     padding: 5px;
 
     color: #000;
-    font-size: 32px; /* 100pxは通常大きすぎるため32pxに変更 */
+    font-size: 100px; /* 100pxは通常大きすぎるため32pxに変更 */
     font-weight: bold;
 }
 
@@ -74,18 +74,21 @@ a:hover {
 
 /* フッターのスタイル */
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; /* flexboxを使用 */
+    flex-direction: column; 
+    align-items: center; /* 水平方向の位置調整 */
+    justify-content: center; /* 垂直方向の位置調整 */
 
-    background-color: #f7f7f7;
-    border-top: 1px solid #000;
+    width: 100%;
+    height: 10%; /* フッターの厚み */
+    /* padding: 5px; 文字と枠の空間 */
 
-    height: 30px;
-    padding: 5px;
+    background-color: #f7f7f7; /* 背景色 */
+    border-top: 1px solid #000; /* フッターの上に黒い線 */
 
-    color: #000;
-    font-size: 14px;
+    /* font setting */
+    color: #000; /* フォントカラー */
+    font-size: 20px; /* フォントサイズ */	
 }
 
 /* レスポンシブデザイン */
