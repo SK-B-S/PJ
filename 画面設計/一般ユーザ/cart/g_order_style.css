@@ -83,45 +83,18 @@ footer {
     min-height: 100vh;
 }
 
-.form-group label {
+.form_group label {
     display: block;
     font-weight: bold;
     font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
 }
 
-.order-btn input:first-of-type{
+.order_btn input:first-of-type{
     margin-right: 50px;
 }
 
-.order-btn{
+.order_btn{
     text-align: left;
-}
-
-/* サイドバーのスタイル */
-.sidebar {
-    width: 200px;
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-right: 2px solid #000; /* サイドバーの右に黒い線 */
-}
-
-/* ナビゲーションメニューのスタイル */
-.sidebar nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar nav ul li {
-    margin-bottom: 10px;
-}
-
-.sidebar nav ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-.sidebar nav ul li a:hover {
-    color: #007bff;
 }
 
 /* コンテンツのスタイル */
@@ -135,7 +108,7 @@ footer {
     font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
 }
 
-.example-text {
+.example_text {
     font-size: 1.2em;
     line-height: 1.5;
     color: #333;
