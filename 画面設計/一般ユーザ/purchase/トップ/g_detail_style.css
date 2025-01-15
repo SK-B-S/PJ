@@ -1,28 +1,61 @@
-/* 全体のスタイル */
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #000; /* サイドバーの下に黒い線 */
+    }
+}
+
 body {
-    margin: 0; /* 余白をリセット */
-    font-family: Arial, sans-serif; /* フォント設定 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* headerとfooterとの間に空間 */
+    align-items: center;
+
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
 }
 
 /* ヘッダーのスタイル */
 header {
-    display: flex;
-    background-color: #f8f8f8; /* 背景色 */
-    align-items: center;
-    justify-content: center;
+    display: flex; /* flexboxを使用 */
+    align-items: center; /* 水平方向の位置調整 */
+    justify-content: center;/* 垂直方向の位置調整 */
 
+    background-color: #f7f7f7; /* 背景色 */
     border-bottom: 1px solid #000; /* ヘッダーの下に黒い線 */
 
-    width: 100%;
+    width: 100%; /* ヘッダーの横幅を画面幅に合わせる */
     height: 120px; /* ヘッダーの厚み */
-    padding: 5px;
+    padding: 5px; /* 文字と枠の空間 */
 
     /* font setting */
-    color: #000;
-    font-size: 80px;
-    font-weight: bold;
+    color: #000; /* フォントカラー */
+    font-size: 100px; /* フォントサイズ */
+    font-weight: bold; /* フォントのスタイル : 太字 */
 }
 
+/* メインのスタイル */
+main {
+    display: flex;
+    flex-direction: column; /* 内部の要素を縦に並べる */
+    align-items: left; /* 中央寄せ */
+
+    width: 100%; /* コンテンツの幅を100%に設定 */
+    padding: 0px;
+    border-radius: 8px; /* 角を丸める */
+
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影をつける */
+}
+
+/* フッターのスタイル */
 footer {
     display: flex;
     align-items: center;
@@ -42,103 +75,38 @@ footer {
 
 /* コンテナのスタイル */
 .container {
-    display: flex; /* フレックスボックスでレイアウト */
-    height: calc(100vh - 70px); /* ヘッダーの高さを除いた高さ */
+    display: flex;
+    flex-direction: column; /* 要素を縦に並べる */
 }
 
-/* サイドバーのスタイル */
-.sidebar {
-    width: 200px; /* 固定幅 */
-    background-color: #f0f0f0; /* 背景色 */
-    padding: 20px; /* 内側の余白 */
-    border-right: 2px solid #000; /* サイドバーの右に黒い線 */
-}
-
-/* ナビゲーションメニューのスタイル */
-.sidebar nav ul {
-    list-style-type: none; /* 項目記号を削除 */
-    padding: 0; /* パディングなし */
-}
-
-.sidebar nav ul li {
-    margin-bottom: 10px; /* 下に余白 */
-}
-
-.sidebar nav ul li a {
-    text-decoration: none; /* 下線を削除 */
-    color: #333; /* テキスト色 */
-}
-
-.sidebar nav ul li a:hover {
-    color: #007bff; /* ホバー時の色変更 */
-}
-
-/* メインコンテンツのスタイル */
+/* コンテンツのスタイル */
 .content {
-    flex: 1; /* サイドバー以外のスペースを使用 */
-    padding: 20px; /* 内側の余白 */
-    font-size: 1.5rem;
+    margin: 10px 0;
 }
 
-.new {
-    text-align: left;
-    position: relative;
+.detail {
+    display: flex;
     float: left;
-    left: 15%;
+    font-weight: bold;
+    position: relative;
+    left: 150px;
 }
 
 .announcement {
-    background-color: #5499b0; /* 薄い黄色の背景 */
     color: #333; /* テキスト色を黒に */
+    background-color: #5499b0; /* 薄い黄色の背景 */
     text-align: center; /* テキストを中央揃え */
-    padding: 10px; /* 内側の余白 */
-    margin: 0%;
-    width: 50%;
-    left: 40%;
     position: relative;
+    left: 450px; /* 右に移動 */
+    padding: 10px; /* 内側の余白 */
+    width: 50%;
 }
 
-
-.left{
+.list {
     float: left;
-    padding-top: 2%;
-    padding-right: 30%;
 }
 
 .name {
     position: relative;
-}
-
-.mo {
-    padding: 5px;
-    padding-top: -20%;
-    position: relative;
-}
-
-.mypage-btn {
-    padding: 5px;
-    padding-top: -20%;
-    position: relative;
-}
-
-input {
-    display: inline-block;
-    padding: 1em 0.5em;
-    line-height: 1;
-    border: 1px solid #999;
-    box-sizing: border-box;
-    background: #f2f2f2;
-    margin: 0.5em 0;
-}
-
-/* レスポンシブデザイン */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* 縦並びに変更 */
-    }
-    .sidebar {
-        width: 100%; /* 横幅いっぱい */
-        border-right: none; /* 右の線を削除 */
-        border-bottom: 2px solid #000; /* 下に黒い線 */
-    }
+    left: 250px;
 }
