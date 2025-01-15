@@ -14,6 +14,8 @@
         overflow-x: hidden;
         font-family: Arial, sans-serif;
         min-height: 100vh;
+    
+        background-color: #f7f7f7;
 
         /* 背景に画像を適応させる */
         background-image: url('path/to/images/file'); /* 画像ファイルのパス */
@@ -52,7 +54,7 @@
         padding: 20px;
         border-radius: 8px; /* 角を丸める */
 
-        background-color: #f7f7f7;
+        background-color: #fff;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影をつける */
     }
 
@@ -103,6 +105,14 @@
         margin: 10px 0;
     }
 
+    /* カレンダーjsのスタイル */
+    .flatpickr_calendar {
+        font-size: 20px;
+        width: 350px;
+    }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
     /* ボタンのスタイル */
     .form_button {
         background-color: #4CAF50;
@@ -111,11 +121,30 @@
         padding: 14px; /* ボタンの高さを調整 */
         border-radius: 4px;
         font-size: 16px;
+
+        margin: 1px;
         cursor: pointer;
         transition: background-color 0.3s ease;
         width: 100%;
         max-width: 100%; /* ボタンの幅を入力フィールドに揃える */
     }
+
+    /* ボタンのスタイル */
+    .cancel_button {
+        background-color: #9fa09f;
+        color: white;
+        border: none;
+        padding: 14px; /* ボタンの高さを調整 */
+        border-radius: 4px;
+        font-size: 16px;
+
+        margin: 1px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%;
+        max-width: 100%; /* ボタンの幅を入力フィールドに揃える */
+    }
+
 
     /* ホバー時のスタイル */
     .form_button:hover {
@@ -156,9 +185,7 @@
     /* 入力フィールドのスタイル */
     .su_input[type="text"],
     .su_input[type="email"],
-    .su_input[type="phone"],
-    .su_input[type="zipcode"],
-    .su_input[type="address"],
+    .su_input[type="tel"],
     .su_input[type="date"],
     .su_input[type="password"] {
         width: 100%;
@@ -181,11 +208,6 @@
         outline: none;
     }
 
-    /* カレンダーjsのスタイル */
-    .flatpickr_calendar {
-        font-size: 20px;
-        width: 350px;
-    }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -279,7 +301,7 @@
 
         transition: background-color 0.3s ease;
 
-        max-width: 60px; /* ボタンの幅を入力フィールドに揃える */
+        max-width: 100%; /* ボタンの幅を入力フィールドに揃える */
     }
     
     /* ホバー時のスタイル */
@@ -288,7 +310,7 @@
     }
 
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* マイページ編集 */
     /* ラベルのスタイル */
     .me_label {
@@ -304,9 +326,8 @@
     /* 入力フィールドのスタイル */
     .me_input[type="text"],
     .me_input[type="email"],
-    .me_input[type="phone"],
-    .me_input[type="zipcode"],
-    .me_input[type="address"],
+    .me_input[type="tel"],
+    .me_input[type="pst"],
     .me_input[type="date"],
     .me_input[type="password"] {
         width: 100%;
