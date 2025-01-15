@@ -96,7 +96,6 @@ footer {
 .mypage_btn {
     width: 10%;
     padding: 10px;
-    box-sizing: border-box;
     position: relative;
     left: 650px;
 }
