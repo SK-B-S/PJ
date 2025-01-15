@@ -101,7 +101,7 @@ styleシート対応表
 	        <link rel="stylesheet" href="PATH_TO_style.css">
 		</head>
 		<body>
-			<header class="header">
+			<header>
 				<p>PAGE NAME</p>
 			</header>
 			<main>
@@ -115,6 +115,21 @@ styleシート対応表
 			</footer>
 		</body>
 	</html>
+
+	<input>要素のtype属性
+		<input>のtype属性には以下のものを適応させる
+
+		text - テキスト入力フィールド（デフォルト）
+		password - パスワード入力（マスクされた文字）
+		email - メールアドレス用入力（形式のバリデーションが適用される）
+		number - 数値入力（数値のみ許可、上下ボタンで増減可能）
+		date, datetime-local, month, time, week - 日付や時間に関連した入力
+		checkbox - チェックボックス
+		radio - ラジオボタン
+		file - ファイル選択
+		url - URL入力（形式のバリデーションが適用される）
+		tel - 電話番号入力（形式のバリデーションなし）
+		color - カラーピッカー
 
 	class名等の接合部は"_"で記述
 
