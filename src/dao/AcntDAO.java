@@ -1,30 +1,33 @@
+package dao;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import bean.ACNT;
 
-public class AcntDAO {
-    private static final String URL = "jdbc:mysql://localhost:3306/your_database_name";
-    private static final String USER = "your_username";
-    private static final String PASSWORD = "your_password";
+public class ACNTDAO {
+    private static final String URL = "jdbc:h2:tcp://localhost/~/PJ_DB"; // データベースファイル
+    private static final String USER = "sa";
+    private static final String PASSWD = "";
 
     public List<ACNT> getAllAccounts() {
         List<ACNT> accounts = new ArrayList<>();
-        String query = "SELECT * FROM ACNT";
+        String sql = "SELECT * FROM accounts";
 
-        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
-             Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery(query)) {
+        try (Connection conn = DriverManager.getConnection(URL, USER, PASSWD);
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
 
-            while (resultSet.next()) {
-                int acntId = resultSet.getInt("acnt_id");
-                int usrType = resultSet.getInt("usr_type");
-                String email = resultSet.getString("email");
-                String pwd = resultSet.getString("pwd");
-                boolean adnFla = resultSet.getBoolean("adn_fla");
-
-                ACNT account = new ACNT(acntId, usrType, email, pwd, adnFla);
-                accounts.add(account);
+            while (rs.next()) {
+                ACNT acnt = new ACNT();
+                acnt.setAcnt_id(rs.getInt("acnt_id"));
+                acnt.setUsr_type(rs.getInt("usr_type"));
+                acnt.setEmail(rs.getString("email"));
+                acnt.setPwd(rs.getString("pwd"));
+                acnt.setAdn_fla(rs.getBoolean("adn_fla"));
+                accounts.add(acnt);
             }
+
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -134,15 +134,16 @@
         background-color: #9fa09f;
         color: white;
         border: none;
-        padding: 14px; /* ボタンの高さを調整 */
         border-radius: 4px;
         font-size: 16px;
 
         margin: 1px;
         cursor: pointer;
         transition: background-color 0.3s ease;
+
         width: 100%;
         max-width: 100%; /* ボタンの幅を入力フィールドに揃える */
+        padding: 14px; /* ボタンの高さを調整 */
     }
 
 
@@ -176,7 +177,7 @@
 
     /* ラベルのスタイル */
     .su_label {
-        font-size: 16px; /* ラベルのフォントサイズを少し大きく */
+        font-size: 20px; /* ラベルのフォントサイズを少し大きく */
         color: #333;
         font-weight: bold;
 
@@ -268,13 +269,13 @@
         /* position: relative;
         right: 200%;
  */
-        font-size: 16px; /* ラベルのフォントサイズを少し大きく */
+        font-size: 20px; /* ラベルのフォントサイズを少し大きく */
         font-weight: bold;
 
         margin-top: 10px;
         margin-bottom: 5px;
         
-        width: 100%;
+        width: 80%;
         color: #333;
 
         gap: 10px;
@@ -283,10 +284,10 @@
     /* リンクのスタイル */
     .edpw_link {
         position: relative;
-        left: 40%;
+        left: 35%;
     }
     
-    /* 変更ボタンのスタイル */
+    /* 編集ボタンのスタイル */
     .mypage_button{
         background-color: #4CAF50;
         color: white;
@@ -296,14 +297,14 @@
         
         cursor: pointer;
 
-        font-size: 16px;
+        font-size: 20px;
         font-weight: bold;
         
-        padding: 5px; /* ボタンのサイズを調整 */
-
         transition: background-color 0.3s ease;
 
+        width: 10%;
         max-width: 100%; /* ボタンの幅を入力フィールドに揃える */
+        padding: 1px; /* ボタンのサイズを調整 */
     }
     
     /* ホバー時のスタイル */
@@ -318,7 +319,7 @@
     .me_label {
         display: block; /* ブロック要素でラベルを左揃え */
 
-        font-size: 16px; /* ラベルのフォントサイズを少し大きく */
+        font-size: 20px; /* ラベルのフォントサイズを少し大きく */
         font-weight: bolder;
 
         margin-bottom: 5px;
