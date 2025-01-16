@@ -177,9 +177,11 @@
     /* ラベルのスタイル */
     .su_label {
         font-size: 16px; /* ラベルのフォントサイズを少し大きく */
+        color: #333;
+        font-weight: bold;
+
         margin-bottom: 5px;
         display: block; /* ブロック要素でラベルを左揃え */
-        color: #333;
     }
 
     /* 入力フィールドのスタイル */
@@ -350,3 +352,6 @@
         outline: none;
     }
 
+    .form_content {
+        width: 65%;
+    }
