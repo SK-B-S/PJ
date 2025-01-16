@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <!-- UTF-8でエンコード -->
+        <meta charset="UTF-8">
+        <!-- デバイスのウィンドウ幅に合わせてページを変更、文字の初期スケールを1に指定 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- タイトル -->
+        <title>Jimoty</title>
+        <!-- style_sample.cssを参照 -->
+        <link rel="stylesheet" href="g_cart_style.css">
+        <!-- 最終更新日：担当者 更新する度に書き換える -->
+        <!-- last update 2025/1/16 杉田 -->
+    
+    </head>
+
+    <body>
+
+        <header>
+            <p>カート</p>
+        </header>
+        
+        <main>
+            <div class="container">
+                <div class="content">
+                    <div class="cart">
+                        カート
+                    </div>
+                    <!-- 商品キャンセルのアナウンス -->
+                    <div class="announcement">
+                        カートの商品を変更しました
+                    </div>
+
+                    <!-- 商品リスト -->
+                    <div class="list">
+                        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                            <!-- 商品画像 -->
+                            <div style="width: 200px; text-align: center; border: 1px solid #ddd; padding: 90px;">
+                                <img src="https://via.placeholder.com/150" alt="商品画像" style="width: 100%;"><br>
+                            </div>
+                        </div>
+                        <p>商品名:</p>
+                    </div>
+
+                    <div class="name">
+                        <p>商品名</p>
+                        <p>¥</p>
+                        <p>数量：<input type="number" value="1" min="1" max="100" step="1"></p>
+                        <!-- 確定ボタン -->
+                        <button class="cancel_btn" type="submit" href="#">確定</button>
+                        <!-- 戻るボタン -->
+                        <button class="cancel_btn" type="submit" href="#">戻る</button>
+                    </div>
+
+                    <div class="all">
+                        <p>小計</p>
+                        <p>￥</p>
+                        <!-- 支払いボタン -->
+                        <button class="all_btn" type="submit" href="#">支払いに進む</button>
+                    </div>
+    
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>ご利用規約・プライバシーポリシー</p>
+            <p>© 2024 YUSA S.A.S</p>
+        </footer>
+    </body>
+</html>
