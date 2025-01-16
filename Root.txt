@@ -7,8 +7,36 @@ Actor
 	農家-farmer				f_[ファイル名].html
 	一般ユーザ-general		g_[ファイル名].html
 
+
+フォルダ構成
+
 css
-	└ style.css
+	└ static_style
+		└ header_style.css
+		└ body_style.css
+		└ main_style.css
+		└ footer_style.css
+
+	└ general_user_style
+		└ account_style.css
+		└ general_style.css
+		└ cart_style.css
+		└ history_style.css
+
+	└ farmer_user_style
+		└ farmer_style.css
+		└ listing_style.css
+		└ sales_style.css
+		└ report_style.css
+		└ cirtification_style.css
+
+	└ admin_user_style
+		└ admin_style.css
+		└ register_style.css
+		└ accountmanage_style.css
+		└ jasmanage_style.css
+
+
 html
 	└ admin
 	└ farmer
