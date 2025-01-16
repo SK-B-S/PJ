@@ -2,6 +2,7 @@
 
 アイコン 	icon -> ico
 アカウント	account -> acnt
+旧          old -> od
 承認 		admit -> adt
 住所 		address -> addr
 詳細 		detail -> dtl
