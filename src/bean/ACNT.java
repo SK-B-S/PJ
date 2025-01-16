@@ -8,15 +8,6 @@ public class ACNT {
     // デフォルトコンストラクタ
     public ACNT() {}
 
-    // パラメータ付きコンストラクタ
-    public ACNT(int acnt_id, int usr_type, String email, String pwd, boolean adn_fla) {
-        this.acnt_id = acnt_id;
-        this.usr_type = usr_type;
-        this.email = email;
-        this.pwd = pwd;
-        this.adn_fla = adn_fla;
-    }
-
     // GetterとSetter
     public int getAcnt_id() {
         return acnt_id;
@@ -56,17 +47,5 @@ public class ACNT {
 
     public void setAdn_fla(boolean adn_fla) {
         this.adn_fla = adn_fla;
-    }
-
-    // デバッグ用のtoStringメソッド
-    @Override
-    public String toString() {
-        return "ACNT{" +
-                "acnt_id=" + acnt_id +
-                ", usr_type=" + usr_type +
-                ", email='" + email + '\'' +
-                ", pwd='" + pwd + '\'' +
-                ", adn_fla=" + adn_fla +
-                '}';
     }
 }
