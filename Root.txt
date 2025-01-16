@@ -57,8 +57,7 @@ styleシート対応表
 		└ トップ				g_top.html
 		└ 検索結果				g_search.html
 		└ 商品詳細				g_detail.html
-		└ 農家別商品				g_farmers.html
-
+		
 	cart_style
 		└ カート				g_cart.html
 		└ カート商品変更			g_cartchange.html
