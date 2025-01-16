@@ -1,3 +1,5 @@
+package bean;
+
 public class ACNT {
     private int acnt_id;       // アカウントID
     private int usr_type;      // ユーザータイプ (1, 2, 3)
