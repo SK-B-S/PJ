@@ -1,30 +1,36 @@
 package bean;
 
 public class ACNT {
-    private int acnt_id;       // アカウントID
-    private int usr_type;      // ユーザータイプ (1, 2, 3)
-    private String email;      // メールアドレス
-    private String pwd;        // パスワード
-    private boolean adn_fla;   // 管理者フラグ
+    private int acntId;
+    private int usrType;
+    private String email;
+    private String pwd;
+    private boolean adnFla;
 
-    // デフォルトコンストラクタ
-    public ACNT() {}
-
-    // GetterとSetter
-    public int getAcnt_id() {
-        return acnt_id;
+    // Constructor
+    public ACNT(int acntId, int usrType, String email, String pwd, boolean adnFla) {
+        this.acntId = acntId;
+        this.usrType = usrType;
+        this.email = email;
+        this.pwd = pwd;
+        this.adnFla = adnFla;
     }
 
-    public void setAcnt_id(int acnt_id) {
-        this.acnt_id = acnt_id;
+    // Getters and Setters
+    public int getAcntId() {
+        return acntId;
     }
 
-    public int getUsr_type() {
-        return usr_type;
+    public void setAcntId(int acntId) {
+        this.acntId = acntId;
     }
 
-    public void setUsr_type(int usr_type) {
-        this.usr_type = usr_type;
+    public int getUsrType() {
+        return usrType;
+    }
+
+    public void setUsrType(int usrType) {
+        this.usrType = usrType;
     }
 
     public String getEmail() {
@@ -43,11 +49,16 @@ public class ACNT {
         this.pwd = pwd;
     }
 
-    public boolean isAdn_fla() {
-        return adn_fla;
+    public boolean isAdnFla() {
+        return adnFla;
     }
 
-    public void setAdn_fla(boolean adn_fla) {
-        this.adn_fla = adn_fla;
+    public void setAdnFla(boolean adnFla) {
+        this.adnFla = adnFla;
+    }
+
+    @Override
+    public String toString() {
+        return "ACNT [acntId=" + acntId + ", usrType=" + usrType + ", email=" + email + ", pwd=" + pwd + ", adnFla=" + adnFla + "]";
     }
 }
