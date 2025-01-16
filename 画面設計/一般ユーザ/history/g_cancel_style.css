@@ -84,7 +84,7 @@ footer {
 
 input[type=checkbox] {
 	transform: scale(5);
-	margin: 160px 0 0 0;
+	margin: 100px 0 0 0;
     float: left;
     position: relative;
     width: 10%;
@@ -106,5 +106,5 @@ input[type=checkbox] {
     width: 10%;
     padding: 10px;
     position: relative;
-    left: 300px;
+    left: 500px;
 }
