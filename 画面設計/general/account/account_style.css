@@ -281,9 +281,6 @@
 /* マイページのスタイル */
     /* ラベルのスタイル */
     .my_label {
-        /* position: relative;
-        right: 200%;
- */
         font-size: 20px; /* ラベルのフォントサイズを少し大きく */
         font-weight: bold;
 

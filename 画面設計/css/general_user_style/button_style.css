@@ -1,0 +1,101 @@
+/* last update 2025/1/16 小林 */
+
+/* ボタンのスタイルまとめ */
+
+/* ボタンを囲うコンテナ */
+.btn_container {
+    display: flex;
+    align-items: center;
+    width: 60%;
+
+    gap: 5px;
+}
+
+/* signup / login で使用 */
+    /* ボタンのスタイル */
+    .form_button {
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        padding: 14px; /* ボタンの高さを調整 */
+        border-radius: 4px;
+        font-size: 20px;
+        font-weight: bold;
+
+        margin: 1px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%;
+        max-width: 100%; /* ボタンの幅を入力フィールドに揃える */
+    }
+    .cancel_button {
+        background-color: #787878;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 20px;
+        font-weight: bold;
+
+        margin: 1px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        width: 100%;
+        max-width: 100%; /* ボタンの幅を入力フィールドに揃える */
+        padding: 14px; /* ボタンの高さを調整 */
+    }
+    /* ホバー時のスタイル */
+    .form_button:hover {
+        background-color: #376a3a;
+    }
+    .cancel_button:hover {
+        background-color: #464646;
+    }
+
+
+/* mypage で使用 */
+    /* ボタンのスタイル */
+    .mypage_button{
+        background-color: #4CAF50;
+        color: #fff;
+        
+        border: none;
+        border-radius: 4px;
+        
+        cursor: pointer;
+
+        font-size: 20px;
+        font-weight: bold;
+        
+        transition: background-color 0.3s ease;
+
+        width: 100%;
+        max-width: 100%; /* ボタンの幅を入力フィールドに揃える */
+        padding: 1px; /* ボタンのサイズを調整 */
+    }
+    .mpcancel_button{
+        background-color: #787878;
+        color: #fff;
+        
+        border: none;
+        border-radius: 4px;
+        
+        cursor: pointer;
+
+        font-size: 20px;
+        font-weight: bold;
+        
+        transition: background-color 0.3s ease;
+
+        width: 100%;
+        max-width: 100%; /* ボタンの幅を入力フィールドに揃える */
+        padding: 1px; /* ボタンのサイズを調整 */
+        margin: 2px;
+    }    
+    /* ホバー時のスタイル */
+    .mypage_button:hover {
+        background-color: #376a3a;
+    }
+    .mpcancel_button:hover {
+        background-color: #464646;
+    }

@@ -1,0 +1,38 @@
+/* last update 2025/1/16 小林 */
+
+/* メインのスタイル */
+main {
+    display: flex;
+    flex-direction: column; /* 内部の要素を縦に並べる */
+    align-items: center; /* 中央寄せ */
+
+    width: 100%; /* コンテンツの幅を100%に設定 */
+    max-width: 70%; /* 最大幅を指定 */
+    padding: 20px;
+    border-radius: 8px; /* 角を丸める */
+
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影をつける */
+}
+
+/* コンテナのスタイル */
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* 要素を縦に並べる */
+
+    width: 100%;
+}
+
+/* コンテンツのスタイル */
+.content {
+    flex: 1;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+/* カレンダーjsのスタイル */
+.flatpickr_calendar {
+    font-size: 20px;
+    width: 350px;
+}

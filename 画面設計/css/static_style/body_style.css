@@ -1,0 +1,24 @@
+/* last update 2025/1/16 小林 */
+
+/* ボディーのスタイル */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* headerとfooterとの間に空間 */
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    background-color: #f7f7f7;
+
+    /* 背景に画像を適応させる */
+    background-image: url('path/to/images/file'); /* 画像ファイルのパス */
+    background-size: cover; /* 画像がコンテナ全体にフィットするように */
+    background-position: center; /* 画像を中央に配置 */
+    background-repeat: no-repeat; /* 画像が繰り返し表示されないように */
+}

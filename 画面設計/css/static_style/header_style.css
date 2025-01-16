@@ -1,0 +1,32 @@
+/* last update 2025/1/16 小林 */
+
+/* ヘッダーのスタイル */
+header {
+    display: flex; /* flexboxを使用 */
+    align-items: center; /* 水平方向の位置調整 */
+    justify-content: center; /* 垂直方向の位置調整 */
+
+    background-color: #f7f7f7; /* 背景色 */
+    border-bottom: 1px solid #000; /* ヘッダーの下に黒い線 */
+    
+    width: 100%; /* ヘッダーの横幅を画面幅に合わせる */
+    height: 120px; /* ヘッダーの厚み */
+    padding: 5px; /* 文字と枠の空間 */
+    
+    /* font setting */
+    color: #000; /* フォントカラー */
+    font-size: 80px; /* フォントサイズ */
+    font-weight: bold; /* フォントのスタイル : 太字 */
+}
+
+/* レスポンシブデザイン -> デバイスに応じた調整を実施 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* 縦方向に配置 */
+    }
+    .sidebar {
+        width: 100%; /* サイドバーの横幅を画面幅に設定 */
+        border-right: none;	/* 右側のサイドバーを削除 */
+        border-bottom: 1px solid #000; /* サイドバーの下に黒い線 */
+    }
+}
