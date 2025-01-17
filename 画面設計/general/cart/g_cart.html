@@ -27,9 +27,7 @@
                         カート
                     </div>
                     <!-- 商品キャンセルのアナウンス -->
-                    <div class="announcement">
-                        カートの商品を変更しました
-                    </div>
+                    <p id="message">カートの商品を変更しました</p>
 
                     <!-- 商品リスト -->
                     <div class="list">
@@ -46,10 +44,16 @@
                         <p>商品名</p>
                         <p>¥</p>
                         <p>数量：<input type="number" value="1" min="1" max="100" step="1"></p>
-                        <!-- 確定ボタン -->
-                        <button class="cancel_btn" type="submit" href="#">確定</button>
+                        <!-- 変更ボタン -->
+                        <button class="cancel_btn" id="cancel_btn" type="submit" href="#">変更</button>
                         <!-- 戻るボタン -->
                         <button class="cancel_btn" type="submit" href="#">戻る</button>
+
+                        <script>
+                            document.getElementById("cancel_btn").addEventListener("click", function() {
+                              document.getElementById("message").style.display = "block";
+                            });
+                        </script>
                     </div>
 
                     <div class="all">
