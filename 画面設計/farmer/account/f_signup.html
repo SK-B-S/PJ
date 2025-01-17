@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- タイトル -->
+        <title>新規登録</title>
+
+        <!-- styleシートを読み込み -->
+        <link rel="stylesheet" href="../../css/static_style/header_style.css">
+        <link rel="stylesheet" href="../../css/static_style/body_style.css">
+        <link rel="stylesheet" href="../../css/static_style/main_style.css">
+        <link rel="stylesheet" href="../../css/static_style/footer_style.css">
+
+        <link rel="stylesheet" href="farmer_style.css">
+
+        <!-- Flatpickrのスタイルとスクリプト -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+        <!-- 日本語ロケール -->
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+    
+        <!-- last update 2024/1/17 小林 -->
+    </head>
+
+    <body>
+
+        <div class="form_container">
+
+            <h1 class="su_h1">新規登録</h1>
+            <form>
+                <label class="su_label" for="name">氏名:</label>
+                <input class="su_input" type="text" id="name" name="name" placeholder="氏名を入力" required>
+
+                <label class="su_label" for="email">メールアドレス:</label>
+                <input class="su_input" type="email" id="email" name="email" placeholder="メールアドレスを入力" required>
+
+                <label class="su_label" for="tel">電話番号:</label>
+                <input class="su_input" type="tel" id="tel" name="telephone" placeholder="電話番号を入力" required>
+
+                <label class="su_label" for="pst">郵便番号:</label>
+                <input class="su_input" type="text" id="pst" name="postcode" placeholder="郵便番号を入力" required>
+
+                <label class="su_label" for="address">住所:</label>
+                <input class="su_input" type="text" id="address" name="address" placeholder="住所を入力" required>
+
+                <label class="su_label" for="birthday">生年月日: ※登録後に変更できません</label>
+                <input class="su_input" type="date" id="birthday" name="birthday" placeholder="生年月日を選択" required>
+
+                <!-- 追加部分: アイコン画像アップロード -->
+                <label class="su_label" for="icon">アイコン画像:</label>
+                <input class="su_input" type="file" id="icon" name="icon" accept="image/*" onchange="previewImage(event, 'icon-preview')">
+                <img id="icon-preview" class="image_preview" alt="アイコンのプレビュー" style="display:none; height: 600px; width: 450px;">
+
+                <!-- 追加部分: 農家証明書アップロード -->
+                <label class="su_label" for="certificate">農家証明書:</label>
+                <input class="su_input" type="file" id="certificate" name="certificate" accept="image/*" onchange="previewImage(event, 'certificate-preview')">
+                <img id="certificate-preview" class="image_preview" alt="農家証明書のプレビュー" style="display:none; height: 600px; width: 450px;">
+
+                <label class="su_label" for="password">パスワード:</label>
+                <input class="su_input" type="password" id="password" name="password" placeholder="パスワードを入力" required>
+
+                <label class="su_label" for="password-confirm">パスワード(確認):</label>
+                <input class="su_input" type="password" id="password-confirm" name="password-confirm" placeholder="パスワードを入力(確認)" required>
+
+                <button class="form_button" type="submit" href="../account/f_login.html">新規登録</button>
+                <button class="cancel_button" type="submit" href="#">登録をやめる</button>
+            </form>
+
+        </div>
+
+        <!-- Flatpickrの初期化スクリプト -->
+        <script>
+            flatpickr( "#birthday", {
+                dateFormat: "Y-m-d",  // YYYY-MM-DD形式
+                locale: flatpickr.l10ns.ja,  // 日本語ロケールの指定
+                defaultDate: "",  // デフォルト空白
+                allowInput : true      // 直接入力も許可
+            });
+
+            // 画像プレビュー用のJavaScript関数
+            function previewImage(event, previewId) {
+                const file = event.target.files[0];
+                const preview = document.getElementById(previewId);
+
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        preview.src = e.target.result;
+                        preview.style.display = "block";
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    preview.style.display = "none";
+                    preview.src = "";
+                }
+            }
+        </script>
+    </body>
+
+</html>
