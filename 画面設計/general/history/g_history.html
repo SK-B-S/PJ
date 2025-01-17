@@ -26,11 +26,10 @@
                     <div class="detail">
                         注文履歴
                     </div>
-                    <!-- 商品キャンセルのアナウンス -->
-                    <div class="announcement">
-                        ＜へちま＞をキャンセルしました。
-                    </div>
 
+                    <!-- 商品キャンセルのアナウンス -->
+                    <p id="message">＜＞をキャンセルしました。</p>
+                    
                     <table class="table" border="1">
                         <tr>
                             <th>注文番号</th><th>注文日</th><th>商品名</th><th>数量</th>
@@ -41,9 +40,16 @@
                             <th>合計</th><th>配送日</th>
                             <th>
                                 <!-- キャンセルボタン -->
-                                <button class="history_btn" type="submit" href="#">キャンセル</button><br>
+                                <button class="his_btn" id="his_btn" type="submit" href="#">キャンセル</button><br>
                                 <!-- 詳細ボタン -->
-                                <button class="history_btn" type="submit" href="#">詳細</button>
+                                <button class="his_btn" type="submit" href="#">詳細</button>
+
+                                <script>
+                                    document.getElementById("his_btn").addEventListener("click", function() {
+                                      document.getElementById("message").style.display = "block";
+                                    });
+                                </script>
+
                             </th>
                         </tr>
                     </table>

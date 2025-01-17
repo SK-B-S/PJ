@@ -52,22 +52,22 @@
 
                 <!-- 追加部分: アイコン画像アップロード -->
                 <label class="su_label" for="icon">アイコン画像:</label>
-                <input class="su_input" type="file" id="icon" name="icon" accept="image/*" onchange="previewImage(event, 'icon-preview')">
+                <input class="su_input" type="file" id="icon" name="icon" accept="image/*" onchange="previewImage(event, 'icon-preview')" required>
                 <img id="icon-preview" class="image_preview" alt="アイコンのプレビュー" style="display:none; height: 600px; width: 450px;">
 
                 <!-- 追加部分: 農家証明書アップロード -->
                 <label class="su_label" for="certificate">農家証明書:</label>
                 <input class="su_input" type="file" id="certificate" name="certificate" accept="image/*" onchange="previewImage(event, 'certificate-preview')">
-                <img id="certificate-preview" class="image_preview" alt="農家証明書のプレビュー" style="display:none; height: 600px; width: 450px;">
+                <img id="certificate-preview" class="image_preview" alt="農家証明書のプレビュー" style="display:none; height: 600px; width: 450px;" required>
 
                 <label class="su_label" for="password">パスワード:</label>
                 <input class="su_input" type="password" id="password" name="password" placeholder="パスワードを入力" required>
 
                 <label class="su_label" for="password-confirm">パスワード(確認):</label>
                 <input class="su_input" type="password" id="password-confirm" name="password-confirm" placeholder="パスワードを入力(確認)" required>
+                
+                <button class="form_button" type="submit" href="#">新規登録</button>
 
-                <button class="form_button" type="submit" href="../account/f_login.html">新規登録</button>
-                <button class="cancel_button" type="submit" href="#">登録をやめる</button>
             </form>
 
         </div>
@@ -98,6 +98,7 @@
                     preview.src = "";
                 }
             }
+
         </script>
     </body>
 

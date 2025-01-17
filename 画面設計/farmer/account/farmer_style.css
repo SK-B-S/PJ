@@ -61,7 +61,7 @@
         width: 100%;
         max-width: 100%; /* ボタンの幅を入力フィールドに揃える */
     }
-
+    
     /* ボタンのスタイル */
     .cancel_button {
         background-color: #787878;
