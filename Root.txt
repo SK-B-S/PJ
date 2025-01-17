@@ -63,74 +63,74 @@ html
 styleシート対応表
 
 一般ユーザ
-	account_style.css
+	account_style.css <account>
 		└ 一般ユーザログイン			g_login.html
 		└ 一般ユーザサインアップ		g_signup.html
 		└ 一般ユーザマイページ			g_mypage.html
 		└ 一般ユーザマイページ編集		g_edmypage.html
 		└ 一般ユーザpw変更			g_edpw.html
 
-	general_style.css
+	general_style.css <general>
 		└ トップ				g_top.html
 		└ 検索結果				g_search.html
 		└ 商品詳細				g_detail.html
 
-	cart_style
+	cart_style <cart>
 		└ カート				g_cart.html
 		└ カート商品変更			g_cartchange.html
 		└ カート削除				g_cartdelete.html
 		└ 注文内容確定				g_order.html
 
-	history_style.css
+	history_style.css <history>
 		└ 注文履歴				g_history.html
 		└ 注文キャンセル			g_cancel.html
 
 農家ユーザ
-	farmer_style.css
+	farmer_style.css <account>
 		└ 農家ユーザログイン			f_login.html
 		└ 農家ユーザサインアップ		f_signup.html
 		└ 農家ユーザマイページ			f_mypage.html
 		└ 農家ユーザpw変更			f_edpw.html
 	
-	listing_style.css
+	listing_style.css <listing>
 		└ 出品登録				f_listing.html
 		└ 出品商品変更				f_edlisting.html
 			└ 削除確認ポップアップ			sale_config.js        // 削除の場合 -> 	トップ画面に遷移 / 削除しない場合 -> ポップアップを消す
 		└ 出荷準備確認				f_shipconf.html
 	
-	sales_style.css
+	sales_style.css <sales>
 		└ 販売履歴				f_history.html
 		└ 販売済商品詳細			f_historydetail.html
 
-	report_style.css
+	report_style.css <report>
 		└ 売上レポート				f_salereport.html
 		└ カテゴリ別売上レポート 		f_catreport.html
 
-	cirtification_style.css
+	cirtification_style.css <cirtification>
 		└ 農家証明書確認			f_cirtificate.html
 		└ JAS登録継続確認			f_jasregister.html
 
 管理者
-	admin_style.css
+	admin_style.css	<account>
 		└ 管理者ログイン			a_login.html
 		└ 管理者トップ				a_top.html
 
-	register_style.css
+	register_style.css <register>
 		└ 農家アカウント本登録			a_fregister.html
 		└ 農家アカウント本登録確認		a_fregisterconf.html
 
-	accountmanage_style.css
+	accountmanage_style.css <accountmanage>
 		└ 農家アカウント管理			a_facntmanage.html
 		└ 一般ユーザアカウント管理		a_gacntmanage.html
 
-	accountdetails_style.css
+	accountdetails_style.css <accountdetail>
 		└ 農家アカウント詳細			a_fdetails.html
 			└ 削除確認ポップアップ			acnt_config.js        // 削除の場合 -> ステータス画面に遷移 / 削除しない場合 -> ポップアップを消す
 
 		└ 一般ユーザアカウント詳細		a_gdetails.html
 			└ 削除確認ポップアップ			acnt_config.js        // 削除の場合 -> ステータス画面に遷移 / 削除しない場合 -> ポップアップを消す
 
-	jasmanage_style.css
+	jasmanage_style.css <jasmange>
 		└ JAS認証審査ステータス			a_jasexamination.html
 		└ JAS認証審査確認			a_jasconf.html
 
