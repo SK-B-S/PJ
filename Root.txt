@@ -56,7 +56,6 @@ html
 			└ カート商品変更			g_cartchange.html
 			└ カート削除				g_cartdelete.html
 			└ 注文内容確定				g_order.html
-		└ purchase
 		
 
 
