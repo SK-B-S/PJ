@@ -85,6 +85,7 @@ footer {
 .detail {
     font-weight: bold;
     position: relative;
+    font-size: 30px;
     left: 150px;
     width: 10%; 
 }

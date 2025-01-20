@@ -1,0 +1,29 @@
+/* general group css */
+
+/* トップ画面のスタイル */
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.searchbar {
+    width: 60%; 
+    height: 20%;
+    padding: 10px;
+}
+
+.srch_input[type="text"] {
+    width: 100%;
+    max-width: 100%; /* 入力フィールドの最大幅を広げる */
+    padding: 12px; /* 内側の余白を広げる */
+    margin-bottom: 20px; /* 下の余白を調整 */
+    border: 1px solid #ccc;
+    border-radius: 4px; /*角の丸み4px*/
+    font-size: 16px; /* フォントサイズを大きく */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+
+}

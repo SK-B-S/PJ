@@ -175,3 +175,24 @@ h2 {
     line-height: 1.5;
     color: #333;
 }
+
+.srch_form {
+    display: flex;
+    align-items: center;
+}
+  
+.srch_input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.srch_button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
