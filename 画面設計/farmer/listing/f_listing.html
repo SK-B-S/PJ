@@ -36,32 +36,37 @@
                     </div>
 
                     <div class="entry">
+                        <label class="up_label" for="name">商品名</label>
+                        <input class="up_input" type="text" id="name" name="name" required>
+        
+                        <label class="up_label" for="cate">カテゴリ</label>
                         <form>
-                            <label class="up_label" for="name">商品名</label>
-                            <input class="up_input" type="text" id="name" name="name">
-            
-                            <label class="up_label" for="cate">カテゴリ</label>
-                            <input class="up_input" type="checkbox" id="cate" name="cate">
-            
-                            <label class="up_label" for="prim">商品画像</label>
-                            <input class="up_input" type="file" id="prim" name="prim" placeholder="アップロード" required>
-            
-                            <label class="up_label" for="pri">値段</label>
-                            <input class="up_input" type="text" id="pri" name="pri">
-            
-                            <label class="up_label" for="expo">商品説明</label>
-                            <textarea class="up_input" id="expo" name="expo"></textarea>
-            
-                            <label class="up_label" for="unit">単位選択</label>
-                            <input class="up_input" type="checkbox" id="unit" name="unit">
-            
-                            <label class="up_label" for="stock">在庫数</label>
-                            <input class="up_input" type="number" id="stock" name="stock">
+                            <input type="checkbox" id="a" required>新規作成
+                            <!-- <input type="text" id="check_A1" required> -->
+                            <input type="checkbox" id="b" required>既存カテゴリ
+                            <!-- <input type="text" id="check_A1" required> -->
                         </form>
+        
+                        <label class="up_label" for="prim">商品画像</label>
+                        <input class="up_input" type="file" id="prim" name="prim" placeholder="アップロード" required>
+        
+                        <label class="up_label" for="pri">値段</label>
+                        <input class="up_input" type="text" id="pri" name="pri" required>
+        
+                        <label class="up_label" for="expo">商品説明</label>
+                        <textarea class="up_input" id="expo" name="expo" required></textarea>
+        
+                        <label class="up_label" for="unit">単位選択</label>
+                        <form>
+                            <input type="checkbox">個数 or
+                            <input type="checkbox">グラム
+                        </form>
+        
+                        <label class="up_label" for="stock">在庫数</label>
+                        <input class="up_input" type="number" id="stock" name="stock" required><br>
 
-                        <button class="up_btn" type="upbmit" href="#">商品登録</button>
-                        <button class="up_btn" type="upbmit" href="#">登録をやめる</button>
-
+                        <button class="up_btn" type="submit" href="#">商品登録</button>
+                        <button class="up_btn" type="submit" href="#">登録をやめる</button>
                     </div>
 
                     <div class="list">
@@ -82,5 +87,6 @@
             <p>ご利用規約・プライバシーポリシー</p>
             <p>© 2024 YUSA S.A.S</p>
         </footer>
+
     </body>
 </html>

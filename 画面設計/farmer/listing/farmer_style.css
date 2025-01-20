@@ -32,12 +32,23 @@
     display: block; /* ブロック要素でラベルを左揃え */
 }
 
+#check_A1 {
+    display: none
+}
+
+#check_A+#check_A1 {
+    display: none
+}
+
+#check_A:checked+#check_A1 {
+    display: block;
+}
+
 /* 入力フィールドのスタイル */
 .up_input[type="text"],
-.up_input[type="email"],
-.up_input[type="tel"],
+.up_input[type="file"],
 .up_input[type="date"],
-.up_input[type="password"] {
+.up_input[type="number"] {
     width: 100%;
     max-width: 100%; /* 入力フィールドの最大幅を広げる */
 
@@ -63,16 +74,12 @@ textarea {
     outline: none;
 }
 
-.list {
-    position: relative;
-    left: 20%;
-}
-
 .up_btn {
     position: relative;
-    left: 100%;
+    left: 50%;
     padding: 10px;
-    margin:30px 20px 15px 0;
+    width: 40%;
+    margin: 20px 20px 0 0;
 }
 
 /*----------------------------------------------------------------*/
