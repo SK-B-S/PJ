@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <!-- UTF-8でエンコード -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- タイトル -->
+        <title>パスワード変更</title>
+        <!-- style_top.cssを参照 -->
+        <link rel="stylesheet" href="../../css/static_style/header_style.css">
+        <link rel="stylesheet" href="../../css/static_style/body_style.css">
+        <link rel="stylesheet" href="../../css/static_style/main_style.css">
+        <link rel="stylesheet" href="../../css/static_style/footer_style.css">
+        
+        <link rel="stylesheet" href="farmer_style.css">
+        <!-- last update 2024/1/21 平田 -->
+    </head>
+
+    <body>
+        <!-- メイン -->
+
+        <header>
+            <p>パスワード変更</p>
+        </header>
+
+        <main>
+            <div class="container">
+                <!-- パスワード変更フォーム -->
+                <div class="form_content">
+                    <form action="/pass" method="POST">
+                        <label class="me_label" for="odpass">現在のパスワード</label>
+                        <input class="me_input" type="password" id="odpwd" name="oldpassword" placeholder="現在のパスワードを入力" required>
+
+                        <label class="me_label" for="newpassword">新パスワード</label>
+                        <input class="me_input" type="password" id="newpassword" name="newpassword" placeholder="新しいパスワードを入力" required>
+
+                        <label class="me_label" for="passwordconf">新パスワード(確認)</label>
+                        <input class="me_input" type="password" id="passwordconf" name="passwordconf" placeholder="新しいパスワードを入力(確認)" required>
+                    </form>
+                </div>
+                <div class="btn_container">
+                    <!-- 確定ボタン -->
+                    <button class="mypage_button" type="submit">確定</button>
+                    <button class="mpcancel_button" type="submit">破壊</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>ご利用規約・プライバシーポリシー</p>
+            <p>© 2024 YUSA S.A.S</p>
+        </footer>
+
+    </body>
+
+</html>
