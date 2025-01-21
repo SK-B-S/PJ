@@ -32,16 +32,22 @@
     display: block; /* ブロック要素でラベルを左揃え */
 }
 
-#check_A1 {
+.check_A1 {
     display: none
 }
 
-#check_A+#check_A1 {
-    display: none
+#check_A:checked + .check_A1 {
+    display: block
 }
 
-#check_A:checked+#check_A1 {
-    display: block;
+.check_A1 {
+    position: relative;
+}
+
+.check_A1 input[type="checkbox"] {
+    position: absolute;
+    left: 220px;
+    top: 15%;
 }
 
 /* 入力フィールドのスタイル */
