@@ -99,3 +99,41 @@
     .mpcancel_button:hover {
         background-color: #464646;
     }
+
+/* topページで使用 */
+    /* ボタンのスタイル */
+    .srch_btn {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 5px;
+    }
+    
+    .header_btn_grp {
+        display: flex;
+        align-items: center;
+
+        position: absolute;
+        right: 0;
+
+        gap: 3px;
+    }
+    
+    .header_btn {    
+        background-color: #5959bb;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 5px;
+    }
+    
+    /* ホバー時のスタイル */
+    .srch_btn:hover {
+        background-color: #376a3a;
+    }
+    .header_btn:hover {
+        background-color: #434391;
+    }

@@ -196,3 +196,58 @@ h2 {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.srchbar {
+    display: flex;
+}
+
+.division_container {
+    display: flex;
+}
+
+.left {
+    flex: 7;
+    background-color: #4CAF50;
+}
+  
+.right {
+    flex: 3;
+    background-color: #007bff;
+}
+
+.form_hdr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.form_hdr_sample {
+    display: flex;
+    align-items: center;
+}
+  
+.input_form_hdr[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex-grow: 1; /* 検索バーを柔軟に伸縮させる */
+}
+  
+.button_form_hdr {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+table {
+    border-collapse: collapse;
+}
+  
+th, td {
+    border: none;
+    padding: 15px;
+}
