@@ -33,41 +33,18 @@
 }
 
 .check_A1 {
-    display: none
+    display: none;
+    position: relative;
 }
 
 #check_A:checked + .check_A1 {
     display: block
 }
 
-.check_A1 {
-    position: relative;
-}
-
 .check_A1 input[type="checkbox"] {
     position: absolute;
     left: 220px;
     top: 15%;
-}
-
-/* 入力フィールドのスタイル */
-.up_input[type="text"],
-.up_input[type="file"],
-.up_input[type="date"],
-.up_input[type="number"] {
-    width: 100%;
-    max-width: 100%; /* 入力フィールドの最大幅を広げる */
-
-    padding: 12px; /* 内側の余白を広げる */
-    margin-bottom: 20px; /* 下の余白を調整 */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    overflow-wrap: normal;
-    
-    font-size: 16px; /* フォントサイズを大きく */
-    
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
 }
 
 textarea {
