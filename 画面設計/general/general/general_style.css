@@ -9,21 +9,74 @@
     width: 100%;
 }
 
-.searchbar {
-    width: 60%; 
-    height: 20%;
-    padding: 10px;
+.srchbar {
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+    width: 60%;
 }
 
 .srch_input[type="text"] {
+    flex: 1;
+
     width: 100%;
     max-width: 100%; /* 入力フィールドの最大幅を広げる */
-    padding: 12px; /* 内側の余白を広げる */
-    margin-bottom: 20px; /* 下の余白を調整 */
+    
+    padding: 5px;
+
     border: 1px solid #ccc;
     border-radius: 4px; /*角の丸み4px*/
     font-size: 16px; /* フォントサイズを大きく */
     box-sizing: border-box;
     transition: border-color 0.3s ease;
-
 }
+  
+/* .srch_btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header_btn_grp {
+    position: absolute;
+    right: 0;
+}
+
+
+.header_btn {    
+    background-color: #5959bb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+} */
+
+@media (max-width: 768px) {
+    /* スマホなどの小さな画面の場合 */
+    .srchbar {
+      flex-direction: column;
+    }
+    .header_btn {
+      position: static; /* 絶対配置を解除 */
+      /* その他のスタイルを調整 */
+    }
+  }
+
+.top_title {
+    font-size: 30px;
+    margin-bottom: 20px; 
+    font-weight: bold;
+}
+
+.products_list {
+    display: flex; 
+    flex-wrap: wrap; 
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+

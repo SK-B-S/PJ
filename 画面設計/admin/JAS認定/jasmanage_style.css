@@ -129,39 +129,38 @@ footer {
 /* 農家情報セクション */
 .details-section {
     flex: 1;
-    padding: 20px;
+    padding: 40px;
 }
 
 .details-section h2 {
-    font-size: 24px;
+    font-size: 28px; /* 見出しのサイズを少し小さくしてバランスを調整 */
+    margin-bottom: 20px; /* 見出しとコンテンツとの間にスペースを追加 */
 }
 
 .details dl {
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .details dt {
     font-weight: bold;
+    font-size: 18px; /* 少しフォントサイズを調整 */
 }
 
 .details dd {
-    margin: 5px 0;
-}
-
-.approval-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #77c627;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    margin: 10px 0;
+    font-size: 16px; /* 説明文のフォントサイズを少し小さく */
+    line-height: 1.6; /* 行間を広げて読みやすく */
 }
 
 /* 認定書セクション */
 .certificate-section {
     width: 50%; /* 認定書を右側に配置 */
-    padding: 20px;
+    padding: 35px;
+}
+
+.certificate-section h2{
+    font-size: 28px; /* 見出しのサイズを少し小さくしてバランスを調整 */
+    margin-bottom: 20px; /* 見出しとコンテンツとの間にスペースを追加 */
 }
 
 .certificate-frame {
@@ -178,8 +177,24 @@ footer {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: auto; /* 幅を自動調整 */
+    display: inline-block; /* 横並びにする */
+    margin-top: 20px; /* 上部の余白 */
 }
 
+/* セレクトボックスデザイン */
+.custom-select {
+    width: 300px; /* 幅を指定 */
+    height: 40px; /* 高さを指定 */
+    font-size: 18px; /* 文字サイズを大きく */
+    padding: 5px; /* 内側の余白を追加 */
+    border-radius: 5px; /* 角丸にする */
+}
+
+.main_flex {
+    display: flex;
+    width: 100%;
+}
 
 /* レスポンシブデザイン */
 @media (max-width: 768px) {

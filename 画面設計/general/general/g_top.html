@@ -5,7 +5,7 @@
         <!-- top page -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ショッピングサイト トップ画面</title>
+        <title>Jimoty -TOP-</title>
         <!-- style_top.cssを参照 -->
 
         <!-- defaul static css file -->
@@ -13,13 +13,12 @@
         <link rel="stylesheet" href="../../css/static_style/body_style.css">
         <link rel="stylesheet" href="../../css/static_style/main_style.css">
         <link rel="stylesheet" href="../../css/static_style/footer_style.css">
+        <link rel="stylesheet" href="../../css/general_user_style/button_style.css">
 
         <link rel="stylesheet" href="general_style.css">
         <!-- <link rel="stylesheet" href="g_top_style.css"> --> 
 
-        <!-- last update YYYY/MM/DD -->
-        <!-- last update 2024/11/27-->
-        <!-- name -->
+        <!-- last update 2024/1/21-->
         <!-- 小林 -->
     </head>
 
@@ -27,25 +26,25 @@
         <!-- ヘッダー -->
         <header>
             <!-- 商品検索フォーム -->
-            <div class="search">
-                <div class="searchbar">
-                    <input class="srch_input" type="text" placeholder="商品を検索">
+            <form class="srchbar">
+                <input class="srch_input" type="text" placeholder="検索ワードを入力">
+                <button class="srch_btn" type="submit">検索</button>
+                <div class="header_btn_grp">
+                    <!-- アカウントボタン -->
+                    <button class="header_btn">アカウント</button>
+                    <!-- カートボタン -->
+                    <button class="header_btn">カート</button>
                 </div>
-                <button style="padding: 10px 20px;">検索</button>
-                <!-- アカウントボタン -->
-                <button style="padding: 10px 20px; float: right;">アカウント</button> <br>
-                <!-- カートボタン -->
-                <button style="padding: 10px 20px; float: right; margin-right: 10px;">カート</button>
-            </div>
+            </form>         
         </header>
 
         <main>
             <div class="container">
                 <!-- メインコンテンツ -->
                 <div class="content">
-                    <div style="margin-bottom: 20px; font-weight: bold;">最近出品された商品</div>
+                    <div class="top_title">最近出品された商品</div>
                     <!-- 商品リスト -->
-                    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                    <div class="products_list">
                         <!-- 商品1 -->
                         <div style="width: 200px; text-align: center; border: 1px solid #ddd; padding: 90px;">
                             <img src="https://via.placeholder.com/150" alt="商品画像" style="width: 100%;">
