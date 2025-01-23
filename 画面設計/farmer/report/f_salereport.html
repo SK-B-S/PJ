@@ -17,8 +17,8 @@
 
         <link rel="stylesheet" href="report_style.css">
 
-        <!-- 最終更新日：担当者 更新する度に書き換える -->
-        <!-- last update 2025/1/21 杉田 -->
+        <!-- 最終更新：担当者 更新する度に書き換える -->
+        <!-- last update 2025/1/23 杉田 -->
     
     </head>
 
@@ -34,9 +34,44 @@
                     <div class="detail">
                         <p>売上レポート</p>
                     </div>
-                    
                 </div>
+
+                <table id="dataTable">
+                  <thead>
+                    <tbody>
+                      <!-- 行が追加される領域 -->
+                    </tbody>
+                    <tr>
+                      <th>商品名</th>
+                      <th>1月</th>
+                      <th>2月</th>
+                      <th>3月</th>
+                      <th>4月</th>
+                      <th>5月</th>
+                      <th>6月</th>
+                      <th>7月</th>
+                      <th>8月</th>
+                      <th>9月</th>
+                      <th>10月</th>
+                      <th>11月</th>
+                      <th>12月</th>
+                      <th>合計</th>
+                    </tr>
+                  </thead>
+                </table>
+
+                <label class="total-label" id="column13Total">売上総額: 0</label>
+              
+                <form id="addRowForm">
+                  <button type="button">＜</button>
+                  <button type="button" onclick="addRow()">商品名を追加</button>
+                  <button type="button">＞</button>
+                </form>
+
+                <script src="report_config.js"></script>
+
             </div>
+
         </main>
 
         <footer>
