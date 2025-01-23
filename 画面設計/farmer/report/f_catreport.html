@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="report_style.css">
 
         <!-- 最終更新：担当者 更新する度に書き換える -->
-        <!-- last update 2025/1/21 杉田 -->
+        <!-- last update 2025/1/23 杉田 -->
     
     </head>
 
@@ -68,66 +68,7 @@
                   <button type="button">＞</button>
                 </form>
               
-                <script>
-                  // 行を追加する関数
-                  function addRow() {
-                    const tableBody = document.querySelector("#dataTable tbody");
-                    const newRow = document.createElement("tr");
-              
-                    // 1列目（行名）を作成
-                    const nameCell = document.createElement("td");
-                    nameCell.setAttribute("contenteditable", "true");
-                    nameCell.innerHTML = "新しい行";
-                    newRow.appendChild(nameCell);
-              
-                    // 2～13列目を作成して行に追加
-                    for (let i = 0; i < 12; i++) {
-                      const newCell = document.createElement("td");
-                      newCell.setAttribute("contenteditable", "true");
-                      newCell.addEventListener("input", () => {
-                        updateRowTotal(newRow); // 行の合計を更新
-                        updateColumn13Total(); // 列13の合計を更新
-                      });
-                      newCell.innerHTML = "";
-                      newRow.appendChild(newCell);
-                    }
-              
-                    // 14列目（合計）を作成
-                    const totalCell = document.createElement("td");
-                    totalCell.className = "row-total";
-                    totalCell.innerHTML = "0";
-                    newRow.appendChild(totalCell);
-              
-                    tableBody.appendChild(newRow);
-                    updateColumn13Total(); // 行が追加された後に列13の合計を更新
-                  }
-              
-                  // 行の合計を計算して14列目に表示する関数
-                  function updateRowTotal(row) {
-                    const cells = row.querySelectorAll("td:nth-child(n+2):nth-child(-n+13)");
-                    let sum = 0;
-              
-                    cells.forEach(cell => {
-                      const value = parseFloat(cell.textContent) || 0;
-                      sum += value;
-                    });
-              
-                    row.querySelector(".row-total").textContent = sum;
-                  }
-              
-                  // 列13の合計を計算して表示する関数
-                  function updateColumn13Total() {
-                    const totalCells = document.querySelectorAll(".row-total");
-                    let grandTotal = 0;
-              
-                    totalCells.forEach(cell => {
-                      const value = parseFloat(cell.textContent) || 0;
-                      grandTotal += value;
-                    });
-              
-                    document.getElementById("column13Total").textContent = `列13の合計: ${grandTotal}`;
-                  }
-                </script>
+                <script src="report_config.js"></script>
 
             </div>
 
