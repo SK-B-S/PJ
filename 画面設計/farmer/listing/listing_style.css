@@ -6,9 +6,7 @@
 }
 
 .entry {
-    position: relative;
     float: left;
-    right: 40%;
 }
 
 .form_container {
@@ -72,6 +70,11 @@ textarea {
     padding: 90px;
 }
 
+.list {
+    display: flex;
+    position: relative;
+    left: 10%;
+}
 /*----------------------------------------------------------------*/
 
 /* f_shipconf.html */
