@@ -29,3 +29,10 @@
     position: relative;
     left: 60%;
 }
+
+.img {
+    width: 200px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 90px;
+}
