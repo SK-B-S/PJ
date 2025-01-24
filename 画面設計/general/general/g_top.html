@@ -5,7 +5,7 @@
         <!-- top page -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ショッピングサイト トップ画面</title>
+        <title>Jimoty -TOP-</title>
         <!-- style_top.cssを参照 -->
 
         <!-- defaul static css file -->
@@ -13,29 +13,30 @@
         <link rel="stylesheet" href="../../css/static_style/body_style.css">
         <link rel="stylesheet" href="../../css/static_style/main_style.css">
         <link rel="stylesheet" href="../../css/static_style/footer_style.css">
+        <link rel="stylesheet" href="../../css/general_user_style/button_style.css">
 
         <link rel="stylesheet" href="general_style.css">
-        <!-- <link rel="stylesheet" href="g_top_style.css"> --> 
+        <!-- <link rel="stylesheet" href="g_top_style.css"> -->
 
-        <!-- last update YYYY/MM/DD -->
-        <!-- last update 2024/11/27-->
-        <!-- name -->
+        <!-- last update 2024/1/21-->
         <!-- 小林 -->
     </head>
 
     <body>
         <!-- ヘッダー -->
         <header>
+            <div class="hdr_icon">
+                <img class="top_icon" src="../../images/explosion.gif" alt="icon画像" href="#">
+            </div>
             <!-- 商品検索フォーム -->
-            <div class="search">
-                <div class="searchbar">
-                    <input class="srch_input" type="text" placeholder="商品を検索">
-                </div>
-                <button style="padding: 10px 20px;">検索</button>
-                <!-- アカウントボタン -->
-                <button style="padding: 10px 20px; float: right;">アカウント</button> <br>
-                <!-- カートボタン -->
-                <button style="padding: 10px 20px; float: right; margin-right: 10px;">カート</button>
+            <form class="srchbar">
+                <input class="srch_input" type="text" placeholder="検索ワードを入力">
+                <button class="srch_btn" type="submit">検索</button>
+            </form>
+
+            <div class="header_btn_grp">
+                <button class="header_btn">アカウント</button>
+                <button class="header_btn">カート</button>
             </div>
         </header>
 
@@ -43,65 +44,100 @@
             <div class="container">
                 <!-- メインコンテンツ -->
                 <div class="content">
-                    <div style="margin-bottom: 20px; font-weight: bold;">最近出品された商品</div>
+                    <div class="top_title">最近出品された商品</div>
                     <!-- 商品リスト -->
-                    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                    <div class="products_list">
                         <!-- 商品1 -->
-                        <div style="width: 200px; text-align: center; border: 1px solid #ddd; padding: 90px;">
-                            <img src="https://via.placeholder.com/150" alt="商品画像" style="width: 100%;">
-                            <p>商品名 A</p>
-                            <p>¥0</p>
-                            <a href="#" style="color: #007bff; text-decoration: none;">詳細を見る</a>
+                        <div class="top_product">
+                            <div class="top_img">
+                                <img src="../../images/rabbit.jpg" alt="商品画像" href="#">
+                            </div>
+                            <div class="product_main">
+                                <p class="gds_name" id="gds_name">商品名 A</p>
+                                <p class="gds_price" id="pri">¥0</p>
+                                <a class="product_link" href="#">詳細を見る</a>
+                            </div>
                         </div>
                         <!-- 商品2 -->
-                        <div style="width: 200px; text-align: center; border: 1px solid #ddd; padding: 90px;">
-                            <img src="https://via.placeholder.com/150" alt="商品画像" style="width: 100%;">
-                            <p>商品名 B</p>
-                            <p>¥1000</p>
-                            <a href="#" style="color: #007bff; text-decoration: none;">詳細を見る</a>
+                        <div class="top_product">
+                            <div class="top_img">
+                                <img src="../../images/strong.png" alt="商品画像" href="#">
+                            </div>
+                            <div class="product_main">
+                                <p class="gds_name" id="gds_name">商品名 B</p>
+                                <p class="gds_price" id="pri">¥0</p>
+                                <a class="product_link" href="#">詳細を見る</a>
+                            </div>
                         </div>
-                        <!-- 商品3 -->
-                        <div style="width: 200px; text-align: center; border: 1px solid #ddd; padding: 90px;">
-                            <img src="https://via.placeholder.com/150" alt="商品画像" style="width: 100%;">
-                            <p>商品名 C</p>
-                            <p>¥100,000,000</p>
-                            <a href="#" style="color: #007bff; text-decoration: none;">詳細を見る</a>
+                        <div class="top_product">
+                            <div class="top_img">
+                                <img src="../../images/ms.jpg" alt="商品画像" href="#">
+                            </div>
+                            <div class="product_main">
+                                <p class="gds_name" id="gds_name">商品名 C</p>
+                                <p class="gds_price" id="pri">¥0</p>
+                                <a class="product_link" href="#">詳細を見る</a>
+                            </div>
                         </div>
-                        <div style="width: 200px; text-align: center; border: 1px solid #ddd; padding: 90px;">
-                            <img src="https://via.placeholder.com/150" alt="商品画像" style="width: 100%;">
-                            <p>商品名 C</p>
-                            <p>¥100,000,000</p>
-                            <a href="#" style="color: #007bff; text-decoration: none;">詳細を見る</a>
+                        <div class="top_product">
+                            <div class="top_img">
+                                <img src="../../images/baby.png" alt="商品画像" href="#">
+                            </div>
+                            <div class="product_main">
+                                <p class="gds_name" id="gds_name">商品名 D</p>
+                                <p class="gds_price" id="pri">¥0</p>
+                                <a class="product_link" href="#">詳細を見る</a>
+                            </div>
                         </div>
-                        <div style="width: 200px; text-align: center; border: 1px solid #ddd; padding: 90px;">
-                            <img src="https://via.placeholder.com/150" alt="商品画像" style="width: 100%;">
-                            <p>商品名 C</p>
-                            <p>¥100,000,000</p>
-                            <a href="#" style="color: #007bff; text-decoration: none;">詳細を見る</a>
+                        <div class="top_product">
+                            <div class="top_img">
+                                <img src="../../images/bomp.gif" alt="商品画像" href="#">
+                            </div>
+                            <div class="product_main">
+                                <p class="gds_name" id="gds_name">商品名 E</p>
+                                <p class="gds_price" id="pri">¥0</p>
+                                <a class="product_link" href="#">詳細を見る</a>
+                            </div>
                         </div>
-                        <div style="width: 200px; text-align: center; border: 1px solid #ddd; padding: 90px;">
-                            <img src="https://via.placeholder.com/150" alt="商品画像" style="width: 100%;">
-                            <p>商品名 C</p>
-                            <p>¥100,000,000</p>
-                            <a href="#" style="color: #007bff; text-decoration: none;">詳細を見る</a>
+                        <div class="top_product">
+                            <div class="top_img">
+                                <img src="../../images/cat_1.jpg" alt="商品画像" href="#">
+                            </div>
+                            <div class="product_main">
+                                <p class="gds_name" id="gds_name">商品名 F</p>
+                                <p class="gds_price" id="pri">¥0</p>
+                                <a class="product_link" href="#">詳細を見る</a>
+                            </div>
                         </div>
-                        <div style="width: 200px; text-align: center; border: 1px solid #ddd; padding: 90px;">
-                            <img src="https://via.placeholder.com/150" alt="商品画像" style="width: 100%;">
-                            <p>商品名 C</p>
-                            <p>¥100,000,000</p>
-                            <a href="#" style="color: #007bff; text-decoration: none;">詳細を見る</a>
+                        <div class="top_product">
+                            <div class="top_img">
+                                <img src="../../images/cat_2.png" alt="商品画像" href="#">
+                            </div>
+                            <div class="product_main">
+                                <p class="gds_name" id="gds_name">商品名 G</p>
+                                <p class="gds_price" id="pri">¥0</p>
+                                <a class="product_link" href="#">詳細を見る</a>
+                            </div>
                         </div>
-                        <div style="width: 200px; text-align: center; border: 1px solid #ddd; padding: 90px;">
-                            <img src="https://via.placeholder.com/150" alt="商品画像" style="width: 100%;">
-                            <p>商品名 C</p>
-                            <p>¥100,000,000</p>
-                            <a href="#" style="color: #007bff; text-decoration: none;">詳細を見る</a>
+                        <div class="top_product">
+                            <div class="top_img">
+                                <img src="../../images/catfight.gif" alt="商品画像" href="#">
+                            </div>
+                            <div class="product_main">
+                                <p class="gds_name" id="gds_name">商品名 H</p>
+                                <p class="gds_price" id="pri">¥0</p>
+                                <a class="product_link" href="#">詳細を見る</a>
+                            </div>
                         </div>
-                        <div style="width: 200px; text-align: center; border: 1px solid #ddd; padding: 90px;">
-                            <img src="https://via.placeholder.com/150" alt="商品画像" style="width: 100%;">
-                            <p>商品名 C</p>
-                            <p>¥100,000,000</p>
-                            <a href="#" style="color: #007bff; text-decoration: none;">詳細を見る</a>
+                        <div class="top_product">
+                            <div class="top_img">
+                                <img src="../../images/chair.jpg" alt="商品画像" href="#">
+                            </div>
+                            <div class="product_main">
+                                <p class="gds_name" id="gds_name">商品名 I</p>
+                                <p class="gds_price" id="pri">¥0</p>
+                                <a class="product_link" href="#">詳細を見る</a>
+                            </div>
                         </div>
                     </div>
                 </div>
