@@ -65,6 +65,13 @@ textarea {
     margin: 20px 20px 0 0;
 }
 
+.img {
+    width: 200px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 90px;
+}
+
 /*----------------------------------------------------------------*/
 
 /* f_shipconf.html */
