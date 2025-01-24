@@ -108,3 +108,10 @@ input[type=checkbox] {
     position: relative;
     left: 500px;
 }
+
+.img {
+    width: 200px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 90px;
+}
