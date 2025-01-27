@@ -11,7 +11,8 @@ date_of_birth -> bd      誕生日
 date_of_expiry -> xpry   有効期限  
 delete -> del            削除  
 detail -> dtl            詳細  
-email -> em              メール  
+email -> em              メール
+explain -> exp           説明  
 farmer -> fmr            農家  
 flag -> fla              フラグ  
 goods -> gds             商品  

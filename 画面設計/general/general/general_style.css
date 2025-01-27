@@ -3,6 +3,8 @@
 /* トップ画面のスタイル */
     /* 商品列のスタイル */
     .top_title {
+        text-align: center;
+
         font-size: 30px;
         margin-bottom: 20px; 
         font-weight: bold;
@@ -14,6 +16,7 @@
 
         align-items: center;
         justify-content: center;
+        width: 100%;
 
         gap: 20px;
     }
@@ -37,7 +40,7 @@
     }
 
     .top_product:empty {
-        display: noen;
+        display: none;
     }
 
     .top_img {
@@ -95,4 +98,19 @@
 
     .product_link:hover {
         color: #0662c4;
+    }
+
+    .product_detail {
+        display: flex;
+        /* justify-content: center;
+        align-items: center;
+ */
+        flex: 1;
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .dtl_img {
+        
     }

@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="../../css/general_user_style/button_style.css">  
 
         <link rel="stylesheet" href="general_style.css">
-        <!-- last update 2025/1/24 小林 -->
+        <!-- last update 2025/1/27 小林 -->
     
     </head>
 
@@ -39,38 +39,43 @@
         <main>
             <div class="container">
                 <div class="content">
-                    <div class="detail">
-                        商品詳細
+                    
+                    <div class="top_title">
+                        <p id="gds_name"> 商品名 </p>
                     </div>
+                    
+                    <div class="products_list">
 
-                    <p id="message">カートに追加しました。</p>
-    
-                    <!-- 商品リスト -->
-                    <div class="list">
-                        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-                            <!-- 商品画像 -->
-                            <div style="width: 200px; text-align: center; border: 1px solid #ddd; padding: 90px;">
-                                <img src="https://via.placeholder.com/150" alt="商品画像" style="width: 100%;">
+                        <!-- 商品リスト -->
+                        <div class="dtl_img">
+                            <div>
+                                <!-- 商品画像 -->
+                                <div>
+                                    <img src="../../images/chair.jpg" alt="商品画像" style="width: 100%;">
+                                </div>
                             </div>
                         </div>
+
+                        <div class="product_detail">
+
+                            <p id="gds_name">商品名 A</p>
+                            <p>商品説明</p>
+                            <p id="gds_exp">2025年1月最新式 3個セット お手軽簡単に</p>
+                            <p id="pri">¥</p>
+                            <p>数量：<input type="number" value="1" min="1" max="100" step="1"></p>
+                            <p id="rest_stk">在庫数〇〇</p>
+                            <!-- カートに入れるボタン -->
+                            <button class="in_btn" id="in_btn" type="submit" href="#">カートに入れる</button>
+                        
+                            <script>
+                            document.getElementById("in_btn").addEventListener("click", function() {
+                                document.getElementById("message").style.display = "block";
+                            });
+                            </script>
+                        </div>
+                        
                     </div>
 
-                    <div class="name">
-                        <p>商品名 A</p>
-                        <p>商品説明</p>
-                        <p>#######</p>
-                        <p>¥</p>
-                        <p>数量：<input type="number" value="1" min="1" max="100" step="1"></p>
-                        <p>在庫数〇〇</p>
-                        <!-- カートに入れるボタン -->
-                        <button class="in_btn" id="in_btn" type="submit" href="#">カートに入れる</button>
-                      
-                        <script>
-                          document.getElementById("in_btn").addEventListener("click", function() {
-                            document.getElementById("message").style.display = "block";
-                          });
-                        </script>
-                    </div>
                 </div>
             </div>
         </main>
