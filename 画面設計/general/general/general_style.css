@@ -79,7 +79,7 @@
         padding: 0;
         font-weight: bold;
 
-        max-width: 22ch;
+        max-width: 20ch;            /* 20characters */      
         white-space: nowrap;        /* テキストを1行にする */
         overflow: hidden;           /* はみ出した部分を隠す */
         text-overflow: ellipsis;    /* 省略記号 (...) を表示 */
