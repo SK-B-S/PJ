@@ -3,11 +3,11 @@ document.getElementById("up_btn").addEventListener("click", () => {
 });
 
 function showDeletePopup() {
-const userConfirmed = confirm("本当に削除しますか？");
+const userConfirmed = confirm("本当に変更しますか？");
     if (userConfirmed) {
-        alert("削除が実行されました。");
+        alert("変更が実行されました。");
         // ここに削除処理を追加
     } else {
-        alert("削除はキャンセルされました。");
+        alert("変更はキャンセルされました。");
     }
 }
