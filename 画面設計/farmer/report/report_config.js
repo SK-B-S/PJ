@@ -18,7 +18,7 @@ const newRow = document.createElement("tr");
 // 1列目（行名）を作成
 const nameCell = document.createElement("td");
 nameCell.setAttribute("contenteditable", "true");
-nameCell.innerHTML = rowData?.name || "新しい行";
+nameCell.innerHTML = rowData?.name || "新しいカテゴリ";
 newRow.appendChild(nameCell);
 
 // 2～13列目を作成して行に追加

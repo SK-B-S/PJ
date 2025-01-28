@@ -25,14 +25,10 @@
     font-weight: bold;
 }
 
-.list {
-    position: relative;
-    left: 60%;
-}
-
 .img {
-    width: 200px;
-    text-align: center;
+    display: flex;
+    position: relative;
+    left: 30%;
     border: 1px solid #ddd;
     padding: 90px;
 }
