@@ -18,7 +18,7 @@ const newRow = document.createElement("tr");
 // 1列目（行名）を作成
 const nameCell = document.createElement("td");
 nameCell.setAttribute("contenteditable", "true");
-nameCell.innerHTML = rowData?.name || "新しいカテゴリ";
+nameCell.innerHTML = rowData?.name || "新しい行";
 newRow.appendChild(nameCell);
 
 // 2～13列目を作成して行に追加
@@ -69,3 +69,14 @@ grandTotal += value;
 document.getElementById("column13Total1").textContent = `＜カテゴリ＞の売上総額: ${formatNumberWithDots(grandTotal)}`; // フォーマット適用
 document.getElementById("column13Total2").textContent = `＜カテゴリ＞の売上総額: ${formatNumberWithDots(grandTotal)}`; // フォーマット適用
 }
+
+const button = document.getElementById("delbtn");
+const table = document.getElementById("addRowForm");
+
+button.addEventListener("click", () => {
+if (table.rows.length > 0) {
+    table.deleteRow(table.rows.length - 1); // 最後の行を削除
+} else {
+    alert("削除する行がありません");
+}
+});
