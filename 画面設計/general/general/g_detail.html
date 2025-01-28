@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
     <head>
         <!-- UTF-8でエンコード -->
         <meta charset="UTF-8">
@@ -12,11 +13,11 @@
         <link rel="stylesheet" href="../../css/static_style/body_style.css">
         <link rel="stylesheet" href="../../css/static_style/main_style.css">
         <link rel="stylesheet" href="../../css/static_style/footer_style.css">
-        <link rel="stylesheet" href="../../css/general_user_style/button_style.css">  
+        <link rel="stylesheet" href="../../css/general_user_style/button_style.css">
 
         <link rel="stylesheet" href="general_style.css">
         <!-- last update 2025/1/27 小林 -->
-    
+
     </head>
 
     <body>
@@ -35,47 +36,51 @@
                 <button class="header_btn">カート</button>
             </div>
         </header>
-        
+
         <main>
             <div class="container">
                 <div class="content">
-                    
+
                     <div class="top_title">
                         <p id="gds_name"> 商品名 </p>
                     </div>
-                    
+
                     <div class="products_list">
 
                         <!-- 商品リスト -->
-                        <div class="dtl_img">
+                        <div class="dtl_img_ctnr">
                             <div>
                                 <!-- 商品画像 -->
                                 <div>
-                                    <img src="../../images/chair.jpg" alt="商品画像" style="width: 100%;">
+                                    <img src="../../images/momonga.jpg" alt="商品画像">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="product_detail">
+                        <div class="dtl_ctnr">
 
-                            <p id="gds_name">商品名 A</p>
-                            <p>商品説明</p>
-                            <p id="gds_exp">2025年1月最新式 3個セット お手軽簡単に</p>
-                            <p id="pri">¥</p>
-                            <p>数量：<input type="number" value="1" min="1" max="100" step="1"></p>
-                            <p id="rest_stk">在庫数〇〇</p>
+                            <div class="product_detail">
+
+                                <!-- <p id="gds_name">商品名 A</p> -->
+                                <p class="sub_title">商品説明</p>
+                                <p class="gds_exp" id="gds_exp">
+                                    2025年1月最新式 3個セット お手軽簡単に【2025新登場】 加湿器 大容量 8L 加熱式 ＆ 超音波式 省エネ ハイブリッド式 最長46時間稼働
+                                    5段階湿度調整 お手入れ簡単 かしつき 上から給水 加湿器 除菌 静音 2WAY給水 アロマ対応 切りタイマー 自動OFF 静電タッチパネル リモコン付き 湿度設定 水漏れ防止
+                                    空焚き防止 おしゃれ 加湿器. 寝室 オフィス リビング 乾燥対策</p>
+                                <p class="price" id="price">¥2000</p>
+                                <p class="qua" id="qua">数量 : <input class="qua_input" type="number" value="1" min="1" max="100" step="1"></p>
+                                <p class="rest_stk" id="rest_stk">在庫数 : </p>
+
+                                <script>
+                                    document.getElementById("in_btn").addEventListener("click", function () {
+                                        document.getElementById("message").style.display = "block";
+                                    });
+                                </script>
+                            </div>
                             <!-- カートに入れるボタン -->
-                            <button class="in_btn" id="in_btn" type="submit" href="#">カートに入れる</button>
-                        
-                            <script>
-                            document.getElementById("in_btn").addEventListener("click", function() {
-                                document.getElementById("message").style.display = "block";
-                            });
-                            </script>
+                            <button class="in_btn" id="in_btn" type="submit">カートに入れる</button>
                         </div>
-                        
                     </div>
-
                 </div>
             </div>
         </main>
@@ -85,4 +90,5 @@
             <p>© 2024 YUSA S.A.S</p>
         </footer>
     </body>
+
 </html>
