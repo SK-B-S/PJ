@@ -70,13 +70,9 @@ document.getElementById("column13Total1").textContent = `＜カテゴリ＞の�
 document.getElementById("column13Total2").textContent = `＜カテゴリ＞の売上総額: ${formatNumberWithDots(grandTotal)}`; // フォーマット適用
 }
 
-const button = document.getElementById("delbtn");
-const table = document.getElementById("addRowForm");
-
-button.addEventListener("click", () => {
-if (table.rows.length > 0) {
-    table.deleteRow(table.rows.length - 1); // 最後の行を削除
-} else {
-    alert("削除する行がありません");
+function del(){
+       
+    let rw = tbl.rows.length;
+    tbl.deleteRow(rw-1);
+    
 }
-});

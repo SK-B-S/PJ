@@ -25,7 +25,18 @@
     <body>
 
         <header>
-            <p>＜カテゴリ＞の売上</p>
+          <div class="hdr_icon">
+            <img class="top_icon" src="../../images/explosion.gif" alt="icon画像" href="#">
+          </div>
+          <form class="srchbar">
+            <input class="srch_input" type="text" placeholder="検索ワードを入力">
+            <button class="srch_btn" type="submit">検索</button>
+          </form>
+  
+          <div class="header_btn_grp">
+            <button class="header_btn">アカウント</button>
+            <button class="header_btn">カート</button>
+          </div>
         </header>
         
         <main>
@@ -63,10 +74,10 @@
                 <label class="total-label" id="column13Total1">＜カテゴリ＞の売上総額: 0</label>
               
                 <form id="addRowForm">
-                  <button type="button">＜</button>
-                  <button type="button" onclick="addRow()">行を追加</button>
-                  <button id="delbtn">行を削除</button>
-                  <button type="button">＞</button>
+                  <button class="add_btn" type="button">＜</button>
+                  <button class="add_btn" type="button" onclick="addRow()">行を追加</button>
+                  <button class="add_btn" id="delbtn">行を削除</button>
+                  <button class="add_btn" type="button">＞</button>
                 </form>
               
                 <script src="report_config.js"></script>
