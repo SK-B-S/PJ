@@ -251,3 +251,43 @@ th, td {
     border: none;
     padding: 15px;
 }
+
+/* テキストの省略 */
+.ellipsis {
+    width: 200px;               /* 固定幅 */
+    white-space: nowrap;        /* テキストを1行にする */
+    overflow: hidden;           /* はみ出した部分を隠す */
+    text-overflow: ellipsis;    /* 省略記号 (...) を表示 */
+    border: 1px solid #ccc;     /* デバッグ用の枠 */
+}
+/* ホバー時に全文表示 */
+.ellipsis:hover::after {
+    content: attr(data-fulltext); /* data-fulltext属性の内容を表示 */
+    position: absolute;
+    top: 110%; /* 要素の下に配置 */
+    left: 0;
+    background-color: #000; /* 背景色 */
+    color: #fff; /* 文字色 */
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap; /* ツールチップは1行で表示 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    z-index: 1000;
+}
+
+.expand-on-hover {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+  }
+  
+  .expand-on-hover:hover {
+    white-space: normal; /* 複数行に戻す */
+    overflow: visible;   /* はみ出しを許可 */
+    background-color: #f9f9f9; /* 背景色を変更 */
+    padding: 5px;
+  }

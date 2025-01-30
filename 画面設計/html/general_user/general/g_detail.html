@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <!-- UTF-8でエンコード -->
+        <meta charset="UTF-8">
+        <!-- デバイスのウィンドウ幅に合わせてページを変更、文字の初期スケールを1に指定 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- タイトル -->
+        <title>Jimoty</title>
+        <!-- cssを参照 -->
+        <link rel="stylesheet" href="../../../css/static_style/header_style.css">
+        <link rel="stylesheet" href="../../../css/static_style/body_style.css">
+        <link rel="stylesheet" href="../../../css/static_style/main_style.css">
+        <link rel="stylesheet" href="../../../css/static_style/footer_style.css">
+        <link rel="stylesheet" href="../../../css/general_user_style/button_style.css">
+
+        <link rel="stylesheet" href="../../../css/general_user_style/general_style.css">
+        <!-- last update 2025/1/27 小林 -->
+
+    </head>
+
+    <body>
+
+        <header>
+            <div class="hdr_icon">
+                <img class="top_icon" src="../../../images/explosion.gif" alt="icon画像" href="#">
+            </div>
+            <!-- 商品検索フォーム -->
+            <form class="srchbar">
+                <input class="srch_input" type="text" placeholder="検索ワードを入力">
+                <button class="srch_btn" type="submit">検索</button>
+            </form>
+            <div class="header_btn_grp">
+                <button class="header_btn">アカウント</button>
+                <button class="header_btn">カート</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="content">
+
+                    <div class="top_title">
+                        <p id="gds_name"> 商品名 </p>
+                    </div>
+
+                    <div class="products_list">
+
+                        <!-- 商品リスト -->
+                        <div class="dtl_img_ctnr">
+                            <div>
+                                <!-- 商品画像 -->
+                                <div>
+                                    <img src="../../../images/momonga.jpg" alt="商品画像">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dtl_ctnr">
+
+                            <div class="product_detail">
+
+                                <!-- <p id="gds_name">商品名 A</p> -->
+                                <p class="sub_title">商品説明</p>
+                                <p class="gds_exp" id="gds_exp">
+                                    2025年1月最新式 3個セット お手軽簡単に【2025新登場】 加湿器 大容量 8L 加熱式 ＆ 超音波式 省エネ ハイブリッド式 最長46時間稼働
+                                    5段階湿度調整 お手入れ簡単 かしつき 上から給水 加湿器 除菌 静音 2WAY給水 アロマ対応 切りタイマー 自動OFF 静電タッチパネル リモコン付き 湿度設定 水漏れ防止
+                                    空焚き防止 おしゃれ 加湿器. 寝室 オフィス リビング 乾燥対策</p>
+                                <p class="price" id="price">¥2000</p>
+                                <p class="qua" id="qua">数量 : <input class="qua_input" type="number" value="1" min="1" max="100" step="1"></p>
+                                <p class="rest_stk" id="rest_stk">在庫数 : </p>
+
+                                <script>
+                                    document.getElementById("in_btn").addEventListener("click", function () {
+                                        document.getElementById("message").style.display = "block";
+                                    });
+                                </script>
+                            </div>
+                            <!-- カートに入れるボタン -->
+                            <button class="in_btn" id="in_btn" type="submit">カートに入れる</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>ご利用規約・プライバシーポリシー</p>
+            <p>© 2024 YUSA S.A.S</p>
+        </footer>
+    </body>
+
+</html>

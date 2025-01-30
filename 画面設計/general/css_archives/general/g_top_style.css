@@ -1,0 +1,73 @@
+/* 全体のスタイル */
+body {
+    margin: 0; /* 余白をリセット */
+    font-family: Arial, sans-serif; /* フォント設定 */
+}
+
+/* ヘッダーのスタイル */
+header {
+    background-color: #f8f8f8; /* 背景色 */
+    padding: 20px; /* 内側の余白 */
+    border-bottom: 2px solid #000; /* ヘッダーの下に黒い線 */
+    text-align: center; /* 中央揃え */
+}
+
+/* コンテナのスタイル */
+.container {
+    display: flex; /* フレックスボックスでレイアウト */
+    height: calc(100vh - 70px); /* ヘッダーの高さを除いた高さ */
+}
+
+/* サイドバーのスタイル */
+.sidebar {
+    width: 200px; /* 固定幅 */
+    background-color: #f0f0f0; /* 背景色 */
+    padding: 20px; /* 内側の余白 */
+    border-right: 2px solid #000; /* サイドバーの右に黒い線 */
+}
+
+/* ナビゲーションメニューのスタイル */
+.sidebar nav ul {
+    list-style-type: none; /* 項目記号を削除 */
+    padding: 0; /* パディングなし */
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px; /* 下に余白 */
+}
+
+.sidebar nav ul li a {
+    text-decoration: none; /* 下線を削除 */
+    color: #333; /* テキスト色 */
+}
+
+.sidebar nav ul li a:hover {
+    color: #007bff; /* ホバー時の色変更 */
+}
+
+/* メインコンテンツのスタイル */
+.content {
+    flex: 1; /* サイドバー以外のスペースを使用 */
+    padding: 20px; /* 内側の余白 */
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* 縦並びに変更 */
+    }
+    .sidebar {
+        width: 100%; /* 横幅いっぱい */
+        border-right: none; /* 右の線を削除 */
+        border-bottom: 2px solid #000; /* 下に黒い線 */
+    }
+}
+
+.announcement {
+    background-color: #5499b0; /* 薄い黄色の背景 */
+    color: #333; /* テキスト色を黒に */
+    text-align: center; /* テキストを中央揃え */
+    padding: 10px; /* 内側の余白 */
+    margin: 0; /* 余白をなしに */
+}
+

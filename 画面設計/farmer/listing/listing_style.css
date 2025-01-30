@@ -6,9 +6,7 @@
 }
 
 .entry {
-    position: relative;
     float: left;
-    right: 40%;
 }
 
 .form_container {
@@ -22,7 +20,7 @@
 }
 
 /* ラベルのスタイル */
-.up_label {
+label {
     font-size: 20px; /* ラベルのフォントサイズを少し大きく */
     color: #333;
     font-weight: bold;
@@ -43,8 +41,8 @@
 
 .check_A1 input[type="checkbox"] {
     position: absolute;
-    left: 220px;
-    top: 15%;
+    left: 235px;
+    top: 25%;
 }
 
 textarea {
@@ -53,41 +51,32 @@ textarea {
 }
 
 /* フォーカス時のスタイル */
-.up_input:focus {
+input:focus {
     outline: none;
 }
 
-.up_btn {
+button {
     position: relative;
-    left: 80%;
+    left: 50%;
     padding: 10px;
     width: 40%;
     margin: 20px 20px 0 0;
 }
 
+.list {
+    display: flex;
+    position: relative;
+    left: 20%;
+    border: 1px solid #ddd;
+    padding: 90px;
+}
 /*----------------------------------------------------------------*/
 
 /* f_shipconf.html */
-
-.pagination {
-    display: inline-block;
-}
-
 .pagination a {
-    color: black;
     float: left;
     padding: 8px 16px;
     text-decoration: none;
     border: 1px solid #ddd;
     margin: 0 4px;
-}
-
-.pagination a.active {
-    background-color: #4CAF50;
-    color: white;
-    border: 1px solid #4CAF50;
-}
-
-.pagination a:hover:not(.active) {
-    background-color: #ddd;
 }

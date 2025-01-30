@@ -7,17 +7,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- タイトル -->
         <title>Jimoty</title>
-        <!-- style_sample.cssを参照 -->
+        <!-- style.cssを参照 -->
+        <!-- defaul static css file -->
+        <link rel="stylesheet" href="../../css/static_style/header_style.css">
+        <link rel="stylesheet" href="../../css/static_style/body_style.css">
+        <link rel="stylesheet" href="../../css/static_style/main_style.css">
+        <link rel="stylesheet" href="../../css/static_style/footer_style.css">
+        <link rel="stylesheet" href="../../css/static_style/button_style.css">
+
         <link rel="stylesheet" href="g_cart_style.css">
         <!-- 最終更新日：担当者 更新する度に書き換える -->
-        <!-- last update 2025/1/16 杉田 -->
+        <!-- last update 2025/1/29 小林 -->
     
     </head>
 
     <body>
 
         <header>
-            <p>カート</p>
+            <div class="hdr_icon">
+                <img class="top_icon" src="../../../images/explosion.gif" alt="icon画像" href="#">
+            </div>
+            <!-- 商品検索フォーム -->
+            <form class="srchbar">
+                <input class="srch_input" type="text" placeholder="検索ワードを入力">
+                <button class="srch_btn" type="submit">検索</button>
+            </form>
+
+            <div class="header_btn_grp">
+                <button class="header_btn">アカウント</button>
+                <button class="header_btn">カート</button>
+            </div>
         </header>
         
         <main>

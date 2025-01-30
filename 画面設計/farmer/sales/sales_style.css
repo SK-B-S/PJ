@@ -25,7 +25,10 @@
     font-weight: bold;
 }
 
-.list {
+.img {
+    display: flex;
     position: relative;
-    left: 60%;
+    left: 30%;
+    border: 1px solid #ddd;
+    padding: 90px;
 }

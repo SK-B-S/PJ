@@ -17,15 +17,26 @@
 
         <link rel="stylesheet" href="report_style.css">
 
-        <!-- 最終更新日：担当者 更新する度に書き換える -->
-        <!-- last update 2025/1/21 杉田 -->
+        <!-- 最終更新：担当者 更新する度に書き換える -->
+        <!-- last update 2025/1/23 杉田 -->
     
     </head>
 
     <body>
 
         <header>
-            <p>＜カテゴリ＞の売上</p>
+          <div class="hdr_icon">
+            <img class="top_icon" src="../../images/explosion.gif" alt="icon画像" href="#">
+          </div>
+          <form class="srchbar">
+            <input class="srch_input" type="text" placeholder="検索ワードを入力">
+            <button class="srch_btn" type="submit">検索</button>
+          </form>
+  
+          <div class="header_btn_grp">
+            <button class="header_btn">アカウント</button>
+            <button class="header_btn">カート</button>
+          </div>
         </header>
         
         <main>
@@ -34,9 +45,45 @@
                     <div class="detail">
                         <p>＜カテゴリ＞の売上</p>
                     </div>
-                    
                 </div>
+
+                <table id="dataTable">
+                  <thead>
+                    <tbody>
+                      <!-- 行が追加される領域 -->
+                    </tbody>
+                    <tr>
+                      <th>カテゴリ名</th>
+                      <th>1月</th>
+                      <th>2月</th>
+                      <th>3月</th>
+                      <th>4月</th>
+                      <th>5月</th>
+                      <th>6月</th>
+                      <th>7月</th>
+                      <th>8月</th>
+                      <th>9月</th>
+                      <th>10月</th>
+                      <th>11月</th>
+                      <th>12月</th>
+                      <th>合計</th>
+                    </tr>
+                  </thead>
+                </table>
+
+                <label class="total-label" id="column13Total1">＜カテゴリ＞の売上総額: 0</label>
+              
+                <form id="addRowForm">
+                  <button class="add_btn" type="button">＜</button>
+                  <button class="add_btn" type="button" onclick="addRow()">行を追加</button>
+                  <button class="add_btn" id="delbtn">行を削除</button>
+                  <button class="add_btn" type="button">＞</button>
+                </form>
+              
+                <script src="report_config.js"></script>
+
             </div>
+
         </main>
 
         <footer>
