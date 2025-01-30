@@ -149,20 +149,62 @@
         background-color: #376a3a;
     }
 
-    .cart_btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+/*  出品登録・出品商品変更で使用　*/
+.lis_button{
+    position: relative;
+    left: 50%;
+    background-color: #4CAF50;
+    color: #fff;
+    
+    border: none;
+    border-radius: 4px;
+    
+    cursor: pointer;
 
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        padding: 7px;
+    font-size: 20px;
+    font-weight: bold;
+    
+    transition: background-color 0.3s ease;
 
-        width: 40%;
-    }
-    .cart_btn:hover {
-        background-color: #376a3a;
-    }
+    width: 100%;
+    max-width: 100%; /* ボタンの幅を入力フィールドに揃える */
+    padding: 1px; /* ボタンのサイズを調整 */
+}
+.liscancel_button{
+    position: relative;
+    left: 50%;
+    background-color: #787878;
+    color: #fff;
+    
+    border: none;
+    border-radius: 4px;
+    
+    cursor: pointer;
+
+    font-size: 20px;
+    font-weight: bold;
+    
+    transition: background-color 0.3s ease;
+
+    width: 100%;
+    max-width: 100%; /* ボタンの幅を入力フィールドに揃える */
+    padding: 1px; /* ボタンのサイズを調整 */
+    margin: 2px;
+}    
+/* ホバー時のスタイル */
+.lis_button:hover {
+    background-color: #376a3a;
+}
+.liscancel_button:hover {
+    background-color: #464646;
+}
+
+.add_btn {
+    background-color: #4CAF50;
+    color: #fff;
+    
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-weight: bold;
+}

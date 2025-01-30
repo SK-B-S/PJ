@@ -55,14 +55,6 @@ input:focus {
     outline: none;
 }
 
-button {
-    position: relative;
-    left: 50%;
-    padding: 10px;
-    width: 40%;
-    margin: 20px 20px 0 0;
-}
-
 .list {
     display: flex;
     position: relative;
@@ -74,7 +66,6 @@ button {
 
 /* f_shipconf.html */
 .pagination a {
-    float: left;
     padding: 8px 16px;
     text-decoration: none;
     border: 1px solid #ddd;
