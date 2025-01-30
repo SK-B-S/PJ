@@ -1,49 +1,5 @@
-/*<!-- last update 2025/1/14 平田 -->*/
+/*<!-- last update 2025/1/30 杉田 -->*/
 /*<!-- ほぼ完成 -->*/
-
-/* Bodyのスタイル */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('background.jpg'); /* 背景画像を設定 */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-}
-
-
-/* ヘッダーのスタイル */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #000;
-
-    width: 100%;
-    height: 120px;
-    padding: 5px;
-
-    color: #000;
-    font-size: 100px; /* 100pxは通常大きすぎるため32pxに変更 */
-    font-weight: bold;
-}
-
-/* メインのスタイル */
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 30px 20px;
-    max-width: 1200px;
-    margin: 20px auto;
-    background-color: #f7f7f7;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
 
 /* テーブルのスタイル */
 table {
@@ -70,37 +26,6 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-/* フッターのスタイル */
-footer {
-    display: flex; /* flexboxを使用 */
-    flex-direction: column; 
-    align-items: center; /* 水平方向の位置調整 */
-    justify-content: center; /* 垂直方向の位置調整 */
-
-    width: 100%;
-    height: 10%; /* フッターの厚み */
-    /* padding: 5px; 文字と枠の空間 */
-
-    background-color: #f7f7f7; /* 背景色 */
-    border-top: 1px solid #000; /* フッターの上に黒い線 */
-
-    /* font setting */
-    color: #000; /* フォントカラー */
-    font-size: 20px; /* フォントサイズ */	
-}
-
-/* レスポンシブデザイン */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    .sidebar {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #000;
-    }
 }
 
 .certificates-section, .reports-section {
