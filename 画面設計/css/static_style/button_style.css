@@ -149,6 +149,24 @@
         background-color: #376a3a;
     }
 
+    .cart_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 7px;
+
+        width: 40%;
+    }
+    .cart_btn:hover {
+        background-color: #376a3a;
+    }
+
 /*  出品登録・出品商品変更で使用　*/
 .lis_button{
     position: relative;
