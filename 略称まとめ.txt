@@ -22,7 +22,7 @@ old -> od                旧
 password -> pwd          パスワード  
 phone -> tel             電話  
 postcode -> pst          郵便番号  
-price -> pri             価格  
+price -> price           価格  
 proceeds -> prcds        利益  
 proof -> prf             証明  
 purchaser -> pchr        購入者  

@@ -69,3 +69,10 @@ grandTotal += value;
 document.getElementById("column13Total1").textContent = `＜カテゴリ＞の売上総額: ${formatNumberWithDots(grandTotal)}`; // フォーマット適用
 document.getElementById("column13Total2").textContent = `＜カテゴリ＞の売上総額: ${formatNumberWithDots(grandTotal)}`; // フォーマット適用
 }
+
+function del(){
+       
+    let rw = tbl.rows.length;
+    tbl.deleteRow(rw-1);
+    
+}
