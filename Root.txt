@@ -157,8 +157,20 @@ styleシート対応表
 		</head>
 		<body>
 			<header>
-				<p>PAGE NAME</p>
+				<div class="hdr_icon">
+					<img class="top_icon" src="../../../images/explosion.gif" alt="icon画像" href="#">
+				</div>
+				<form class="srchbar">
+					<input class="srch_input" type="text" placeholder="検索ワードを入力">
+					<button class="srch_btn" type="submit">検索</button>
+				</form>
+
+				<div class="header_btn_grp">
+					<button class="header_btn">アカウント</button>
+					<button class="header_btn">カート</button>
+				</div>
 			</header>
+
 			<main>
 				<div class="container">
 					PAGE CONTENTS

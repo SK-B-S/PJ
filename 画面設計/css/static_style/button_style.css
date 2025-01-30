@@ -6,7 +6,7 @@
 .btn_container {
     display: flex;
     align-items: center;
-    width: 60%;
+    width: 70%;
 
     gap: 5px;
 }
@@ -128,4 +128,23 @@
     }
     .header_btn:hover {
         background-color: #434391;
+    }
+
+/* 商品詳細で使用 */
+    .in_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 7px;
+
+        width: 40%;
+    }
+    .in_btn:hover {
+        background-color: #376a3a;
     }

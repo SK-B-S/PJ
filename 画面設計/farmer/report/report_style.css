@@ -23,10 +23,6 @@ form {
   font-size: 20px;
 }
 
-button {
+.add_btn {
   padding: 10px 15px;
-  color: black;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }

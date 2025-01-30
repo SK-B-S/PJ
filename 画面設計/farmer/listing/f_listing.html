@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="listing_style.css">
 
         <!-- 最終更新日：担当者 更新する度に書き換える -->
-        <!-- last update 2025/1/21 杉田 -->
+        <!-- last update 2025/1/27 杉田 -->
     
     </head>
 
@@ -36,60 +36,51 @@
                     </div>
 
                     <div class="entry">
-                        <label class="up_label" for="name">商品名</label>
-                        <input class="up_input" type="text" id="name" name="name" required>
+                        <label for="name">商品名</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="cate">カテゴリ</label>
+                        <input type="checkbox" id="check_A" required>新規作成
+                        <div class="check_A1" id="check_A1">
+                            <label for="check_A1">カテゴリ:<input type="text" id="text" required></label>
+                        </div>
+                        <input type="checkbox" id="check_A" required>既存カテゴリ
+                        <div class="check_A1" id="check_A1">
+                            <label for="check_A1">カテゴリ:<input type="text" id="text" required></label>
+                            <input type="checkbox" id="check" required>
+                        </div>
         
-                        <label class="up_label" for="cate">カテゴリ</label>
-                        <form>
-                            <input type="checkbox" id="check_A" required>新規作成
-                            <div class="check_A1" id="check_A1">
-                                <label for="check_A1">カテゴリ:</label>
-                                <input type="text" id="text" required>
-                            </div>
-                            <input type="checkbox" id="check_A" required>既存カテゴリ
-                            <div class="check_A1" id="check_A1">
-                                <label for="check_A1">カテゴリ:</label>
-                                <input type="text" id="text" required>
-                                <input type="checkbox" id="check" required>
-                            </div>
-                        </form>
+                        <label for="prim">商品画像</label>
+                        <input type="file" id="prim" name="prim" placeholder="アップロード" required>
         
-                        <label class="up_label" for="prim">商品画像</label>
-                        <input class="up_input" type="file" id="prim" name="prim" placeholder="アップロード" required>
+                        <label for="pri">値段</label>
+                        <input type="text" id="pri" name="pri" required>
         
-                        <label class="up_label" for="pri">値段</label>
-                        <input class="up_input" type="text" id="pri" name="pri" required>
+                        <label for="expo">商品説明</label>
+                        <textarea id="expo" name="expo" required></textarea>
         
-                        <label class="up_label" for="expo">商品説明</label>
-                        <textarea class="up_input" id="expo" name="expo" required></textarea>
+                        <label for="unit">単位選択</label>
+                        <input type="checkbox" id="check_A" required>個数
+                        <div class="check_A1" id="check_A1">
+                            <label for="check_A1">個数</label>
+                            <input type="number" id="qua" required>
+                        </div>        
+                        <input type="checkbox" id="check_A" required>グラム
+                        <div class="check_A1" id="check_A1">
+                            <label for="check_A1">グラム</label>
+                            <input type="number" id="Kg" min="1" placeholder="Kg" required>
+                        </div>
         
-                        <label class="up_label" for="unit">単位選択</label>
-                        <form>
-                            <input type="checkbox" id="check_A" required>個数
-                            <div class="check_A1" id="check_A1">
-                                <label for="check_A1">個数</label>
-                                <input type="number" id="cou" required>
-                            </div>        
-                            <input type="checkbox" id="check_A" required>グラム
-                            <div class="check_A1" id="check_A1">
-                                <label for="check_A1">グラム</label>
-                                <input type="number" id="Kg" min="1" placeholder="Kg" required>
-                            </div>
-                        </form>
-        
-                        <label class="up_label" for="stock">在庫数</label>
-                        <input class="up_input" type="number" id="stock" name="stock" value="1" min="1" max="100" step="1" required><br>
+                        <label for="stock">在庫数</label>
+                        <input type="number" id="stock" name="stock" value="1" min="1" max="100" required><br>
                         
 
-                        <button class="up_btn" type="submit" href="#">商品登録</button>
-                        <button class="up_btn" type="submit" href="#">登録をやめる</button>
+                        <button type="submit" href="#">商品登録</button>
+                        <button type="submit" href="#">登録をやめる</button>
                     </div>
 
                     <div class="list">
                         <!-- 商品画像 -->
-                        <div class="img">
-                            <img src="https://via.placeholder.com/150" alt="商品画像">
-                        </div>
+                        <img src="https://via.placeholder.com/150" alt="商品画像">
                     </div>
 
                     

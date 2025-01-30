@@ -11,7 +11,8 @@ date_of_birth -> bd      誕生日
 date_of_expiry -> xpry   有効期限  
 delete -> del            削除  
 detail -> dtl            詳細  
-email -> em              メール  
+email -> em              メール
+explain -> exp           説明  
 farmer -> fmr            農家  
 flag -> fla              フラグ  
 goods -> gds             商品  
@@ -21,7 +22,7 @@ old -> od                旧
 password -> pwd          パスワード  
 phone -> tel             電話  
 postcode -> pst          郵便番号  
-price -> pri             価格  
+price -> price           価格  
 proceeds -> prcds        利益  
 proof -> prf             証明  
 purchaser -> pchr        購入者  
