@@ -198,3 +198,13 @@
 .liscancel_button:hover {
     background-color: #464646;
 }
+
+.add_btn {
+    background-color: #4CAF50;
+    color: #fff;
+    
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-weight: bold;
+}
