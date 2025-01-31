@@ -38,54 +38,52 @@
                 </div>
 
                 <div class="entry">
-                    <label for="name">商品名</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="cate">カテゴリ</label>
-                    <input type="checkbox" id="check_A" required>新規作成
-                    <div class="check_A1" id="check_A1">
-                        <label for="check_A1">カテゴリ:<input type="text" id="text" required></label>
+                    <div class="ig">
+                        <label for="name">商品名</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="cate">カテゴリ</label>
+                        <input type="checkbox" id="check_A" required>新規作成
+                        <div class="check_A1" id="check_A1">
+                            <label for="check_A1">カテゴリ:<input type="text" id="text" required></label>
+                        </div>
+                        <input type="checkbox" id="check_A" required>既存カテゴリ
+                        <div class="check_A1" id="check_A1">
+                            <label for="check_A1">カテゴリ:<input type="text" id="text" required></label>
+                            <input type="checkbox" id="check" required>
+                        </div>
+
+                        <label for="pri">値段</label>
+                        <input type="text" id="pri" name="pri" required>
+
+                        <label for="prim">商品画像</label>
+                        <input type="file" id="prim" name="prim" placeholder="アップロード" required>
+
+                        <label for="expo">商品説明</label>
+                        <textarea id="expo" name="expo" required></textarea>
+
+                        <label for="unit">単位選択</label>
+                        <input type="checkbox" id="check_A" required>個数
+                        <div class="check_A1" id="check_A1">
+                            <label for="check_A1">個数:<input type="number" id="qua" required></label>
+                        </div>
+                        <input type="checkbox" id="check_A" required>グラム
+                        <div class="check_A1" id="check_A1">
+                            <label for="check_A1">グラム:<input type="number" id="Kg" min="1" placeholder="Kg"
+                                    required></label>
+                        </div>
+
+                        <label for="stock">在庫数</label>
+                        <input type="number" id="stock" name="stock" value="1" min="1" max="100" required><br>
                     </div>
-                    <input type="checkbox" id="check_A" required>既存カテゴリ
-                    <div class="check_A1" id="check_A1">
-                        <label for="check_A1">カテゴリ:<input type="text" id="text" required></label>
-                        <input type="checkbox" id="check" required>
+
+                    <div class="img">
+                        <!-- 商品画像 -->
+                        <img src="../../images/cat_1.jpg" alt="商品画像">
                     </div>
-
-                    <label for="prim">商品画像</label>
-                    <input type="file" id="prim" name="prim" placeholder="アップロード" required>
-
-                    <label for="pri">値段</label>
-                    <input type="text" id="pri" name="pri" required>
-
-                    <label for="expo">商品説明</label>
-                    <textarea id="expo" name="expo" required></textarea>
-
-                    <label for="unit">単位選択</label>
-                    <input type="checkbox" id="check_A" required>個数
-                    <div class="check_A1" id="check_A1">
-                        <label for="check_A1">個数</label>
-                        <input type="number" id="qua" required>
-                    </div>
-                    <input type="checkbox" id="check_A" required>グラム
-                    <div class="check_A1" id="check_A1">
-                        <label for="check_A1">グラム</label>
-                        <input type="number" id="Kg" min="1" placeholder="Kg" required>
-                    </div>
-
-                    <label for="stock">在庫数</label>
-                    <input type="number" id="stock" name="stock" value="1" min="1" max="100" required>
-
-
-                    <button class="lis_button" type="submit" href="#">商品登録</button>
-                    <button class="liscancel_button" type="submit" href="#">登録をやめる</button>
-
                 </div>
 
-                <div class="list">
-                    <!-- 商品画像 -->
-                    <img src="../../images/cat_1.jpg" alt="商品画像">
-                </div>
-
+                <button class="lis_button" type="submit" href="#">商品登録</button>
+                <button class="liscancel_button" type="submit" href="#">登録をやめる</button>
 
             </div>
         </div>
