@@ -9,36 +9,97 @@
     width: 50%;
 }
 
-.list {
-    float: left;
-    position: relative;
-    right: 50px;
-    margin: 10px;
-    margin-top: 5%;
-    font-size: 20px;
-    left: 5px;
-}
+.top_title {
+    text-align: center;
 
-.name {
-    float: left;
-    position: relative;
-    font-size: 30px; /* フォントサイズ */
-    left: 50px;
-}
-
-.cancel_btn {
-    width: 45%;
-    padding: 10px;
-}
-
-.all {
     font-size: 30px;
-    position: relative;
-    margin-top: 40px;
-    left: 200px; 
+    margin-bottom: 20px; 
+    font-weight: bold;
 }
 
-.all_btn {
-    width: 10%;
-    padding: 10px;
+.products_list {
+    display: flex; 
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    gap: 20px;
 }
+
+
+.gds_name {
+    font-size: 30px; /* フォントサイズ */
+
+    padding: 2px;
+}
+
+.cart_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1;
+    flex-direction: column;
+}
+
+.cart_img_grp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.cart_img {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 80%;
+    width: 100%;
+}
+
+.cart_img img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.cart_gds_grp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1;
+    flex-direction: column;
+}
+
+.gds_dtl {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+
+    flex: 2;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.cart_prch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    margin: 0;
+}
+
