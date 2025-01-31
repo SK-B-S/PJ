@@ -9,6 +9,14 @@
     width: 50%;
 }
 
+.side_set {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+
+    width: 100%;
+}
+
 .top_title {
     text-align: center;
 
@@ -103,3 +111,34 @@
     margin: 0;
 }
 
+/* サイドバーのスタイル */
+.rightsidebar {
+    position: absolute;
+
+    margin-top: 0;
+    padding-top: 0;
+    right: 0;
+    width: 20%px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #000;
+}
+
+/* ナビゲーションメニューのスタイル */
+.rightsidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.rightsidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.rightsidebar nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.rightsidebar nav ul li a:hover {
+    color: #007bff;
+}

@@ -168,13 +168,14 @@
 
 /* サイドバーのスタイル */
 .sidebar {
-    position: sticky;
+    position: absolute;
 
     right: 0;
-    width: 200px;
+    width: 20%;
     background-color: #f0f0f0;
     padding: 20px;
     border-left: 1px solid #000;
+    border-bottom: #000;
     /* サイドバーの左に黒い線 */
 }
 
