@@ -30,64 +30,95 @@
         <p>出品登録</p>
     </header>
 
+    <!-- <div class="side_set"> -->
     <main>
+
         <div class="container">
             <div class="content">
-                <div class="detail">
-                    <p>出品登録</p>
-                </div>
+                <div class="top_title">出品登録</div>
 
                 <div class="entry">
-                    <div class="ig">
-                        <label for="name">商品名</label>
-                        <input type="text" id="name" name="name" required>
-                        <label for="cate">カテゴリ</label>
-                        <input type="checkbox" id="check_A" required>新規作成
-                        <div class="check_A1" id="check_A1">
-                            <label for="check_A1">カテゴリ:<input type="text" id="text" required></label>
+                    <div class="upper_grp">
+                        <div class="exp_1">
+                            <label class="cart_label" for="gds_name">商品名</label>
+                            <input class="gds_name" type="text" id="gds_name" name="gds_name" required>
+
+                            <label class="cart_label" for="categorize">カテゴリ</label>
+                            <div class="categorize">
+                                <input type="checkbox" id="check_A" required>新規作成
+                                <div class="check_A1" id="check_A1">
+                                    <label for="check_A1">カテゴリ:<input type="text" id="text" required></label>
+                                </div>
+
+                                <input type="checkbox" id="check_A" required>既存カテゴリ
+                                <div class="check_A1" id="check_A1">
+                                    <label class="cart_label" for="check_A1">カテゴリ:<input type="text" id="text"
+                                            required></label>
+                                    <input type="checkbox" id="check" required>
+                                </div>
+                            </div>
+
+                            <label class="cart_label" for="pri">値段</label>
+                            <p class="list_price">¥<input class="input_list_price" type="number" id="pri" name="pri"
+                                    required></p>
                         </div>
-                        <input type="checkbox" id="check_A" required>既存カテゴリ
-                        <div class="check_A1" id="check_A1">
-                            <label for="check_A1">カテゴリ:<input type="text" id="text" required></label>
-                            <input type="checkbox" id="check" required>
+
+                        <div class="list_img">
+                            <!-- 商品画像 -->
+                            <img src="../../images/cat_1.jpg" alt="商品画像">
+                            <label class="cart_label" for="prim">商品画像</label>
+                            <input type="file" id="prim" name="prim" placeholder="アップロード" required>
+                        </div>
+                    </div>
+
+                    <div class="lower_grp">
+                        <div class="exp_area">
+                            <label class="cart_label" for="gds_exp">商品説明</label>
+                            <textarea class="exp_text" id="gds_exp" name="gds_exp" required></textarea>
                         </div>
 
-                        <label for="pri">値段</label>
-                        <input type="text" id="pri" name="pri" required>
-
-                        <label for="prim">商品画像</label>
-                        <input type="file" id="prim" name="prim" placeholder="アップロード" required>
-
-                        <label for="expo">商品説明</label>
-                        <textarea id="expo" name="expo" required></textarea>
-
-                        <label for="unit">単位選択</label>
+                        <label class="cart_label" for="unit">単位選択</label>
                         <input type="checkbox" id="check_A" required>個数
                         <div class="check_A1" id="check_A1">
-                            <label for="check_A1">個数:<input type="number" id="qua" required></label>
+                            <label class="cart_label" for="check_A1">個数:<input type="number" id="qua" required></label>
                         </div>
+
                         <input type="checkbox" id="check_A" required>グラム
                         <div class="check_A1" id="check_A1">
-                            <label for="check_A1">グラム:<input type="number" id="Kg" min="1" placeholder="Kg"
-                                    required></label>
+                            <label class="cart_label" for="check_A1">グラム:<input type="number" id="Kg" min="1"
+                                    placeholder="Kg" required></label>
                         </div>
 
-                        <label for="stock">在庫数</label>
-                        <input type="number" id="stock" name="stock" value="1" min="1" max="100" required><br>
+                        <label class="cart_labelk" for="stock">在庫数</label>
+                        <input type="number" id="stock" name="stock" value="1" min="1" max="100" required>
                     </div>
 
-                    <div class="img">
-                        <!-- 商品画像 -->
-                        <img src="../../images/cat_1.jpg" alt="商品画像">
+                    <div class="list_btn_grp">
+                        <button class="list_regi_btn" type="submit" href="#">商品登録</button>
+                        <button class="list_cancel_btn" type="submit" href="#">登録をやめる</button>
                     </div>
+
+
                 </div>
 
-                <button class="lis_button" type="submit" href="#">商品登録</button>
-                <button class="liscancel_button" type="submit" href="#">登録をやめる</button>
 
             </div>
+
         </div>
+
     </main>
+
+    <!-- <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#">メニュー1</a></li>
+                    <li><a href="#">メニュー2</a></li>
+                    <li><a href="#">メニュー3</a></li>
+                </ul>
+            </nav>
+        </aside> -->
+
+    <!-- </div> -->
 
     <footer>
         <p>ご利用規約・プライバシーポリシー</p>

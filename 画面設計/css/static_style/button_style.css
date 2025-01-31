@@ -186,6 +186,44 @@
     background-color: #376a3a;
 }
 
+.add_btn {
+    background-color: #4CAF50;
+    color: #fff;
+
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+.cart_btn_grp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+
+    gap: 5px;
+}
+
+.del_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #787878;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 7px;
+
+    width: 40%;
+}
+
+.del_btn:hover {
+    background-color: #464646;
+}
+
 /*  出品登録・出品商品変更で使用　*/
 .lis_button {
     position: relative;
@@ -242,40 +280,64 @@
     background-color: #464646;
 }
 
-.add_btn {
+.list_btn_grp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    gap: 2px;
+
+    width: 50%;
+}
+
+.list_regi_btn {
     background-color: #4CAF50;
     color: #fff;
 
     border: none;
     border-radius: 4px;
-    padding: 10px 15px;
-    font-weight: bold;
-}
 
-.cart_btn_grp {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70%;
-
-    gap: 5px;
-}
-
-.del_btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #787878;
-    color: white;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
-    padding: 7px;
 
-    width: 40%;
+    font-size: 20px;
+    font-weight: bold;
+
+    transition: background-color 0.3s ease;
+
+    width: 100%;
+    max-width: 100%;
+    /* ボタンの幅を入力フィールドに揃える */
+    padding: 1px;
+    /* ボタンのサイズを調整 */
 }
 
-.del_btn:hover {
+.list_regi_btn:hover {
+    background-color: #376a3a;
+}
+
+.list_cancel_btn {
+    background-color: #787878;
+    color: #fff;
+
+    border: none;
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    transition: background-color 0.3s ease;
+
+    width: 100%;
+    max-width: 100%;
+    /* ボタンの幅を入力フィールドに揃える */
+    padding: 1px;
+    /* ボタンのサイズを調整 */
+
+}
+
+.list_cancel_btn:hover {
     background-color: #464646;
 }
