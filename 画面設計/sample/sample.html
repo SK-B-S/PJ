@@ -18,202 +18,233 @@
 
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <!-- UTF-8でエンコード -->
-        <meta charset="UTF-8">
-        <!-- デバイスのウィンドウ幅に合わせてページを変更、文字の初期スケールを1に指定 -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- タイトル -->
-        <title>Jimoty - SAMPLE -</title>
-        <!-- style_sample.cssを参照 -->
-        <link rel="stylesheet" href="sample_style.css">
-        <!-- 最終更新日：担当者 更新する度に書き換える -->
-        <!-- last update 2024/11/27 小林 -->
-        <!-- 更新内容 -->
 
-        <!-- font -->
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
-    
-    </head>
+<head>
+    <!-- UTF-8でエンコード -->
+    <meta charset="UTF-8">
+    <!-- デバイスのウィンドウ幅に合わせてページを変更、文字の初期スケールを1に指定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- タイトル -->
+    <title>Jimoty - SAMPLE -</title>
+    <!-- style_sample.cssを参照 -->
+    <link rel="stylesheet" href="sample_style.css">
+    <!-- 最終更新日：担当者 更新する度に書き換える -->
+    <!-- last update 2024/11/27 小林 -->
+    <!-- 更新内容 -->
 
-    <body>
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
 
-        <header class="form_hdr">
-            <!-- <p>ヘッダー</p> -->
-            <!-- <header class="form_hdr"> -->
-                <form class="form_hdr_sample">
-                    <input class="input_form_hdr" type="text" placeholder="検索">
-                    <button class="button_form_hdr" type="submit">検索</button>
-                </form>
-                <button class="button_form_hdr">ボタン1</button>
-                <button class="button_form_hdr">ボタン2</button>
-            <!-- </header> -->
-        </header>
-        
-        <main>
-            <div>
-                <form>
-                    <input class="srch_input" type="text" placeholder="検索ワードを入力">
-                    <button class="srch_btn" type="submit">検索</button>
-                </form>
+</head>
+
+<body>
+
+    <header class="form_hdr">
+        <!-- <p>ヘッダー</p> -->
+        <!-- <header class="form_hdr"> -->
+        <form class="form_hdr_sample">
+            <input class="input_form_hdr" type="text" placeholder="検索">
+            <button class="button_form_hdr" type="submit">検索</button>
+        </form>
+        <button class="button_form_hdr">ボタン1</button>
+        <button class="button_form_hdr">ボタン2</button>
+        <!-- </header> -->
+    </header>
+
+
+    <main>
+        <div>
+            <form>
+                <input class="srch_input" type="text" placeholder="検索ワードを入力">
+                <button class="srch_btn" type="submit">検索</button>
+            </form>
+        </div>
+
+        <div class="container">
+
+            <aside class="sidebar">
+                <nav>
+                    <ul>
+                        <li><a href="#">メニュー1</a></li>
+                        <li><a href="#">メニュー2</a></li>
+                        <li><a href="#">メニュー3</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+
+            <div class="division_container">
+                <div class="left">左側のコンテンツ - 7割 -</div>
+                <div class="right">右側のコンテンツ - 3割 -</div>
             </div>
 
-            <div class="container">
 
-                <!-- <aside class="sidebar">
-                    <nav>
-                        <ul>
-                            <li><a href="#">メニュー1</a></li>
-                            <li><a href="#">メニュー2</a></li>
-                            <li><a href="#">メニュー3</a></li>
-                        </ul>
-                    </nav>
-                </aside> -->
+            <form class="sample_form" action="submit" method="post">
+                <div>
+                    <label for="usr">text</label>
+                    <input type="text" name="name" id="usr">
+                </div>
+                <div>
+                    <label for="tel">tel</label>
+                    <input type="tel" name="tel" id="tel">
+                </div>
+                <div>
+                    <label for="pwd">password</label>
+                    <input type="password" name="pwd" id="pwd">
+                </div>
+            </form>
 
-
-                <div class="division_container">
-                    <div class="left">左側のコンテンツ - 7割 -</div>
-                    <div class="right">右側のコンテンツ - 3割 -</div>
-                </div>
-
-
-                <form class="sample_form" action="submit" method="post">
-                    <div>
-                        <label for="usr">text</label>
-                        <input type="text" name="name" id="usr">
-                    </div>
-                    <div>
-                        <label for="tel">tel</label>
-                        <input type="tel" name="tel" id="tel">
-                    </div>
-                    <div>
-                        <label for="pwd">password</label>
-                        <input type="password" name="pwd" id="pwd">
-                    </div>
-                </form>
-
-                <div class="content">
-                    <h2> Serif（セリフ体）</h2>
-                    <p class=" serif example-text">This is a sample text using **Serif Fonts**.（セリフ体のサンプルテキストです。）</p>
-                </div>
-                
-                <div class="content">
-                    <h2> Sans-serif（サンセリフ体）</h2>
-                    <p class=" sans-serif example-text">This is a sample text using **Sans-serif Fonts**.（サンセリフ体のサンプルテキストです。）</p>
-                </div>
-                
-                <div class="content">
-                    <h2> Monospace（等幅フォント）</h2>
-                    <p class=" monospace example-text">This is a sample text using **Monospace Fonts**.（等幅フォントのサンプルテキストです。）</p>
-                </div>
-                
-                <div class="content">
-                    <h2> Cursive（手書き風フォント）</h2>
-                    <p class=" cursive example-text">This is a sample text using **Cursive Fonts**.（手書き風フォントのサンプルテキストです。）</p>
-                </div>
-                
-                <div class="content">
-                    <h2> Fantasy（装飾的フォント）</h2>
-                    <p class=" fantasy example-text">This is a sample text using **Fantasy Fonts**.（装飾的フォントのサンプルテキストです。）</p>
-                </div>
-
-                <div class="content">
-                    <h2> System Fonts（システムフォント）</h2>
-                    <p class=" system example-text">This is a sample text using **System Fonts**.（システムフォントのサンプルテキストです。）</p>
-                </div>
-
-                <div class="content" style="font-family: 'Noto Sans JP', sans-serif;">
-                    <h2 class="font-name">Noto Sans JP</h2>
-                    <p>これは「Noto Sans JP」で表示したサンプルテキストです。</p>
-                </div>
-            
-                <div class="content" style="font-family: 'Noto Serif JP', serif;">
-                    <h2 class="font-name">Noto Serif JP</h2>
-                    <p>これは「Noto Serif JP」で表示したサンプルテキストです。</p>
-                </div>
-            
-                <div class="content" style="font-family: 'Roboto', sans-serif;">
-                    <h2 class="font-name">Roboto</h2>
-                    <p>これは「Roboto」で表示したサンプルテキストです。</p>
-                </div>
-            
-                <div class="content" style="font-family: 'Kosugi', sans-serif;">
-                    <h2 class="font-name">Kosugi</h2>
-                    <p>これは「Kosugi」で表示したサンプルテキストです。</p>
-                </div>
-            
-                <div class="content" style="font-family: 'Kosugi Maru', sans-serif;">
-                    <h2 class="font-name">Kosugi Maru</h2>
-                    <p>これは「Kosugi Maru」で表示したサンプルテキストです。</p>
-                </div>
-            
-                <div class="content" style="font-family: 'Zen Kaku Gothic Antique', sans-serif;">
-                    <h2 class="font-name">Zen Kaku Gothic Antique</h2>
-                    <p>これは「Zen Kaku Gothic Antique」で表示したサンプルテキストです。</p>
-                </div>
-            
-                <div class="content" style="font-family: 'Zen Maru Gothic', sans-serif;">
-                    <h2 class="font-name">Zen Maru Gothic</h2>
-                    <p>これは「Zen Maru Gothic」で表示したサンプルテキストです。</p>
-                </div>
-            
-                <div class="content" style="font-family: 'Zen Old Mincho', serif;">
-                    <h2 class="font-name">Zen Old Mincho</h2>
-                    <p>これは「Zen Old Mincho」で表示したサンプルテキストです。</p>
-                </div>
-            
-                <div class="content" style="font-family: 'Sawarabi Mincho', serif;">
-                    <h2 class="font-name">Sawarabi Mincho</h2>
-                    <p>これは「さわらび明朝」で表示したサンプルテキストです。</p>
-                </div>
-            
-                <div class="content" style="font-family: 'Sawarabi Gothic', sans-serif;">
-                    <h2 class="font-name">Sawarabi Gothic</h2>
-                    <p>これは「さわらびゴシック」で表示したサンプルテキストです。</p>
-                </div>
-
+            <div class="content">
+                <h2> Serif（セリフ体）</h2>
+                <p class=" serif example-text">This is a sample text using **Serif Fonts**.（セリフ体のサンプルテキストです。）</p>
             </div>
 
-            <div class="container">
-                <table>
-                    <tr>
-                      <th>名前</th>
-                      <th>年齢</th>
-                    </tr>
-                    <tr>
-                      <td>太郎</td>
-                      <td>20</td>
-                    </tr>
-                  </table>
+            <div class="content">
+                <h2> Sans-serif（サンセリフ体）</h2>
+                <p class=" sans-serif example-text">This is a sample text using **Sans-serif
+                    Fonts**.（サンセリフ体のサンプルテキストです。）</p>
             </div>
 
-            <p class="ellipsis" data-fulltext="これは14文字以上のテキストが含まれています。">
+            <div class="content">
+                <h2> Monospace（等幅フォント）</h2>
+                <p class=" monospace example-text">This is a sample text using **Monospace Fonts**.（等幅フォントのサンプルテキストです。）
+                </p>
+            </div>
+
+            <div class="content">
+                <h2> Cursive（手書き風フォント）</h2>
+                <p class=" cursive example-text">This is a sample text using **Cursive Fonts**.（手書き風フォントのサンプルテキストです。）
+                </p>
+            </div>
+
+            <div class="content">
+                <h2> Fantasy（装飾的フォント）</h2>
+                <p class=" fantasy example-text">This is a sample text using **Fantasy Fonts**.（装飾的フォントのサンプルテキストです。）</p>
+            </div>
+
+            <div class="content">
+                <h2> System Fonts（システムフォント）</h2>
+                <p class=" system example-text">This is a sample text using **System Fonts**.（システムフォントのサンプルテキストです。）</p>
+            </div>
+
+            <div class="content" style="font-family: 'Noto Sans JP', sans-serif;">
+                <h2 class="font-name">Noto Sans JP</h2>
+                <p>これは「Noto Sans JP」で表示したサンプルテキストです。</p>
+            </div>
+
+            <div class="content" style="font-family: 'Noto Serif JP', serif;">
+                <h2 class="font-name">Noto Serif JP</h2>
+                <p>これは「Noto Serif JP」で表示したサンプルテキストです。</p>
+            </div>
+
+            <div class="content" style="font-family: 'Roboto', sans-serif;">
+                <h2 class="font-name">Roboto</h2>
+                <p>これは「Roboto」で表示したサンプルテキストです。</p>
+            </div>
+
+            <div class="content" style="font-family: 'Kosugi', sans-serif;">
+                <h2 class="font-name">Kosugi</h2>
+                <p>これは「Kosugi」で表示したサンプルテキストです。</p>
+            </div>
+
+            <div class="content" style="font-family: 'Kosugi Maru', sans-serif;">
+                <h2 class="font-name">Kosugi Maru</h2>
+                <p>これは「Kosugi Maru」で表示したサンプルテキストです。</p>
+            </div>
+
+            <div class="content" style="font-family: 'Zen Kaku Gothic Antique', sans-serif;">
+                <h2 class="font-name">Zen Kaku Gothic Antique</h2>
+                <p>これは「Zen Kaku Gothic Antique」で表示したサンプルテキストです。</p>
+            </div>
+
+            <div class="content" style="font-family: 'Zen Maru Gothic', sans-serif;">
+                <h2 class="font-name">Zen Maru Gothic</h2>
+                <p>これは「Zen Maru Gothic」で表示したサンプルテキストです。</p>
+            </div>
+
+            <div class="content" style="font-family: 'Zen Old Mincho', serif;">
+                <h2 class="font-name">Zen Old Mincho</h2>
+                <p>これは「Zen Old Mincho」で表示したサンプルテキストです。</p>
+            </div>
+
+            <div class="content" style="font-family: 'Sawarabi Mincho', serif;">
+                <h2 class="font-name">Sawarabi Mincho</h2>
+                <p>これは「さわらび明朝」で表示したサンプルテキストです。</p>
+            </div>
+
+            <div class="content" style="font-family: 'Sawarabi Gothic', sans-serif;">
+                <h2 class="font-name">Sawarabi Gothic</h2>
+                <p>これは「さわらびゴシック」で表示したサンプルテキストです。</p>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <table>
+                <tr>
+                    <th>名前</th>
+                    <th>年齢</th>
+                </tr>
+                <tr>
+                    <td>太郎</td>
+                    <td>20</td>
+                </tr>
+            </table>
+        </div>
+
+        <p class="ellipsis" data-fulltext="これは14文字以上のテキストが含まれています。">
             これは14文字以上のテキストが含まれています。
-            </p>
+        </p>
 
-            <div class="expand-on-hover">
-                とても長いテキストがここにありますが、幅を超えたら省略されます。
-            </div>
+        <div class="expand-on-hover">
+            とても長いテキストがここにありますが、幅を超えたら省略されます。
+        </div>
 
-            <div class="ellipsis" title="とても長いテキストがここにありますが、幅を超えたら省略されます。">
-                とても長いテキストがここにありますが、幅を超えたら省略されます。
-            </div>
+        <div class="ellipsis" title="とても長いテキストがここにありますが、幅を超えたら省略されます。">
+            とても長いテキストがここにありますが、幅を超えたら省略されます。
+        </div>
 
-        </main>
+        <div class="rightsidebar">
+            <h2>サイドバー_1</h2>
+            <p>ここにメニューや情報を配置できます。</p>
+        </div>
 
-        <footer>
-            <p>フッター</p>
-        </footer>
+        <div class="rightcontent">
+            <h1>メインコンテンツ</h1>
+            <p>この部分に記事やコンテンツを配置します。</p>
+            <p>スクロールしてもサイドバーは固定されます。</p>
+        </div>
 
-    </body>
-    
+        <aside>
+            <h2>サイドバー_aside</h2>
+            <ul>
+                <li><a href="#">メニュー1</a></li>
+                <li><a href="#">メニュー2</a></li>
+            </ul>
+        </aside>
+
+        <aside class="rightsidebar_2">
+            <h2>サイドバー</h2>
+            <p>ここにメニューや情報を配置できます。</p>
+        </aside>
+
+    </main>
+
+
+
+    <footer>
+        <p>フッター</p>
+    </footer>
+
+</body>
+
 </html>

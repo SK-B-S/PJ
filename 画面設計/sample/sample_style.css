@@ -3,10 +3,12 @@
     .container {
         flex-direction: column;
     }
+
     .sidebar {
         width: 100%;
         border-right: none;
-        border-bottom: 1px solid #000; /* サイドバーの下に黒い線 */
+        border-bottom: 1px solid #000;
+        /* サイドバーの下に黒い線 */
     }
 }
 
@@ -14,17 +16,22 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* headerとfooterとの間に空間 */
+    justify-content: space-between;
+    /* headerとfooterとの間に空間 */
     align-items: center;
 
     margin: 0;
     font-family: Arial, sans-serif;
     min-height: 100vh;
 
-    background-image: url('../sample/images/ms.jpg'); /* 画像ファイルのパス */
-    background-size: cover; /* 画像がコンテナ全体にフィットするように */
-    background-position: center; /* 画像を中央に配置 */
-    background-repeat: no-repeat; /* 画像が繰り返し表示されないように */
+    background-image: url('../sample/images/ms.jpg');
+    /* 画像ファイルのパス */
+    background-size: cover;
+    /* 画像がコンテナ全体にフィットするように */
+    background-position: center;
+    /* 画像を中央に配置 */
+    background-repeat: no-repeat;
+    /* 画像が繰り返し表示されないように */
 }
 
 /* ヘッダーのスタイル */
@@ -34,10 +41,12 @@ header {
     justify-content: center;
 
     background-color: #f7f7f7;
-    border-bottom: 1px solid #000; /* ヘッダーの下に黒い線 */
+    border-bottom: 1px solid #000;
+    /* ヘッダーの下に黒い線 */
 
     width: 100%;
-    height: 120px; /* ヘッダーの厚み */
+    height: 120px;
+    /* ヘッダーの厚み */
     padding: 5px;
 
     /* font setting */
@@ -45,20 +54,28 @@ header {
     font-size: 100px;
     font-weight: bold;
 
+    /* z-index: 10; */
+
 }
 
 main {
     display: flex;
-    flex-direction: column; /* 内部の要素を縦に並べる */
-    align-items: center; /* 中央寄せ */
+    flex-direction: column;
+    /* 内部の要素を縦に並べる */
+    align-items: center;
+    /* 中央寄せ */
 
-    width: 100%; /* コンテンツの幅を100%に設定（任意） */
-    max-width: 1200px; /* 最大幅を指定（任意） */
+    width: 100%;
+    /* コンテンツの幅を100%に設定（任意） */
+    max-width: 1200px;
+    /* 最大幅を指定（任意） */
     padding: 20px;
-    border-radius: 8px; /* 角を丸める（任意） */
+    border-radius: 8px;
+    /* 角を丸める（任意） */
 
     background-color: #f7f7f7;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影をつける（任意） */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* 影をつける（任意） */
 }
 
 
@@ -83,7 +100,8 @@ footer {
 /* コンテナのスタイル */
 .container {
     display: flex;
-    flex-direction: column; /* 要素を縦に並べる */
+    flex-direction: column;
+    /* 要素を縦に並べる */
 }
 
 /* サイドバーのスタイル */
@@ -91,7 +109,8 @@ footer {
     width: 200px;
     background-color: #f0f0f0;
     padding: 20px;
-    border-right: 1px solid #000; /* サイドバーの右に黒い線 */
+    border-right: 1px solid #000;
+    /* サイドバーの右に黒い線 */
 }
 
 /* ナビゲーションメニューのスタイル */
@@ -119,17 +138,22 @@ footer {
     align-items: center;
     justify-content: center;
 
-    grid-template-columns: 100px 100px 100px; /* 2列のグリッド: ラベルとテキストボックス */
-    gap: 10px 20px; /* 行と列の間隔 */
+    grid-template-columns: 100px 100px 100px;
+    /* 2列のグリッド: ラベルとテキストボックス */
+    gap: 10px 20px;
+    /* 行と列の間隔 */
 
     background-color: #fff;
 
-    padding: 50px; /* 内側の余白を少し広げる */
+    padding: 50px;
+    /* 内側の余白を少し広げる */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-    width: 60%; /* フォーム全体を広げる */
-    max-width: 100%; /* 最大幅を800pxに調整 */
+    width: 60%;
+    /* フォーム全体を広げる */
+    max-width: 100%;
+    /* 最大幅を800pxに調整 */
 
     box-sizing: border-box;
 }
@@ -180,14 +204,14 @@ h2 {
     display: flex;
     align-items: center;
 }
-  
+
 .srch_input[type="text"] {
     flex: 1;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-  
+
 .srch_button {
     padding: 10px 20px;
     background-color: #4CAF50;
@@ -209,7 +233,7 @@ h2 {
     flex: 7;
     background-color: #4CAF50;
 }
-  
+
 .right {
     flex: 3;
     background-color: #007bff;
@@ -226,14 +250,15 @@ h2 {
     display: flex;
     align-items: center;
 }
-  
+
 .input_form_hdr[type="text"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    flex-grow: 1; /* 検索バーを柔軟に伸縮させる */
+    flex-grow: 1;
+    /* 検索バーを柔軟に伸縮させる */
 }
-  
+
 .button_form_hdr {
     padding: 10px 20px;
     border: none;
@@ -246,31 +271,43 @@ h2 {
 table {
     border-collapse: collapse;
 }
-  
-th, td {
+
+th,
+td {
     border: none;
     padding: 15px;
 }
 
 /* テキストの省略 */
 .ellipsis {
-    width: 200px;               /* 固定幅 */
-    white-space: nowrap;        /* テキストを1行にする */
-    overflow: hidden;           /* はみ出した部分を隠す */
-    text-overflow: ellipsis;    /* 省略記号 (...) を表示 */
-    border: 1px solid #ccc;     /* デバッグ用の枠 */
+    width: 200px;
+    /* 固定幅 */
+    white-space: nowrap;
+    /* テキストを1行にする */
+    overflow: hidden;
+    /* はみ出した部分を隠す */
+    text-overflow: ellipsis;
+    /* 省略記号 (...) を表示 */
+    border: 1px solid #ccc;
+    /* デバッグ用の枠 */
 }
+
 /* ホバー時に全文表示 */
 .ellipsis:hover::after {
-    content: attr(data-fulltext); /* data-fulltext属性の内容を表示 */
+    content: attr(data-fulltext);
+    /* data-fulltext属性の内容を表示 */
     position: absolute;
-    top: 110%; /* 要素の下に配置 */
+    top: 110%;
+    /* 要素の下に配置 */
     left: 0;
-    background-color: #000; /* 背景色 */
-    color: #fff; /* 文字色 */
+    background-color: #000;
+    /* 背景色 */
+    color: #fff;
+    /* 文字色 */
     padding: 5px 10px;
     border-radius: 5px;
-    white-space: nowrap; /* ツールチップは1行で表示 */
+    white-space: nowrap;
+    /* ツールチップは1行で表示 */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     font-size: 12px;
     z-index: 1000;
@@ -283,11 +320,59 @@ th, td {
     text-overflow: ellipsis;
     border: 1px solid #ccc;
     transition: all 0.3s ease;
-  }
-  
-  .expand-on-hover:hover {
-    white-space: normal; /* 複数行に戻す */
-    overflow: visible;   /* はみ出しを許可 */
-    background-color: #f9f9f9; /* 背景色を変更 */
+}
+
+.expand-on-hover:hover {
+    white-space: normal;
+    /* 複数行に戻す */
+    overflow: visible;
+    /* はみ出しを許可 */
+    background-color: #f9f9f9;
+    /* 背景色を変更 */
     padding: 5px;
-  }
+}
+
+.rightsidebar {
+    position: sticky;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 50%;
+    /* 画面全体の高さ */
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.rightcontent {
+    margin-right: 260px;
+    /* サイドバーの幅+余白 */
+    padding: 20px;
+}
+
+aside {
+    width: 300px;
+    /* サイドバーの幅 */
+    background-color: #eee;
+    /* サイドバーの背景色 */
+    padding: 20px;
+    position: relative;
+    /* aside要素を相対配置にする */
+    position: sticky;
+    top: 80px;
+    /* ヘッダーの高さ分を空ける */
+    height: calc(100vh - 80px);
+    /* ヘッダーの高さ分を引く */
+    overflow-y: auto;
+}
+
+.rightsidebar_2 {
+    width: 250px;
+    height: 100vh;
+    position: sticky;
+    top: 60px; /* ヘッダーの高さ分下げる */
+    background: #444;
+    color: white;
+    padding: 20px;
+}
