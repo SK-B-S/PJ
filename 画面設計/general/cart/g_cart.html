@@ -26,7 +26,7 @@
 
     <header>
         <div class="hdr_icon">
-            <img class="top_icon" src="../../../images/explosion.gif" alt="icon画像" href="#">
+            <img class="top_icon" src="../../images/spycat.gif" alt="icon画像" href="#">
         </div>
         <!-- 商品検索フォーム -->
         <form class="srchbar">
@@ -61,29 +61,31 @@
 
                     <div class="cart_gds_grp">
                         <div class="gds_dtl">
-                            <p class="sub_title">商品説明</p>
+                            <p class="sub_title">2025年1月最新式 3個セット お手軽簡単に【2025新登場】 加湿器 大容量 8L 加熱式 ＆ 超音波式 省エネ ハイブリッド式
+                                最長46時間稼働
+                                5段階湿度調整 お手入れ簡単 かしつき 上から給水 加湿器 除菌 静音 2WAY給水 アロマ対応 切りタイマー 自動OFF 静電タッチパネル リモコン付き 湿度設定 水漏れ防止
+                                空焚き防止 おしゃれ 加湿器. 寝室 オフィス リビング 乾燥対策</p>
                             <p class="price" id="price">¥2000</p>
                             <p class="qua" id="qua">数量 : <input class="qua_input" type="number" value="1" min="1"
                                     max="100" step="1"></p>
-                            <div class="btn_container">
-                                <!-- 変更ボタン -->
-                                <button class="cart_btn" id="cancel_btn" type="submit" href="#">変更</button>
-                                <!-- 削除ボタン -->
-                                <button class="cart_btn" type="submit" href="#">削除</button>
-                            </div>
-
-                            <script>
-                                document.getElementById("cancel_btn").addEventListener("click", function () {
-                                    document.getElementById("message").style.display = "block";
-                                });
-                            </script>
+                        </div>
+                        <div class="cart_btn_grp">
+                            <!-- 変更ボタン -->
+                            <button class="cart_btn" id="cancel_btn" type="submit" href="#">変更</button>
+                            <!-- 削除ボタン -->
+                            <button class="del_btn" id="del_btn" type="submit" href="#">削除</button>
                         </div>
 
+                        <script>
+                            document.getElementById("cancel_btn").addEventListener("click", function () {
+                                document.getElementById("message").style.display = "block";
+                            });
+                        </script>
+
                         <div class="cart_prch">
-                            <p>小計</p>
-                            <p>¥</p>
-                            <!-- 支払いボタン -->
-                            <button class="all_btn" type="submit" href="#">支払いに進む</button>
+                            <p>小計 : ¥
+                                <!-- 支払いボタン -->
+                                <button class="all_btn" type="submit" href="#">支払いに進む</button>
                         </div>
                     </div>
                 </div>

@@ -35,11 +35,6 @@
     padding: 2px;
 }
 
-.all_btn {
-    width: 100%;
-    padding: 10px;
-}
-
 .cart_list {
     display: flex;
     align-items: center;
@@ -97,3 +92,14 @@
 
     width: 100%;
 }
+
+.cart_prch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    margin: 0;
+}
+
