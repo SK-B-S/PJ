@@ -204,3 +204,16 @@
 .sidebar nav ul li a:hover {
     color: #007bff;
 }
+
+.categorize {
+    display: flex;
+    align-items: center ;
+}
+
+.cate_1 {
+    display: flex;
+}
+
+.cate_2 {
+    display: flex;
+}
