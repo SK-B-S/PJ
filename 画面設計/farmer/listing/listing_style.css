@@ -50,10 +50,6 @@
     margin-bottom: 5px;
 }
 
-
-/*----------------------------------------------------------------*/
-
-/* f_shipconf.html */
 .pagination a {
     padding: 8px 16px;
     text-decoration: none;
@@ -81,26 +77,46 @@
 
 .gds_name {
     width: 70%;
-    font-size: 100px;
+    font-size: 40px;
 }
 
-.categorize {
-    display: flex;
+.categorize input[type="text"] {
+    font-size: 20px;
 }
 
-.check_A1 {
+.check_A {
     display: none;
     position: relative;
 }
 
-#check_A:checked+.check_A1 {
+#check_A:checked+.check_A {
     display: block
 }
 
-.check_A1 input[type="checkbox"] {
+#check_A2:checked+.check_A {
+    display: block
+}
+
+#check_B:checked+.check_A {
+    display: block
+}
+
+#check_B2:checked+.check_A {
+    display: block
+}
+
+.check_A input[type="checkbox"] {
     position: absolute;
-    left: 235px;
-    top: 25%;
+    left: 310px;
+    top: 20%;
+}
+
+.lower_grp input[type="number"] {
+    font-size: 20px;
+}
+
+.ungp input[type="number"] {
+    font-size: 20px;
 }
 
 .list_price {
@@ -164,6 +180,10 @@
     height: 100px;
 
     resize: none;
+}
+
+.cart_labelk {
+    font-size: 20px;
 }
 
 /* サイドバーのスタイル */
