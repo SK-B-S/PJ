@@ -49,7 +49,7 @@
                                     <input type="checkbox" id="check_A" name="check_A" onclick="chbx(this)"
                                         required>新規作成
                                     <div class="check_A" id="check_A">
-                                        <label class="cart_labelk" for="check_A">カテゴリ</label>
+                                        <label class="cart_labelk" for="check_A"></label>
                                         <input type="text" id="text" required>
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@
                                     <input type="checkbox" id="check_A2" name="check_A" onclick="chbx(this)"
                                         required>既存カテゴリ
                                     <div class="check_A" id="check_A2">
-                                        <label class="cart_labelk" for="check_A">カテゴリ</label>
+                                        <label class="cart_labelk" for="check_A"></label>
                                         <select id="check" required>
                                             <option value="neko">neko</option>
                                             <option value="sakana">sakana</option>
@@ -87,18 +87,22 @@
                             <textarea class="exp_text" id="gds_exp" name="gds_exp" required></textarea>
                         </div>
 
-                        <label class="cart_label" for="unit">単位選択</label>
-                        <div class="ungp">
-                            <input type="checkbox" id="check_B" name="check_B1" onclick="chkbx(this)" required>個数
-                            <div class="check_A" id="check_B1">
-                                <label class="cart_labelk" for="check_B">個数</label>
-                                <input type="number" id="number" required>
-                            </div>
+                        <div class="categorize">
+                            <label class="cart_label" for="unit">単位選択</label>
 
-                            <input type="checkbox" id="check_B2" name="check_B2" onclick="chkbx(this)" required>グラム
-                            <div class="check_A" id="check_B2">
-                                <label class="cart_labelk" for="check_B">グラム</label>
-                                <input type="number" id="Kg" min="1" placeholder="Kg" required>
+                            <div class="cate_1">
+                                <input type="checkbox" id="check_B" name="check_B1" onclick="chkbx(this)" required>個数
+                                <div class="check_A" id="check_B1">
+                                    <label class="cart_labelk" for="check_B"></label>
+                                    <input type="number" id="number" required>
+                                </div>
+                            </div>
+                            <div class="cate_2">
+                                <input type="checkbox" id="check_B2" name="check_B2" onclick="chkbx(this)" required>グラム
+                                <div class="check_A" id="check_B2">
+                                    <label class="cart_labelk" for="check_B"></label>
+                                    <input type="number" id="Kg" min="1" placeholder="Kg" required>
+                                </div>
                             </div>
                         </div>
 
