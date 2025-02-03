@@ -45,15 +45,16 @@
 
                             <label class="cart_label" for="categorize">カテゴリ</label>
                             <div class="categorize">
-                                <input type="checkbox" id="check_A" required>新規作成
-                                <div class="check_A1" id="check_A1">
-                                    <label for="check_A1">カテゴリ:<input type="text" id="text" required></label>
+                                <input type="checkbox" id="check_A" name="check_A" onclick="chbx(this)" required>新規作成
+                                <div class="check_A" id="check_A">
+                                    <label class="cart_labelk" for="check_A">カテゴリ</label>
+                                    <input type="text" id="text" required>
                                 </div>
 
-                                <input type="checkbox" id="check_A" required>既存カテゴリ
-                                <div class="check_A1" id="check_A1">
-                                    <label class="cart_label" for="check_A1">カテゴリ:<input type="text" id="text"
-                                            required></label>
+                                <input type="checkbox" id="check_A2" name="check_A" onclick="chbx(this)" required>既存カテゴリ
+                                <div class="check_A" id="check_A2">
+                                    <label class="cart_labelk" for="check_A">カテゴリ</label>
+                                    <input type="text" id="text" required>
                                     <input type="checkbox" id="check" required>
                                 </div>
                             </div>
@@ -78,15 +79,18 @@
                         </div>
 
                         <label class="cart_label" for="unit">単位選択</label>
-                        <input type="checkbox" id="check_A" required>個数
-                        <div class="check_A1" id="check_A1">
-                            <label class="cart_label" for="check_A1">個数:<input type="number" id="qua" required></label>
-                        </div>
+                        <div class="ungp">
+                            <input type="checkbox" id="check_B" name="check_B1" onclick="chkbx(this)" required>個数
+                            <div class="check_A" id="check_B1">
+                                <label class="cart_labelk" for="check_B">個数</label>
+                                <input type="number" id="number" required>
+                            </div>
 
-                        <input type="checkbox" id="check_A" required>グラム
-                        <div class="check_A1" id="check_A1">
-                            <label class="cart_label" for="check_A1">グラム:<input type="number" id="Kg" min="1"
-                                    placeholder="Kg" required></label>
+                            <input type="checkbox" id="check_B2" name="check_B2" onclick="chkbx(this)" required>グラム
+                            <div class="check_A" id="check_B2">
+                                <label class="cart_labelk" for="check_B">グラム</label>
+                                <input type="number" id="Kg" min="1" placeholder="Kg" required>
+                            </div>
                         </div>
 
                         <label class="cart_label" for="stock">在庫数</label>
@@ -98,7 +102,6 @@
                         <button class="list_cancel_btn" type="submit" href="#">登録をやめる</button>
                     </div>
 
-
                 </div>
 
 
@@ -107,6 +110,30 @@
         </div>
 
     </main>
+
+    <script>
+        function chbx(obj) {
+            let that = obj;
+            if (document.getElementById(that.id).checked == true) {
+                let boxes = document.querySelectorAll('input[type="checkbox"]');
+                for (let i = 0; i < boxes.length; i++) {
+                    boxes[i].checked = false;
+                }
+                document.getElementById(that.id).checked = true;
+            }
+        }
+
+        function chkbx(obj) {
+            let that = obj;
+            if (document.getElementById(that.id).checked == true) {
+                let boxes = document.querySelectorAll('input[type="checkbox"]');
+                for (let i = 0; i < boxes.length; i++) {
+                    boxes[i].checked = false;
+                }
+                document.getElementById(that.id).checked = true;
+            }
+        }
+    </script>
 
     <!-- <aside class="sidebar">
             <nav>
