@@ -288,7 +288,7 @@
     flex-direction: column;
     gap: 2px;
 
-    width: 50%;
+    width: 50%  ;
 }
 
 .list_regi_btn {
