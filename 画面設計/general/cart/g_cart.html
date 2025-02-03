@@ -40,58 +40,195 @@
         </div>
     </header>
 
-    <main>
-        <div class="container">
-            <div class="content">
-                <div class="top_title">
-                    カート
-                </div>
-                <div class="products_list">
-                    <!-- 商品キャンセルのアナウンス -->
-                    <!-- <p id="message">カートの商品を変更しました</p> -->
-
-                    <!-- 商品リスト -->
-                    <div class="cart_list">
-                        <div class="cart_img">
-                            <!-- 商品画像 -->
-                            <img src="../../images/explosion.gif" alt="商品画像">
-                        </div>
-                        <p class="gds_name">商品名:</p>
+    <div class="side_set">
+        <main>
+            <div class="container">
+                <div class="content">
+                    <div class="top_title">
+                        カート
                     </div>
 
-                    <div class="cart_gds_grp">
-                        <div class="gds_dtl">
-                            <p class="sub_title">2025年1月最新式 3個セット お手軽簡単に【2025新登場】 加湿器 大容量 8L 加熱式 ＆ 超音波式 省エネ ハイブリッド式
-                                最長46時間稼働
-                                5段階湿度調整 お手入れ簡単 かしつき 上から給水 加湿器 除菌 静音 2WAY給水 アロマ対応 切りタイマー 自動OFF 静電タッチパネル リモコン付き 湿度設定 水漏れ防止
-                                空焚き防止 おしゃれ 加湿器. 寝室 オフィス リビング 乾燥対策</p>
-                            <p class="price" id="price">¥2000</p>
-                            <p class="qua" id="qua">数量 : <input class="qua_input" type="number" value="1" min="1"
-                                    max="100" step="1"></p>
-                        </div>
-                        <div class="cart_btn_grp">
-                            <!-- 変更ボタン -->
-                            <button class="cart_btn" id="cancel_btn" type="submit" href="#">変更</button>
-                            <!-- 削除ボタン -->
-                            <button class="del_btn" id="del_btn" type="submit" href="#">削除</button>
+                    <!-- 繰り返し表示 -->
+                    <div class="products_list">
+                        <!-- 商品キャンセルのアナウンス -->
+                        <!-- <p id="message">カートの商品を変更しました</p> -->
+
+                        <!-- 商品リスト -->
+                        <div class="cart_list">
+                            <div class="cart_img">
+                                <!-- 商品画像 -->
+                                <img src="../../images/explosion.gif" alt="商品画像">
+                            </div>
+                            <p class="gds_name">商品名:</p>
                         </div>
 
-                        <script>
-                            document.getElementById("cancel_btn").addEventListener("click", function () {
-                                document.getElementById("message").style.display = "block";
-                            });
-                        </script>
+                        <div class="cart_gds_grp">
+                            <div class="gds_dtl">
+                                <p class="sub_title">2025年1月最新式 3個セット お手軽簡単に【2025新登場】 加湿器 大容量 8L 加熱式 ＆ 超音波式 省エネ ハイブリッド式
+                                    最長46時間稼働
+                                    5段階湿度調整 お手入れ簡単 かしつき 上から給水 加湿器 除菌 静音 2WAY給水 アロマ対応 切りタイマー 自動OFF 静電タッチパネル リモコン付き 湿度設定
+                                    水漏れ防止
+                                    空焚き防止 おしゃれ 加湿器. 寝室 オフィス リビング 乾燥対策</p>
+                                <p class="price" id="price">¥2000</p>
+                                <p class="qua" id="qua">数量 : <input class="qua_input" type="number" value="1" min="1"
+                                        max="100" step="1"></p>
+                            </div>
+                            <div class="cart_btn_grp">
+                                <!-- 変更ボタン -->
+                                <button class="cart_btn" id="cancel_btn" type="submit" href="#">変更</button>
+                                <!-- 削除ボタン -->
+                                <button class="del_btn" id="del_btn" type="submit" href="#">削除</button>
+                            </div>
 
-                        <div class="cart_prch">
-                            <p>小計 : ¥
-                                <!-- 支払いボタン -->
-                                <button class="all_btn" type="submit" href="#">支払いに進む</button>
+                            <script>
+                                document.getElementById("cancel_btn").addEventListener("click", function () {
+                                    document.getElementById("message").style.display = "block";
+                                });
+                            </script>
+
+                        </div>
+                    <!-- 繰り返し表示 -->
+                    <div class="products_list">
+                        <!-- 商品キャンセルのアナウンス -->
+                        <!-- <p id="message">カートの商品を変更しました</p> -->
+
+                        <!-- 商品リスト -->
+                        <div class="cart_list">
+                            <div class="cart_img">
+                                <!-- 商品画像 -->
+                                <img src="../../images/explosion.gif" alt="商品画像">
+                            </div>
+                            <p class="gds_name">商品名:</p>
+                        </div>
+
+                        <div class="cart_gds_grp">
+                            <div class="gds_dtl">
+                                <p class="sub_title">2025年1月最新式 3個セット お手軽簡単に【2025新登場】 加湿器 大容量 8L 加熱式 ＆ 超音波式 省エネ ハイブリッド式
+                                    最長46時間稼働
+                                    5段階湿度調整 お手入れ簡単 かしつき 上から給水 加湿器 除菌 静音 2WAY給水 アロマ対応 切りタイマー 自動OFF 静電タッチパネル リモコン付き 湿度設定
+                                    水漏れ防止
+                                    空焚き防止 おしゃれ 加湿器. 寝室 オフィス リビング 乾燥対策</p>
+                                <p class="price" id="price">¥2000</p>
+                                <p class="qua" id="qua">数量 : <input class="qua_input" type="number" value="1" min="1"
+                                        max="100" step="1"></p>
+                            </div>
+                            <div class="cart_btn_grp">
+                                <!-- 変更ボタン -->
+                                <button class="cart_btn" id="cancel_btn" type="submit" href="#">変更</button>
+                                <!-- 削除ボタン -->
+                                <button class="del_btn" id="del_btn" type="submit" href="#">削除</button>
+                            </div>
+
+                            <script>
+                                document.getElementById("cancel_btn").addEventListener("click", function () {
+                                    document.getElementById("message").style.display = "block";
+                                });
+                            </script>
+
                         </div>
                     </div>
+                    <!-- 繰り返し表示 -->
+                    <div class="products_list">
+                        <!-- 商品キャンセルのアナウンス -->
+                        <!-- <p id="message">カートの商品を変更しました</p> -->
+
+                        <!-- 商品リスト -->
+                        <div class="cart_list">
+                            <div class="cart_img">
+                                <!-- 商品画像 -->
+                                <img src="../../images/explosion.gif" alt="商品画像">
+                            </div>
+                            <p class="gds_name">商品名:</p>
+                        </div>
+
+                        <div class="cart_gds_grp">
+                            <div class="gds_dtl">
+                                <p class="sub_title">2025年1月最新式 3個セット お手軽簡単に【2025新登場】 加湿器 大容量 8L 加熱式 ＆ 超音波式 省エネ ハイブリッド式
+                                    最長46時間稼働
+                                    5段階湿度調整 お手入れ簡単 かしつき 上から給水 加湿器 除菌 静音 2WAY給水 アロマ対応 切りタイマー 自動OFF 静電タッチパネル リモコン付き 湿度設定
+                                    水漏れ防止
+                                    空焚き防止 おしゃれ 加湿器. 寝室 オフィス リビング 乾燥対策</p>
+                                <p class="price" id="price">¥2000</p>
+                                <p class="qua" id="qua">数量 : <input class="qua_input" type="number" value="1" min="1"
+                                        max="100" step="1"></p>
+                            </div>
+                            <div class="cart_btn_grp">
+                                <!-- 変更ボタン -->
+                                <button class="cart_btn" id="cancel_btn" type="submit" href="#">変更</button>
+                                <!-- 削除ボタン -->
+                                <button class="del_btn" id="del_btn" type="submit" href="#">削除</button>
+                            </div>
+
+                            <script>
+                                document.getElementById("cancel_btn").addEventListener("click", function () {
+                                    document.getElementById("message").style.display = "block";
+                                });
+                            </script>
+
+                        </div>
+                    </div>
+                    <!-- 繰り返し表示 -->
+                    <div class="products_list">
+                        <!-- 商品キャンセルのアナウンス -->
+                        <!-- <p id="message">カートの商品を変更しました</p> -->
+
+                        <!-- 商品リスト -->
+                        <div class="cart_list">
+                            <div class="cart_img">
+                                <!-- 商品画像 -->
+                                <img src="../../images/explosion.gif" alt="商品画像">
+                            </div>
+                            <p class="gds_name">商品名:</p>
+                        </div>
+
+                        <div class="cart_gds_grp">
+                            <div class="gds_dtl">
+                                <p class="sub_title">2025年1月最新式 3個セット お手軽簡単に【2025新登場】 加湿器 大容量 8L 加熱式 ＆ 超音波式 省エネ ハイブリッド式
+                                    最長46時間稼働
+                                    5段階湿度調整 お手入れ簡単 かしつき 上から給水 加湿器 除菌 静音 2WAY給水 アロマ対応 切りタイマー 自動OFF 静電タッチパネル リモコン付き 湿度設定
+                                    水漏れ防止
+                                    空焚き防止 おしゃれ 加湿器. 寝室 オフィス リビング 乾燥対策</p>
+                                <p class="price" id="price">¥2000</p>
+                                <p class="qua" id="qua">数量 : <input class="qua_input" type="number" value="1" min="1"
+                                        max="100" step="1"></p>
+                            </div>
+                            <div class="cart_btn_grp">
+                                <!-- 変更ボタン -->
+                                <button class="cart_btn" id="cancel_btn" type="submit" href="#">変更</button>
+                                <!-- 削除ボタン -->
+                                <button class="del_btn" id="del_btn" type="submit" href="#">削除</button>
+                            </div>
+
+                            <script>
+                                document.getElementById("cancel_btn").addEventListener("click", function () {
+                                    document.getElementById("message").style.display = "block";
+                                });
+                            </script>
+
+                        </div>
+                    </div>
+                    
+                    <div class="cart_prch">
+                        <p>小計 : ¥</p>
+                            <!-- 支払いボタン -->
+                            <button class="cart_btn" type="submit" href="#">支払いに進む</button>
+                    </div>
+
+
                 </div>
             </div>
+        </main>
 
-    </main>
+        <aside class="rightsidebar">
+            <nav>
+                <ul>
+                    <li><a href="#">メニュー1</a></li>
+                    <li><a href="#">メニュー2</a></li>
+                    <li><a href="#">メニュー3</a></li>
+                </ul>
+            </nav>
+        </aside>    
+    </div>
 
     <footer>
         <p>ご利用規約・プライバシーポリシー</p>
