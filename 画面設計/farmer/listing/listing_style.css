@@ -84,28 +84,20 @@
     font-size: 100px;
 }
 
-.check_A {
+.categorize {
+    display: flex;
+}
+
+.check_A1 {
     display: none;
     position: relative;
 }
 
-#check_A:checked+.check_A {
+#check_A:checked+.check_A1 {
     display: block
 }
 
-#check_A2:checked+.check_A {
-    display: block
-}
-
-#check_B:checked+.check_A {
-    display: block
-}
-
-#check_B2:checked+.check_A {
-    display: block
-}
-
-.check_A input[type="checkbox"] {
+.check_A1 input[type="checkbox"] {
     position: absolute;
     left: 235px;
     top: 25%;
@@ -176,13 +168,14 @@
 
 /* サイドバーのスタイル */
 .sidebar {
-    position: sticky;
+    position: absolute;
 
     right: 0;
-    width: 200px;
+    width: 20%;
     background-color: #f0f0f0;
     padding: 20px;
     border-left: 1px solid #000;
+    border-bottom: #000;
     /* サイドバーの左に黒い線 */
 }
 

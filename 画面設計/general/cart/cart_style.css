@@ -109,10 +109,6 @@
     flex-direction: column;
 
     margin: 0;
-    width: 70%;
-
-    font-size: 16px;
-    font-weight: bold;
 }
 
 /* サイドバーのスタイル */
@@ -145,28 +141,4 @@
 
 .rightsidebar nav ul li a:hover {
     color: #007bff;
-}
-
-.form_group label {
-    display: block;
-    font-weight: bold;
-    font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
-}
-
-.order_btn{
-    width: 20%;
-    padding: 10px;
-    margin-right: 20%;
-    position: relative;
-    left: 100px;
-}
-
-.cursive {
-    font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
-}
-
-.example_text {
-    font-size: 1.2em;
-    line-height: 1.5;
-    color: #333;
 }
