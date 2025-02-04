@@ -39,7 +39,7 @@
 
 .gds_name {
     font-size: 30px; /* フォントサイズ */
-
+    font-weight: bold;
     padding: 2px;
 }
 
@@ -158,4 +158,20 @@
     font-weight: bold;
     color: #333;
     margin: 0;
+}
+
+.price {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.qua {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.qua_input {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0;
 }

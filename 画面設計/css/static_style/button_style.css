@@ -341,3 +341,22 @@
 .list_cancel_btn:hover {
     background-color: #464646;
 }
+
+.all_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #23aeff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 7px;
+
+    width: 40%;
+}
+
+.all_btn:hover {
+    background-color: #374d6a;
+}
