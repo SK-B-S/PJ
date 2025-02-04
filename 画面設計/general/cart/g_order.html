@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <!-- UTF-8でエンコード -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- タイトル -->
-        <title>Jimoty</title>
-        <!-- style_top.cssを参照 -->
-        <link rel="stylesheet" href="g_order_style.css">
-        <!-- last update 2025/1/9 杉田-->
 
-    </head>
+<head>
+    <!-- UTF-8でエンコード -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- タイトル -->
+    <title>Jimoty</title>
+    <!-- style.cssを参照 -->
+    <link rel="stylesheet" href="../../css/static_style/header_style.css">
+    <link rel="stylesheet" href="../../css/static_style/body_style.css">
+    <link rel="stylesheet" href="../../css/static_style/main_style.css">
+    <link rel="stylesheet" href="../../css/static_style/footer_style.css">
+    <link rel="stylesheet" href="../../css/static_style/button_style.css">
 
-    <body>
-        <!-- ヘッダー -->
-        <header>
-            <p>注文内容確認</p>
-        </header>
-        
-        <!-- メイン -->
-        <main>
-            <div class="container">
+    <link rel="stylesheet" href="cart_style.css">
+    <!-- last update 2025/02/04 小林 -->
 
-                <div class="form_group">
-                    <p class="cursive example_text">
-                        <label for="addr">お届け先</label>
-                        <input class="input" type="text" id="addr" name="addr" placeholder="お届け先の住所を入力">
-                        <label for="pay">支払い方法</label>
-                        <input class="input" type="text" id="pay" name="pay" placeholder="支払い方法を入力">
-                        <label for="name">商品名</label>
-                        <input class="input" type="text" id="name" name="name" placeholder="商品名を入力">
-                        <label for="quantity">数量</label>
-                        <input class="input" type="number" id="quantity" name="quantity">
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="hdr_icon">
+            <img class="top_icon" src="../../images/explosion.gif" alt="icon画像" href="#">
+        </div>
+
+        <form class="srchbar">
+            <input class="srch_input" type="text" placeholder="検索ワードを入力">
+            <button class="srch_btn" type="submit">検索</button>
+        </form>
+
+        <div class="header_btn_grp">
+            <button class="header_btn">アカウント</button>
+            <button class="header_btn">カート</button>
+        </div>
+    </header>
+
+    <!-- メイン -->
+    <main>
+        <div class="container">
+            <div class="content">
+
+                <div class="top_title">
+                    <p id="gds_name"> 商品注文確認 </p>
+                </div>
+
+                <div class="deliver_grp">
+                    <p class="dlvr" id="addr"> お届け住所:</p>
+                    <p class="dlvr" id="payment">      支払い方法:代金引換
                     </p>
                 </div>
 
@@ -42,23 +59,25 @@
                             ・代金は商品配送時にお支払いください。<br>
                             ・配送時のお支払方法は現金のみとなっております。<br>
                             ・〔代引き手数料料金表〕<br>
-                                全国一律料金：300円
+                            全国一律料金:300円
                         </label>
                     </p>
 
                     <!-- 確定ボタン -->
-                    <button class="order_btn" type="submit" href="#">確定</button>
+                    <button class="odr_btn" type="submit" href="#">確定</button>
                     <!-- 戻るボタン -->
-                    <button class="order_btn" type="submit" href="#">戻る</button>
+                    <button class="odr_btn" type="submit" href="#">戻る</button>
 
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <footer>
-            <p>ご利用規約・プライバシーポリシー</p>
-            <p>© 2024 YUSA S.A.S</p>
-        </footer>
-        
-    </body>
+    <footer>
+        <p>ご利用規約・プライバシーポリシー</p>
+        <p>© 2024 YUSA S.A.S</p>
+    </footer>
+
+</body>
+
 </html>
