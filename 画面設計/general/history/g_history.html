@@ -25,14 +25,26 @@
     <body>
 
         <header>
-            <p>注文履歴</p>
+            <div class="hdr_icon">
+                <img class="top_icon" src="../../images/explosion.gif" alt="icon画像" href="#">
+            </div>
+    
+            <form class="srchbar">
+                <input class="srch_input" type="text" placeholder="検索ワードを入力">
+                <button class="srch_btn" type="submit">検索</button>
+            </form>
+    
+            <div class="header_btn_grp">
+                <button class="header_btn">アカウント</button>
+                <button class="header_btn">カート</button>
+            </div>
         </header>
         
         <main>
             <div class="container">
                 <div class="content">
-                    <div class="detail">
-                        注文履歴
+                    <div class="top_title">
+                        <p id="gds_name"> 注文履歴 </p>
                     </div>
 
                     <!-- 商品キャンセルのアナウンス -->
@@ -43,13 +55,32 @@
                             <th>注文番号</th><th>注文日</th><th>商品名</th><th>数量</th>
                             <th>合計</th><th>配送日</th><th></th>
                         </tr>
+
+                        <!-- 繰り返し表示する -->
                         <tr  class="custom" >
                             <th>注文番号</th><th>注文日</th><th>商品名</th><th>数量</th>
                             <th>合計</th><th>配送日</th>
                             <th>
                                 <!-- キャンセルボタン -->
                                 <button class="his_btn" id="his_btn" type="submit" href="#">キャンセル</button><br>
-                                <!-- 詳細ボタン -->
+                                <!-- 詳細ボタン どこにリンク張るの?-->
+                                <button class="his_btn" type="submit" href="#">詳細</button>
+
+                                <script>
+                                    document.getElementById("his_btn").addEventListener("click", function() {
+                                      document.getElementById("message").style.display = "block";
+                                    });
+                                </script>
+
+                            </th>
+                        </tr>
+                        <tr  class="custom" >
+                            <th>注文番号</th><th>注文日</th><th>商品名</th><th>数量</th>
+                            <th>合計</th><th>配送日</th>
+                            <th>
+                                <!-- キャンセルボタン 注文キャンセルページにリンク -->
+                                <button class="his_btn" id="his_btn" type="submit" href="#">キャンセル</button><br>
+                                <!-- 詳細ボタン どこにリンク張るの?-->
                                 <button class="his_btn" type="submit" href="#">詳細</button>
 
                                 <script>
