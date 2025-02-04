@@ -50,10 +50,6 @@
     margin-bottom: 5px;
 }
 
-
-/*----------------------------------------------------------------*/
-
-/* f_shipconf.html */
 .pagination a {
     padding: 8px 16px;
     text-decoration: none;
@@ -80,8 +76,32 @@
 }
 
 .gds_name {
-    width: 70%;
-    font-size: 100px;
+    width: 40%;
+    font-size: 16px;
+}
+
+.cate_1 input[type="radio"] {
+    width: 20px;
+    height: 20px;
+}
+
+.cate_1 {
+    display: flex;
+    font-size: 20px;
+}
+
+.cate_2 input[type="radio"] {
+    width: 20px;
+    height: 20px;
+}
+
+.cate_2 {
+    display: flex;
+    font-size: 20px;
+}
+
+.cate_2 select{
+    font-size: 16px;
 }
 
 .check_A {
@@ -97,18 +117,12 @@
     display: block
 }
 
-#check_B:checked+.check_A {
+#check_B1:checked+.check_A {
     display: block
 }
 
 #check_B2:checked+.check_A {
     display: block
-}
-
-.check_A input[type="checkbox"] {
-    position: absolute;
-    left: 235px;
-    top: 25%;
 }
 
 .list_price {
@@ -157,6 +171,11 @@
     width: 100%;
 }
 
+.lower_grp input[type="number"] {
+    font-size: 16px;
+    width: 60px;
+}
+
 .exp_area {
     display: flex;
     /* align-items: center; */
@@ -203,19 +222,4 @@
 
 .sidebar nav ul li a:hover {
     color: #007bff;
-}
-
-.categorize {
-    display: flex;
-    /* align-items: center ; */
-
-    flex-direction: column;
-}
-
-.cate_1 {
-    display: flex;
-}
-
-.cate_2 {
-    display: flex;
 }

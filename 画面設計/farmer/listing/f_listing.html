@@ -46,8 +46,7 @@
                             <label class="cart_label" for="categorize">カテゴリ</label>
                             <div class="categorize">
                                 <div class="cate_1">
-                                    <input type="checkbox" id="check_A" name="check_A" onclick="chbx(this)"
-                                        required>新規作成
+                                    <input type="radio" id="check_A" name="check_A" required>新規作成　
                                     <div class="check_A" id="check_A">
                                         <label class="cart_labelk" for="check_A"></label>
                                         <input type="text" id="text" required>
@@ -55,8 +54,7 @@
                                 </div>
 
                                 <div class="cate_2">
-                                    <input type="checkbox" id="check_A2" name="check_A" onclick="chbx(this)"
-                                        required>既存カテゴリ
+                                    <input type="radio" id="check_A2" name="check_A" required>既存カテゴリ　
                                     <div class="check_A" id="check_A2">
                                         <label class="cart_labelk" for="check_A"></label>
                                         <select id="check" required>
@@ -91,14 +89,14 @@
                             <label class="cart_label" for="unit">単位選択</label>
 
                             <div class="cate_1">
-                                <input type="checkbox" id="check_B" name="check_B1" onclick="chkbx(this)" required>個数
+                                <input type="radio" id="check_B1" name="check_B1" required>個数　
                                 <div class="check_A" id="check_B1">
                                     <label class="cart_labelk" for="check_B"></label>
-                                    <input type="number" id="number" required>
+                                    <input type="number" id="number" value="1" min="1" required>
                                 </div>
                             </div>
                             <div class="cate_2">
-                                <input type="checkbox" id="check_B2" name="check_B2" onclick="chkbx(this)" required>グラム
+                                <input type="radio" id="check_B2" name="check_B1" required>グラム　
                                 <div class="check_A" id="check_B2">
                                     <label class="cart_labelk" for="check_B"></label>
                                     <input type="number" id="Kg" min="1" placeholder="Kg" required>
@@ -106,7 +104,7 @@
                             </div>
                         </div>
 
-                        <label class="cart_label" for="stock">在庫数</label>
+                        <label class="cart_label" for="stock">在庫数　</label>
                         <input type="number" id="stock" name="stock" value="1" min="1" max="100" required>
                     </div>
 
@@ -123,30 +121,6 @@
         </div>
 
     </main>
-
-    <script>
-        function chbx(obj) {
-            let that = obj;
-            if (document.getElementById(that.id).checked == true) {
-                let boxes = document.querySelectorAll('input[type="checkbox"]');
-                for (let i = 0; i < boxes.length; i++) {
-                    boxes[i].checked = false;
-                }
-                document.getElementById(that.id).checked = true;
-            }
-        }
-
-        function chkbx(obj) {
-            let that = obj;
-            if (document.getElementById(that.id).checked == true) {
-                let boxes = document.querySelectorAll('input[type="checkbox"]');
-                for (let i = 0; i < boxes.length; i++) {
-                    boxes[i].checked = false;
-                }
-                document.getElementById(that.id).checked = true;
-            }
-        }
-    </script>
 
     <!-- <aside class="sidebar">
             <nav>
