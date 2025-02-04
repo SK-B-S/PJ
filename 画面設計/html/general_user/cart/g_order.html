@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- UTF-8でエンコード -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- タイトル -->
+    <title>Jimoty</title>
+    <!-- style.cssを参照 -->
+    <link rel="stylesheet" href="../../css/static_style/header_style.css">
+    <link rel="stylesheet" href="../../css/static_style/body_style.css">
+    <link rel="stylesheet" href="../../css/static_style/main_style.css">
+    <link rel="stylesheet" href="../../css/static_style/footer_style.css">
+    <link rel="stylesheet" href="../../css/static_style/button_style.css">
+
+    <link rel="stylesheet" href="cart_style.css">
+    <!-- last update 2025/02/04 小林 -->
+
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="hdr_icon">
+            <img class="top_icon" src="../../images/explosion.gif" alt="icon画像" href="#">
+        </div>
+
+        <form class="srchbar">
+            <input class="srch_input" type="text" placeholder="検索ワードを入力">
+            <button class="srch_btn" type="submit">検索</button>
+        </form>
+
+        <div class="header_btn_grp">
+            <button class="header_btn">アカウント</button>
+            <button class="header_btn">カート</button>
+        </div>
+    </header>
+
+    <!-- メイン -->
+    <main>
+        <div class="container">
+            <div class="content">
+
+                <div class="top_title">
+                    <p id="gds_name"> 商品注文確認 </p>
+                </div>
+
+                <div class="deliver_grp">
+                    <p class="dlvr" id="addr">お届け住所:〒 099-2421 北海道網走市字呼人1-1</p>
+                    <p class="dlvr" id="payment">支払い方法:代金引換</p>
+                </div>
+
+                <!-- このリストを繰り返し表示 -->
+                <div class="products_list">
+                    <!-- 商品キャンセルのアナウンス -->
+                    <!-- <p id="message">カートの商品を変更しました</p> -->
+
+                    <!-- 商品リスト -->
+                    <div class="cart_list">
+                        <div class="odr_img">
+                            <!-- 商品画像 -->
+                            <img id="gds_img" src="../../images/baby.png" alt="商品画像">
+                        </div>
+                        <p class="gds_name" id="gds_name">Human`s Baby</p>
+                    </div>
+
+                    <div class="cart_gds_grp">
+                        <div class="gds_dtl">
+                            <p class="sub_title" id="gds_exp">
+                                2025年1月最新式 3個セット お手軽簡単に【2025新登場】 加湿器 大容量 8L 加熱式 ＆ 超音波式 省エネ ハイブリッド式
+                                最長46時間稼働
+                                5段階湿度調整 お手入れ簡単 かしつき 上から給水 加湿器 除菌 静音 2WAY給水 アロマ対応 切りタイマー 自動OFF 静電タッチパネル リモコン付き 湿度設定
+                                水漏れ防止
+                                空焚き防止 おしゃれ 加湿器. 寝室 オフィス リビング 乾燥対策
+                            </p>
+                            <p class="price" id="price">¥2000</p>
+                            <p class="qua" id="qua">数量:1</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="products_list">
+                    <!-- 商品キャンセルのアナウンス -->
+                    <!-- <p id="message">カートの商品を変更しました</p> -->
+
+                    <!-- 商品リスト -->
+                    <div class="cart_list">
+                        <div class="odr_img">
+                            <!-- 商品画像 -->
+                            <img id="gds_img" src="../../images/chair.jpg" alt="商品画像">
+                        </div>
+                        <p class="gds_name" id="gds_name">Happy? Chair</p>
+                    </div>
+
+                    <div class="cart_gds_grp">
+                        <div class="gds_dtl">
+                            <p class="sub_title" id="gds_exp">
+                                【2025最新型】座椅子 パソコンチェア 腰枕付き 一人掛けソファー 背面5段階調整 ゆったりワイド大きい 洗えるカバーニング 背もたれ ハイバック 180度フラット可能
+                                リクライニング 低反発 折りたたみ収納 フロアチェア リクライニングチェア 寝れる 180度 座椅子ソファー 座椅子 かわいい (グレー)
+                            </p>
+                            <p class="price" id="price">¥20666</p>
+                            <p class="qua" id="qua">数量:3</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment_exp">
+                    <p class="pay_policy">
+                        ■ 代金引換<br>
+                        ・代金は商品配送時にお支払いください。<br>
+                        ・配送時のお支払方法は現金のみとなっております。<br>
+                        ・〔代引き手数料料金表〕<br>
+                        全国一律料金:300円
+                    </p>
+                    <p class="total">合計:63998</p>
+                </div>
+                <div class="odr_btn_grp">
+                    <!-- 確定ボタン -->
+                    <button class="odr_btn" type="submit" href="#">注文</button>
+                    <!-- 戻るボタン -->
+                    <button class="odr_back_btn" type="submit" href="#">戻る</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>ご利用規約・プライバシーポリシー</p>
+        <p>© 2024 YUSA S.A.S</p>
+    </footer>
+
+</body>
+
+</html>
