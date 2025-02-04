@@ -358,5 +358,53 @@
 }
 
 .all_btn:hover {
-    background-color: #374d6a;
+    background-color: #37639c;
+}
+
+.odr_btn_grp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2px;
+
+    width: 100%;
+}
+
+.odr_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #23aeff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 7px;
+
+    width: 25%;
+}
+
+.odr_btn:hover {
+    background-color: #37639c;
+}
+
+.odr_back_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #787878;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 7px;
+
+    width: 25%;
+}
+
+.odr_back_btn:hover {
+    background-color: #464646;
 }

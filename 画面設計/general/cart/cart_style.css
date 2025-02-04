@@ -72,6 +72,9 @@
     
     height: 80%;
     width: 100%;
+
+    overflow: hidden;
+    object-fit: contain;
 }
 
 .cart_img img {
@@ -147,12 +150,11 @@
     display: flex;
     /* align-items: center; */
     justify-content: center;
-
     flex-direction: column;
 }
 
 .dlvr {
-    text-align: end;
+    text-align: start;
 
     font-size: 20px;
     font-weight: bold;
@@ -173,5 +175,10 @@
 .qua_input {
     font-weight: bold;
     font-size: 16px;
-    padding: 0;
+}
+
+.sub_title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
 }
