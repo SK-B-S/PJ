@@ -1,4 +1,4 @@
-document.getElementById("up_btn").addEventListener("click", () => {
+document.getElementById("list_regi_btn").addEventListener("click", () => {
     showDeletePopup();
 });
 
