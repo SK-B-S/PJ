@@ -169,6 +169,16 @@ styleシート対応表
 					<button class="header_btn">カート</button>
 				</div>
 			</header>
+			
+			<aside class="sidebar">
+				<nav>
+					<ul>
+						<li><a href="#">メニュー1</a></li>
+						<li><a href="#">メニュー2</a></li>
+						<li><a href="#">メニュー3</a></li>
+					</ul>
+				</nav>
+       		</aside>	
 
 			<main>
 				<div class="container">
@@ -300,3 +310,35 @@ styleシート対応表
 			margin: 10px 0;
 		}
 
+	サイドバー
+		/* サイドバーのスタイル */
+		.sidebar {
+			position: absolute;
+
+			margin-top: 0;
+			padding-top: 0;
+			left: 0; /* ここで左右切り替え */
+			width: 20%px;
+			background-color: #f0f0f0;
+			padding: 20px;
+			border: 1px solid #000;
+		}
+
+		/* ナビゲーションメニューのスタイル */
+		.sidebar nav ul {
+			list-style-type: none;
+			padding: 0;
+		}
+
+		.sidebar nav ul li {
+			margin-bottom: 10px;
+		}
+
+		.sidebar nav ul li a {
+			text-decoration: none;
+			color: #333;
+		}
+
+		.sidebar nav ul li a:hover {
+			color: #007bff;
+		}

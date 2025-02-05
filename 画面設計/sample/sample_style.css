@@ -371,8 +371,51 @@ aside {
     width: 250px;
     height: 100vh;
     position: sticky;
-    top: 60px; /* ヘッダーの高さ分下げる */
+    top: 60px;
+    /* ヘッダーの高さ分下げる */
     background: #444;
     color: white;
     padding: 20px;
+}
+
+.lsidebar {
+    position: absolute;
+
+    /* 上部の間隔 */
+    margin-top: 80px;
+    /* 左右の間隔 */
+    padding-top: 0;
+
+    /* ここで左右切り替え */
+    left:   0;
+    
+    /* 横幅 */
+    width: 10%;
+    /* 縦幅 */
+    min-height: 100vh;
+
+    /* 背景色 */
+    background-color: #f0f0f0;
+
+    /* 枠 */
+    border: 1px solid #000;
+}
+
+/* ナビゲーションメニューのスタイル */
+.lsidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lsidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.lsidebar nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.lsidebar nav ul li a:hover {
+    color: #007bff;
 }
