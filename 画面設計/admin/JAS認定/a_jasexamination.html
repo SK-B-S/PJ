@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
     <link rel="stylesheet" href="../../css/static_style/footer_style.css">
 
     <link rel="stylesheet" href="jasmanage_style.css">
-    
+
     <script>
         // 戻るボタンの機能
         function goBack() {
@@ -19,6 +20,7 @@
         }
     </script>
 </head>
+
 <body>
     <header>
         <p>JAS認定審査確認</p>
@@ -28,31 +30,31 @@
 
     <main>
         <div class="main-container">
-        <div class="main_flex">
-            <section class="details-section">
-                <h2>農家情報</h2>
-                <!-- flagを取得して表示内容を変更 -->
-                <dl class="details">
-                    <dt>農家ID</dt>
-                    <dd>001</dd>
-                    <dt>氏名</dt>
-                    <dd>農作 太郎</dd>
-                    <dt>・を認定しますか？</dt>
-                    <dt>・継続承認しますか？</dt>
-                </dl>
-                <select id="approval-select" name="approval" class="custom-select">
-                    <option value="approved">承認</option>
-                    <option value="rejected">拒否</option>
-                </select>
-            </section>
+            <div class="main_flex">
+                <section class="details-section">
+                    <h2>農家情報</h2>
+                    <!-- flagを取得して表示内容を変更 -->
+                    <dl class="details">
+                        <dt>農家ID</dt>
+                        <dd>001</dd>
+                        <dt>氏名</dt>
+                        <dd>農作 太郎</dd>
+                        <dt>・を認定しますか？</dt>
+                        <dt>・継続承認しますか？</dt>
+                    </dl>
+                    <select id="approval-select" name="approval" class="custom-select">
+                        <option value="approved">承認</option>
+                        <option value="rejected">拒否</option>
+                    </select>
+                </section>
 
-            <section class="certificate-section">
-                <h2>認定書</h2>
-                <div class="certificate-frame">
-                    <embed src="certificate_sample.pdf" type="application/pdf" width="100%" height="500px">
-                </div>
-            </section>
-        </div>
+                <section class="certificate-section">
+                    <h2>認定書</h2>
+                    <div class="certificate-frame">
+                        <embed src="certificate_sample.pdf" type="application/pdf" width="100%" height="500px">
+                    </div>
+                </section>
+            </div>
         </div>
         <!-- 戻るボタン -->
         <button class="back-button" onclick="goBack()">戻る</button>
@@ -62,7 +64,8 @@
         <p>ご利用規約・プライバシーポリシー</p>
         <p>© 2024 YUSA S.A.S</p>
     </footer>
-    
+
 
 </body>
+
 </html>
