@@ -1,85 +1,86 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <!-- UTF-8でエンコード -->
-        <meta charset="UTF-8">
-        <!-- デバイスのウィンドウ幅に合わせてページを変更、文字の初期スケールを1に指定 -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- タイトル -->
-        <title>売上レポート</title>
 
-        <!-- style_sample.cssを参照 -->
-        <!-- defaul static css file -->
-        <link rel="stylesheet" href="../../css/static_style/header_style.css">
-        <link rel="stylesheet" href="../../css/static_style/body_style.css">
-        <link rel="stylesheet" href="../../css/static_style/main_style.css">
-        <link rel="stylesheet" href="../../css/static_style/footer_style.css">
-        <link rel="stylesheet" href="../../css/static_style/button_style.css">
+<head>
+  <!-- UTF-8でエンコード -->
+  <meta charset="UTF-8">
+  <!-- デバイスのウィンドウ幅に合わせてページを変更、文字の初期スケールを1に指定 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- タイトル -->
+  <title>売上レポート</title>
 
-        <link rel="stylesheet" href="report_style.css">
+  <!-- style_sample.cssを参照 -->
+  <!-- defaul static css file -->
+  <link rel="stylesheet" href="../../css/static_style/header_style.css">
+  <link rel="stylesheet" href="../../css/static_style/body_style.css">
+  <link rel="stylesheet" href="../../css/static_style/main_style.css">
+  <link rel="stylesheet" href="../../css/static_style/footer_style.css">
+  <link rel="stylesheet" href="../../css/static_style/button_style.css">
 
-        <!-- 最終更新：担当者 更新する度に書き換える -->
-        <!-- last update 2025/1/23 杉田 -->
-    
-    </head>
+  <link rel="stylesheet" href="report_style.css">
 
-    <body>
+  <!-- 最終更新：担当者 更新する度に書き換える -->
+  <!-- last update 2025/1/23 杉田 -->
 
-        <header>
-          <p>売上レポート</p>
-        </header>
-        
-        <main>
-            <div class="container">
-                <div class="content">
-                    <div class="detail">
-                        <p>売上レポート</p>
-                    </div>
-                </div>
+</head>
 
-                <table id="dataTable">
-                  <thead>
-                    <tbody>
-                      <!-- 行が追加される領域 -->
-                    </tbody>
-                    <tr>
-                      <th>商品名</th>
-                      <th>1月</th>
-                      <th>2月</th>
-                      <th>3月</th>
-                      <th>4月</th>
-                      <th>5月</th>
-                      <th>6月</th>
-                      <th>7月</th>
-                      <th>8月</th>
-                      <th>9月</th>
-                      <th>10月</th>
-                      <th>11月</th>
-                      <th>12月</th>
-                      <th>合計</th>
-                    </tr>
-                  </thead>
-                </table>
+<body>
 
-                <label class="total-label" id="column13Total2">売上総額: 0</label>
-              
-                <form id="addRowForm">
-                  <button class="add_btn" type="submit" href="#">＜</button>
-                  <button class="add_btn" type="button" onclick="addRow()">行を追加</button>
-                  <button class="add_btn" id="delbtn">行を削除</button>
-                  <button class="add_btn" type="submit" href="#">＞</button>
-                </form>
+  <header>
+    <p>売上レポート</p>
+  </header>
 
-                <script src="report_config.js"></script>
+  <main>
+    <div class="container">
+      <div class="content">
 
-            </div>
+        <div class="top_title">売上レポート</div>
 
-        </main>
+        <table id="dataTable">
+          <thead>
+          <tbody>
+            <!-- 新しく追加される行がここに挿入される -->
+          </tbody>
+          <tr>
+            <th>商品名</th>
+            <th>1月</th>
+            <th>2月</th>
+            <th>3月</th>
+            <th>4月</th>
+            <th>5月</th>
+            <th>6月</th>
+            <th>7月</th>
+            <th>8月</th>
+            <th>9月</th>
+            <th>10月</th>
+            <th>11月</th>
+            <th>12月</th>
+            <th>合計</th>
+          </tr>
+          </thead>
+        </table>
 
-        <footer>
-            <p>ご利用規約・プライバシーポリシー</p>
-            <p>© 2024 YUSA S.A.S</p>
-        </footer>
+        <div class="total-label" id="grandTotal2">売上総額：0</div>
 
-    </body>
+        <div class="btn_group">
+          <button class="add_btn" type="submit" href="#">＜</button>
+          <button class="add_btn" id="addRowBtn">行を追加</button>
+          <button class="add_btn" id="delRowBtn">行を削除</button>
+          <button class="add_btn" type="submit" href="#">＞</button>
+        </div>
+
+        <script src="report_config.js"></script>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>ご利用規約・プライバシーポリシー</p>
+    <p>© 2024 YUSA S.A.S</p>
+  </footer>
+
+</body>
+
 </html>
