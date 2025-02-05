@@ -50,30 +50,28 @@
                 <p id="message">＜＞をキャンセルしました。</p>
 
                 <table class="his_table">
-                    <tbody  >
-                        <tr>
+                    <tbody>
+                        <tr class="thead">
                             <th>注文番号</th>
                             <th>注文日</th>
                             <th>商品名</th>
                             <th>数量</th>
                             <th>合計</th>
                             <th>配送日</th>
-                            <th></th>
+                            <!-- <th></th> -->
                         </tr>
 
                         <!-- 繰り返し表示する -->
                         <tr class="custom">
-                            <th>注文番号</th>
-                            <th>注文日</th>
-                            <th>商品名</th>
-                            <th>数量</th>
-                            <th>合計</th>
-                            <th>配送日</th>
-                            <th>
+                            <th class="th_1">注文番号</th>
+                            <th class="th_2">注文日</th>
+                            <th class="th_3">商品名</th>
+                            <th class="th_4">数量</th>
+                            <th class="th_5">合計</th>
+                            <th class="th_6">配送日</th>
+                            <!-- <th>
                                 <div class="history_btn_grp">
-                                    <!-- キャンセルボタン 注文キャンセルページにリンク -->
                                     <button class="his_btn" id="his_btn" type="submit" href="#">キャンセル</button>
-                                    <!-- 詳細ボタン どこにリンク張るの?-->
                                     <button class="his_btn" type="submit" href="#">詳細</button>
                                 </div>
 
@@ -82,8 +80,7 @@
                                         document.getElementById("message").style.display = "block";
                                     });
                                 </script>
-
-                            </th>
+                            </th> -->
                         </tr>
 
                         <!-- 繰り返し表示する -->
@@ -94,11 +91,9 @@
                             <th>数量</th>
                             <th>合計</th>
                             <th>配送日</th>
-                            <th>
+                            <!-- <th>
                                 <div class="history_btn_grp">
-                                    <!-- キャンセルボタン 注文キャンセルページにリンク -->
                                     <button class="his_btn" id="his_btn" type="submit" href="#">キャンセル</button>
-                                    <!-- 詳細ボタン どこにリンク張るの?-->
                                     <button class="his_btn" type="submit" href="#">詳細</button>
                                 </div>
 
@@ -107,8 +102,7 @@
                                         document.getElementById("message").style.display = "block";
                                     });
                                 </script>
-
-                            </th>
+                            </th> -->
                         </tr>
 
                         <!-- 繰り返し表示する -->
@@ -119,11 +113,9 @@
                             <th>数量</th>
                             <th>合計</th>
                             <th>配送日</th>
-                            <th>
+                            <!-- <th>
                                 <div class="history_btn_grp">
-                                    <!-- キャンセルボタン 注文キャンセルページにリンク -->
                                     <button class="his_btn" id="his_btn" type="submit" href="#">キャンセル</button>
-                                    <!-- 詳細ボタン どこにリンク張るの?-->
                                     <button class="his_btn" type="submit" href="#">詳細</button>
                                 </div>
 
@@ -132,8 +124,7 @@
                                         document.getElementById("message").style.display = "block";
                                     });
                                 </script>
-
-                            </th>
+                            </th> -->
                         </tr>
 
                         <!-- 繰り返し表示する -->
@@ -144,11 +135,9 @@
                             <th>数量</th>
                             <th>合計</th>
                             <th>配送日</th>
-                            <th>
+                            <!-- <th>
                                 <div class="history_btn_grp">
-                                    <!-- キャンセルボタン 注文キャンセルページにリンク -->
                                     <button class="his_btn" id="his_btn" type="submit" href="#">キャンセル</button>
-                                    <!-- 詳細ボタン どこにリンク張るの?-->
                                     <button class="his_btn" type="submit" href="#">詳細</button>
                                 </div>
 
@@ -157,8 +146,7 @@
                                         document.getElementById("message").style.display = "block";
                                     });
                                 </script>
-
-                            </th>
+                            </th> -->
                         </tr>
 
                         <!-- 繰り返し表示する -->
@@ -169,20 +157,6 @@
                             <th>数量</th>
                             <th>合計</th>
                             <th>配送日</th>
-                            <th>
-                                <div class="history_btn_grp">
-                                    <!-- キャンセルボタン 注文キャンセルページにリンク -->
-                                    <button class="his__btn" type="submit" href="#">キャンセル</button>
-                                    <!-- 詳細ボタン どこにリンク張るの?-->
-                                    <button class="his_btn" type="submit" href="#">詳細</button>
-                                </div>
-
-                                <script>
-                                    document.getElementById("his_btn").addEventListener("click", function () {
-                                        document.getElementById("message").style.display = "block";
-                                    });
-                                </script>
-                            </th>
                         </tr>
                     </tbody>
                 </table>
