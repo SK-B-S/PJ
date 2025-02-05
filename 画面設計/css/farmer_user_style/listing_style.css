@@ -1,0 +1,225 @@
+/* f_listing.html,f_edlisting.html */
+
+.side_set {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+
+    width: 100%;
+}
+
+.top_title {
+    text-align: center;
+
+    font-size: 30px;
+    margin-bottom: 20px; 
+    font-weight: bold;
+}
+
+.entry {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.form_container {
+    background-color: #fff;
+    padding: 150px;
+    /* 内側の余白を少し広げる */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    /* フォーム全体を広げる */
+    max-width: 1000px;
+    /* 最大幅を800pxに調整 */
+    box-sizing: border-box;
+}
+
+/* ラベルのスタイル */
+.cart_label {
+    font-size: 20px;
+    /* ラベルのフォントサイズを少し大きく */
+    color: #000;
+    font-weight: bold;
+    overflow-wrap: normal;
+    
+    margin-bottom: 5px;
+}
+
+.pagination a {
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+.upper_grp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.exp_1 {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+
+    flex: 6;
+    flex-direction: column;
+    width: 100%;
+}
+
+.gds_name {
+    width: 40%;
+    font-size: 16px;
+}
+
+.cate_1 input[type="radio"] {
+    width: 20px;
+    height: 20px;
+}
+
+.cate_1 {
+    display: flex;
+    font-size: 20px;
+}
+
+.cate_2 input[type="radio"] {
+    width: 20px;
+    height: 20px;
+}
+
+.cate_2 {
+    display: flex;
+    font-size: 20px;
+}
+
+.cate_2 select{
+    font-size: 16px;
+}
+
+.check_A {
+    display: none;
+    position: relative;
+}
+
+#check_A:checked+.check_A {
+    display: block
+}
+
+#check_A2:checked+.check_A {
+    display: block
+}
+
+#check_B1:checked+.check_A {
+    display: block
+}
+
+#check_B2:checked+.check_A {
+    display: block
+}
+
+.list_price {
+    padding: 0;
+    margin: 0;
+}
+
+.input_list_price {
+    width: 20%;
+    font-size: 16px;
+}
+
+.input_list_price[type="number"]::-webkit-outer-spin-button,
+.input_list_price[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefoxでも矢印を非表示にする */
+.input_list_price[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* フォーカス時のスタイル */
+.input_list_price:focus {
+    outline: none;
+}
+
+.list_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 4;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.list_img img {
+    width: 300px;
+    height: 200px;
+}
+
+.lower_grp {
+    width: 100%;
+}
+
+.lower_grp input[type="number"] {
+    font-size: 16px;
+    width: 60px;
+}
+
+.exp_area {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.exp_text {
+    /* width: 80%; */
+    height: 100px;
+
+    resize: none;
+}
+
+/* サイドバーのスタイル */
+.sidebar {
+    position: sticky;
+
+    right: 0;
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-left: 1px solid #000;
+    /* サイドバーの左に黒い線 */
+}
+
+/* ナビゲーションメニューのスタイル */
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar nav ul li a:hover {
+    color: #007bff;
+}
