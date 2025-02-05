@@ -184,3 +184,9 @@
 
         gap: 5px;
     }
+
+    .image_preview {
+        display:none;
+        height: 600px;
+        width: 450px;
+    }
