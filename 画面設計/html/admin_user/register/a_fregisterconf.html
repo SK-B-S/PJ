@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>農家本登録確認</title>
+
+    <link rel="stylesheet" href="../../css/static_style/header_style.css">
+    <link rel="stylesheet" href="../../css/static_style/body_style.css">
+    <link rel="stylesheet" href="../../css/static_style/main_style.css">
+    <link rel="stylesheet" href="../../css/static_style/footer_style.css">
+    <link rel="stylesheet" href="../../css/static_style/button_style.css">
+
+    <link rel="stylesheet" href="register_style.css">
+    <script>
+        // セレクトボックスの選択に応じた表示変更
+        function handleSelection() {
+            const selectBox = document.getElementById("approval-select");
+            const reasonSection = document.getElementById("reason-section");
+            const confirmButton = document.getElementById("confirm-button");
+
+            if (selectBox.value === "reject") {
+                reasonSection.style.display = "block"; // 拒否理由入力欄を表示
+            } else {
+                reasonSection.style.display = "none"; // 拒否理由入力欄を非表示
+            }
+
+            confirmButton.style.display = "block"; // 確定ボタンを表示
+        }
+
+        // 戻るボタンの機能
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <p>農家本登録確認</p>
+        <!-- last update 2025/1/30 杉田 -->
+        <!-- 修正済み -->
+    </header>
+
+    <main class="main-container">
+        <div class="main_flex">
+            <section class="details-section">
+                <h2 class="details-title">農家情報</h2>
+                <dl class="details">
+                    <dt>農家ID</dt>
+                    <dd>001</dd>
+                    <dt>氏名</dt>
+                    <dd>農作 太郎</dd>
+                    <dt>住所</dt>
+                    <dd>東京都新宿区西新宿1-1-1</dd>
+                </dl>
+
+                <!-- 承認・拒否セレクトボックス -->
+                <label for="approval-select">登録の承認または拒否を選択してください:</label>
+                <select id="approval-select" onchange="handleSelection()">
+                    <option value="">選択してください</option>
+                    <option value="approve">承認</option>
+                    <option value="reject">拒否</option>
+                </select>
+
+                <!-- 拒否理由入力欄 -->
+                <div id="reason-section" style="display: none;">
+                    <textarea id="reject-reason" rows="4" cols="50" placeholder="理由を入力してください..."></textarea>
+                </div>
+
+                <!-- 確定ボタン -->
+                <button id="confirm-button" style="display: none;">確定</button>
+            </section>
+
+            <section class="certificate-section">
+                <h2 class="details-title">証明書</h2>
+                <div class="certificate-frame">
+                    <embed src="certificate_sample.pdf" type="application/pdf" width="500px" height="650px">
+                </div>
+            </section>
+        </div>
+        
+        <!-- 戻るボタン -->
+        <button class="back-button" onclick="goBack()">戻る</button>
+    </main>
+
+    <footer>
+        <p>ご利用規約・プライバシーポリシー</p>
+        <p>© 2024 YUSA S.A.S</p>
+    </footer>
+</body>
+</html>
