@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- UTF-8でエンコード -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- タイトル -->
+    <title>マイページ編集</title>
+
+    <!-- style.cssを参照 -->
+    <!-- defaul static css file -->
+    <link rel="stylesheet" href="../../../css/static_style/header_style.css">
+    <link rel="stylesheet" href="../../../css/static_style/body_style.css">
+    <link rel="stylesheet" href="../../../css/static_style/main_style.css">
+    <link rel="stylesheet" href="../../../css/static_style/footer_style.css">
+
+    <!-- unique css file -->
+    <link rel="stylesheet" href="../../../css/static_style/button_style.css">
+    <link rel="stylesheet" href="../../../css/farmer_user_style/farmer_style.css">
+
+
+    <!-- 日本語ロケール -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+
+    <!-- last update 2024/1/15 小林 -->
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="hdr_icon">
+            <img class="top_icon" src="../../../images/explosion.gif" alt="icon画像" href="#">
+        </div>
+        <!-- 商品検索フォーム -->
+        <form class="srchbar">
+            <input class="srch_input" type="text" placeholder="検索ワードを入力">
+            <button class="srch_btn" type="submit">検索</button>
+        </form>
+
+        <div class="header_btn_grp">
+            <button class="header_btn">アカウント</button>
+            <button class="header_btn">カート</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- 個人情報フォーム -->
+            <div class="form_content">
+                <form>
+                    <label class="me_label" for="name">氏名:</label>
+                    <input class="me_input" type="text" id="name" name="name" placeholder="氏名" required>
+
+                    <label class="me_label" for="email">メールアドレス:</label>
+                    <input class="me_input" type="email" id="email" name="email" placeholder="メールアドレス" required>
+
+                    <label class="me_label" for="tel">電話番号:</label>
+                    <input class="me_input" type="tel" id="tel" name="telephone" placeholder="電話番号" required>
+
+                    <label class="me_label" for="pst">郵便番号:</label>
+                    <input class="me_input" type="text" id="pst" name="postcode" placeholder="郵便番号" required>
+
+                    <label class="me_label" for="addr">住所:</label>
+                    <input class="me_input" type="text" id="addr" name="address" placeholder="住所" required>
+
+                    <!-- 追加部分: アイコン画像アップロード -->
+                    <label class="me_label" for="icon">アイコン画像:</label>
+                    <input class="me_input" type="file" id="icon" name="icon" accept="image/*"
+                        onchange="previewImage(event, 'icon-preview')" required>
+                    <div class="image_preview">
+                        <img id="icon-preview" alt="アイコンのプレビュー">
+                    </div>
+                </form>
+            </div>
+            <div class="container">
+                <div class="btn_container">
+                    <!--  確定ボタン-->
+                    <button class="mypage_button" type="submit">変更を確定</button>
+                    <button class="mpcancel_button" type="submit">変更を破壊</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>ご利用規約・プライバシーポリシー</p>
+        <p>© 2024 YUSA S.A.S</p>
+    </footer>
+
+    <script>
+        // 画像プレビュー用のJavaScript関数
+        function previewImage(event, previewId) {
+            const file = event.target.files[0];
+            const preview = document.getElementById(previewId);
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    preview.src = e.target.result;
+                    preview.style.display = "block";
+                };
+                reader.readAsDataURL(file);
+            } else {
+                preview.style.display = "none";
+                preview.src = "";
+            }
+        }
+    </script>
+</body>
+
+</html>
