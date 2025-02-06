@@ -186,7 +186,17 @@
     }
 
     .image_preview {
-        display:none;
         height: 600px;
         width: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 5px;
+    }
+
+    .image_preview img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
