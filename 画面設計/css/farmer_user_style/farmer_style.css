@@ -224,3 +224,87 @@
     object-fit: cover;
 }
 
+.products_list {
+    display: flex; 
+    flex-wrap: wrap; 
+
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    gap: 20px;
+}
+
+.products_list:empty {
+    display: none;
+}
+
+.top_product {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 340px;
+    height: 350px;
+
+    border: 1px solid;
+    border-color: #ccc;
+    color: #000000;
+    padding: 20px;
+}
+
+.top_product:empty {
+    display: none;
+}
+
+.top_img {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.product_main {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.product_main:empty {
+    display: none;
+}
+
+/* 商品の詳細 */
+.gds_name {
+    text-align: center;
+
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+
+    max-width: 20ch;            /* 20characters */      
+    white-space: nowrap;        /* テキストを1行にする */
+    overflow: hidden;           /* はみ出した部分を隠す */
+    text-overflow: ellipsis;    /* 省略記号 (...) を表示 */
+}
+
+.gds_price {
+    text-align: center;
+
+    font-size: 30px;
+    margin: 0;
+    padding: 10%;
+}
+
+.product_link {
+    text-align: center ;
+
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.product_link:hover {
+    color: #0662c4;
+}
