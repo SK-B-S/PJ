@@ -1,58 +1,75 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <!-- UTF-8でエンコード -->
-        <meta charset="UTF-8">
-        <!-- デバイスのウィンドウ幅に合わせてページを変更、文字の初期スケールを1に指定 -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- タイトル -->
-        <title>販売履歴</title>
 
-        <!-- style_sample.cssを参照 -->
-        <!-- defaul static css file -->
-        <link rel="stylesheet" href="../../../css/static_style/header_style.css">
-        <link rel="stylesheet" href="../../../css/static_style/body_style.css">
-        <link rel="stylesheet" href="../../../css/static_style/main_style.css">
-        <link rel="stylesheet" href="../../../css/static_style/footer_style.css">
+<head>
+    <!-- UTF-8でエンコード -->
+    <meta charset="UTF-8">
+    <!-- デバイスのウィンドウ幅に合わせてページを変更、文字の初期スケールを1に指定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- タイトル -->
+    <title>販売履歴</title>
 
-        <link rel="stylesheet" href="../../../css/farmer_user_style/sales_style.css">
+    <!-- style_sample.cssを参照 -->
+    <!-- defaul static css file -->
+    <link rel="stylesheet" href="../../../css/static_style/header_style.css">
+    <link rel="stylesheet" href="../../../css/static_style/body_style.css">
+    <link rel="stylesheet" href="../../../css/static_style/main_style.css">
+    <link rel="stylesheet" href="../../../css/static_style/footer_style.css">
+    <link rel="stylesheet" href="../../../css/static_style/button_style.css">
 
-        <!-- 最終更新日：担当者 更新する度に書き換える -->
-        <!-- last update 2025/1/17 杉田 -->
-    
-    </head>
+    <link rel="stylesheet" href="../../../css/farmer_user_style/sales_style.css">
 
-    <body>
+    <!-- 最終更新日：担当者 更新する度に書き換える -->
+    <!-- last update 2025/1/17 杉田 -->
 
-        <header>
-            <p>販売履歴</p>
-        </header>
-        
-        <main>
-            <div class="container">
-                <div class="content">
-                    <div class="detail">
-                        販売履歴
-                    </div>
-                    
-                    <table class="table" border="1">
-                        <tr>
-                            <th>注文番号</th><th>注文日</th><th>商品名</th><th>数量</th>
-                            <th>合計</th><th>配送予定日</th>
-                        </tr>
-                        <tr  class="custom" >
-                            <th>注文番号</th><th>注文日</th><th>商品名</th><th>数量</th>
-                            <th>合計</th><th>配送予定日</th>
-                        </tr>
-                    </table>
-    
+</head>
+
+<body>
+
+    <header>
+        <p>販売履歴</p>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content">
+                <div class="top_title">
+                    <p>販売履歴</p>
                 </div>
-            </div>
-        </main>
 
-        <footer>
-            <p>ご利用規約・プライバシーポリシー</p>
-            <p>© 2024 YUSA S.A.S</p>
-        </footer>
-    </body>
+                <table class="his_table">
+                    <tbody>
+                        <tr class="thead">
+                            <th>注文番号</th>
+                            <th>注文日</th>
+                            <th>商品名</th>
+                            <th>数量</th>
+                            <th>合計</th>
+                            <th>配送日</th>
+                        </tr>
+
+                        <!-- 繰り返し表示する -->
+                        <tr class="custom">
+                            <th class="th_1">注文番号</th>
+                            <th class="th_2">注文日</th>
+                            <th class="th_3">商品名</th>
+                            <th class="th_4">数量</th>
+                            <th class="th_5">合計</th>
+                            <th class="th_6">配送日</th>
+                        </tr>
+
+                    </tbody>
+                </table>
+                </table>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>ご利用規約・プライバシーポリシー</p>
+        <p>© 2024 YUSA S.A.S</p>
+    </footer>
+</body>
+
 </html>

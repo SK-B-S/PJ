@@ -1,56 +1,68 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>販売済商品詳細</title>
 
-        <!-- defaul static css file -->
-        <link rel="stylesheet" href="../../../css/static_style/header_style.css">
-        <link rel="stylesheet" href="../../../css/static_style/body_style.css">
-        <link rel="stylesheet" href="../../../css/static_style/main_style.css">
-        <link rel="stylesheet" href="../../../css/static_style/footer_style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>販売済商品詳細</title>
 
-        <!-- unique css file -->
-        <link rel="stylesheet" href="../../../css/farmer_user_style/sales_style.css">
+    <!-- defaul static css file -->
+    <link rel="stylesheet" href="../../../css/static_style/header_style.css">
+    <link rel="stylesheet" href="../../../css/static_style/body_style.css">
+    <link rel="stylesheet" href="../../../css/static_style/main_style.css">
+    <link rel="stylesheet" href="../../../css/static_style/footer_style.css">
 
-        <!-- 最終更新日：担当者 更新する度に書き換える -->
-        <!-- last update 2025/1/17 杉田 -->
-    
-    </head>
+    <!-- unique css file -->
+    <link rel="stylesheet" href="../../../css/farmer_user_style/sales_style.css">
 
-    <body>
+    <!-- 最終更新日：担当者 更新する度に書き換える -->
+    <!-- last update 2025/02/06 小林 -->
 
-        <header>
-            <p>販売済商品詳細</p>
-        </header>
-        
-        <main>
-            <div class="container">
-                <div class="content">
-                    <div class="detail">
-                        販売済商品詳細
+</head>
+
+<body>
+
+    <header>
+        <p>販売済商品詳細</p>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content">
+                <div class="top_title">
+                    販売済商品詳細
+                </div>
+
+                <div class="products_list">
+                    <!-- 商品リスト -->
+                    <div class="dtl_img_ctnr">
+                        <!-- 商品画像 -->
+                        <img src="../../../images/cat_2.png " alt="商品画像">
                     </div>
-                    
-                    <div class="sold">
-                        <p>商品名：</p>
-                        <p>販売時値段：</p>
-                        <p>商品説明：<p id="text"></p></p>
-                        <p>数量：箱</p>
-                    </div>
 
-                    <!-- 商品画像 -->
-                    <div class="img">
-                        <img src="https://via.placeholder.com/150" alt="商品画像">
+                    <div class="dtl_ctnr">
+
+                        <div class="product_detail">
+                            <!-- <p id="gds_name">商品名 A</p> -->
+                            <p class="sub_title">商品説明</p>
+                            <p class="gds_exp" id="gds_exp">
+                                2025年1月最新式 3個セット お手軽簡単に【2025新登場】 加湿器 大容量 8L 加熱式 ＆ 超音波式 省エネ ハイブリッド式 最長46時間稼働
+                                5段階湿度調整 お手入れ簡単 かしつき 上から給水 加湿器 除菌 静音 2WAY給水 アロマ対応 切りタイマー 自動OFF 静電タッチパネル リモコン付き 湿度設定 水漏れ防止
+                                空焚き防止 おしゃれ 加湿器. 寝室 オフィス リビング 乾燥対策</p>
+                            <p class="price" id="price">販売時価格:¥2000</p>
+                            <p class="qua" id="qua">数量:</p>
+                        </div>
+
                     </div>
-    
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <footer>
-            <p>ご利用規約・プライバシーポリシー</p>
-            <p>© 2024 YUSA S.A.S</p>
-        </footer>
-    </body>
+    <footer>
+        <p>ご利用規約・プライバシーポリシー</p>
+        <p>© 2024 YUSA S.A.S</p>
+    </footer>
+</body>
+
 </html>
