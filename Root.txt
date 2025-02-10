@@ -109,7 +109,7 @@ styleシート対応表
 
 	cirtification_style.css <cirtification>
 		└ 農家証明書確認			f_cirtificate.html
-		└ JAS登録継続確認			f_jasregister.html
+		└ JAS登録継続確認			f_jasregister.html	// 削除
 
 管理者
 	admin_style.css	<account>
