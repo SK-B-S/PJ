@@ -409,3 +409,18 @@
 .odr_back_btn:hover {
     background-color: #464646;
 }
+
+.pag_btn {
+    background-color: #4CAF50;
+    color: #fff;
+
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+.pag_btn:hover {
+    background-color: #376a3a;
+}

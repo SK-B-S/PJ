@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>農家証明書確認</title>
+
+    <link rel="stylesheet" href="../../../css/static_style/header_style.css">
+    <link rel="stylesheet" href="../../../css/static_style/body_style.css">
+    <link rel="stylesheet" href="../../../css/static_style/main_style.css">
+    <link rel="stylesheet" href="../../../css/static_style/footer_style.css">
+
+    <link rel="stylesheet" href="../../../css/farmer_user_style/cirtification_style.css">
+    <!-- last update 2025/2/7 杉田 -->
+
+
+</head>
+
+<body>
+    <header>
+        <p>農家証明書確認</p>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content">
+                <div class="top_title">農家証明書確認</div>
+
+                <h2 class="details-title">証明書</h2>
+                <div class="confi">
+                    <section class="certificate-section">
+                        <div class="certificate-frame">
+                            <embed src="certificate_sample.pdf" type="application/pdf" width="500px" height="650px">
+                        </div>
+                    </section>
+
+                    <div class="mess">
+                        <p class="mes1" id="mes1">・承認待ち</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function toggleReasonInput(status) {
+                let statusText = document.getElementById("mes1");
+
+                if (status === 'approved') {
+                    statusText.textContent = "・承認済み";
+                } else if (status === 'rejected') {
+                    statusText.textContent = "・拒否されました";
+                }
+            }
+        </script>
+    </main>
+
+    <footer>
+        <p>ご利用規約・プライバシーポリシー</p>
+        <p>© 2024 YUSA S.A.S</p>
+    </footer>
+
+</body>
+
+</html>
