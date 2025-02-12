@@ -53,17 +53,26 @@
 
                     <div class="products_list">
                         <div class="cart_list">
+                            <div class="cart_list">
+                                <div class="odr_img">
+                                    <!-- 商品画像 -->
+                                    <img id="gds_img" src="../../../images/chair.jpg" alt="商品画像">
+                                </div>
+                                <p class="gds_name" id="gds_name">${cart.goods.gdsName}</p>
+                            </div>
+                            
                             <div class="cart_gds_grp">
-                                <p class="gds_name">${cart.goods.gdsName}</p>
-                                <p class="qua">数量: ${cart.cartQua}</p>
+                                <p class="sub_title">${cart.goods.gds_exp}</p>
                                 <p class="price">¥${cart.goods.price}</p>
+                                <p class="qua">数量: ${cart.cartQua}</p>
                             </div>
                         </div>
                     </div>
                 </c:forEach>
 
                 <div class="payment_exp">
-                    <p class="pay_policy">■ 代金引換<br>
+                    <p class="pay_policy">
+                        ■ 代金引換<br>
                         ・代金は商品配送時にお支払いください。<br>
                         ・配送時のお支払方法は現金のみとなっております。<br>
                         ・〔代引き手数料料金表〕全国一律料金：300円</p>
