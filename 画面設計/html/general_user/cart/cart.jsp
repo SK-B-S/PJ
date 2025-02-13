@@ -95,8 +95,8 @@
                                 数量:<input class="qua_input" type="number" value="1" min="1" max="100" step="1">
                             </p>
                         </div>
-                        <form action="${pageContext.request.contextPath}/cart/DeleteCartServlet" method="post">
-                            <div class="cart_btn_grp"></div>
+                        <form class="frm_grp" action="${pageContext.request.contextPath}/cart/DeleteCartServlet" method="post">
+                            <div class="cart_btn_grp">
                                 <input type="hidden" name="gdsId" value="<%= goods.getGdsId() %>">
                                 <button class="del_btn" type="submit">削除</button>
                             </div>
@@ -118,7 +118,7 @@
                 <div class="cart_prch">
                     <p>小計 : ¥<%= totalPrice%></p>
                     <!-- 支払いボタン -->
-                    <form a ction="${pageContext.request.contextPath}/g_order_check/GOrderCheckServlet" method="get">
+                    <form class="frm_grp" action="${pageContext.request.contextPath}/g_order_check/GOrderCheckServlet" method="get">
                         <button class="all_btn" type="submit">注文確認へ進む</button>
                     </form>
                 </div>  
