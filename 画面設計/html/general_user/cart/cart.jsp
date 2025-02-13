@@ -82,14 +82,14 @@
                             <!-- 商品画像 -->
                             <img src="${pageContext.request.contextPath}/upload/goods/<%= goods.getGdsImage() %>" alt="商品画像">
                         </div>
-                        <p class="gds_name">${cart.goods.gdsName}</p>
+                        <p class="gds_name"><%= goods.getGdsName() %></p>
                     </div>
 
                     <div class="cart_gds_grp">
                         <div class="gds_dtl">
-                            <p class="sub_title" id="gds_exp">${cart.goods.gds_exp}</p>
+                            <p class="sub_title" id="gds_exp">${goods.GdsExp}</p>
 
-                            <p class="price" id="price">¥${cart.goods.price}</p>
+                            <p class="price" id="price"><%= goods.getPrice() %></p>
 
                             <p class="qua" id="qua">
                                 数量:<input class="qua_input" type="number" value="1" min="1" max="100" step="1">
