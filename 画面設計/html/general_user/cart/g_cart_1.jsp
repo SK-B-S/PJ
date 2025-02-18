@@ -74,7 +74,7 @@
                                    <input type="hidden" name="gdsId" value="<%= goods.getGdsId() %>">
                                    <button type="submit">削除</button>
                                </form>
-                           </td>
+                           </td>   
                        </tr>
                        <% } } %>
                        <tr>
