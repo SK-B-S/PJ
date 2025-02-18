@@ -424,3 +424,11 @@
 .pag_btn:hover {
     background-color: #376a3a;
 }
+
+.frm_grp {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+
+	width: 100%;
+}
